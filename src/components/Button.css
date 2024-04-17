@@ -1,0 +1,38 @@
+.button{
+    border-radius: 12px;
+    padding: 3px 1rem;
+    text-align: center;
+    box-shadow: 2px 3px rgba(0,0,0,0.7);
+    cursor: pointer;
+}
+
+.buttonBranco{
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid black;
+}
+
+.buttonAzul{
+    background-color: #3C3AC5;
+    color: #ffffff;
+}
+
+.buttonAmarelo{
+    background-color: #C3C53A;
+    color: #000000;
+}
+
+.buttonVerde{
+    background-color: #3AC581;
+    color: #000000;
+}
+
+.buttonRosa{
+    background-color: #C53A7E;
+    color:#ffffff;
+}
+
+.buttonCinza{
+    background-color: #b8b8b8;
+    color: #000000;
+}

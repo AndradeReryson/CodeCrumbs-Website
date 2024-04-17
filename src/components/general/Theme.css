@@ -1,0 +1,94 @@
+@font-face {
+    font-family: "Khand";
+    src: url('../../assets/font/Khand-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Khand";
+    src: url('../../assets/font/Khand-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Khand";
+    src: url('../../assets/font/Khand-SemiBold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Khand";
+    src: url('../../assets/font/Khand-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root{
+    --azul: #3C3AC5;
+    --amarelo: #C3C53A;
+    --verde: #3AC581;
+    --rosa: #C53A7E;
+    --preto: #000000;
+    --branco: #ffffff;
+    --cinza: #b8b8b8;
+    --cinzaEscuro: #8a8d8f;
+
+    font-family: 'Khand';
+    font-weight: 400;
+    font-size: 16px;
+}
+
+*{
+    font-family: 'Khand','Trebuchet MS';
+    font-weight: 400;
+    font-size: 16px;
+}
+
+h2, h3, h4, h5, h6{
+    margin: 4px;
+}
+
+h2,
+.font_h2 {
+    font-weight: 500;
+    font-size: 42px;
+}
+
+h3,
+.font_h3 {
+    font-weight: 600;
+    font-size: 36px;
+}
+
+h4,
+.font_h4 {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+h5,
+.font_h5 {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+h6,
+.font_h6{
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.fonteCinzaEscuro{
+    color: var(--cinzaEscuro);
+}
+
+input[type="checkbox"] {
+    accent-color: var(--azul);
+    margin: 0 0.5rem;
+    align-self: center;
+    height: 1rem !important; 
+    width: 1rem !important;
+}
