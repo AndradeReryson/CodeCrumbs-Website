@@ -1,13 +1,57 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Lander from './pages/Lander';
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
+import ListaExercicios from './pages/ListaExercicios';
+import ListaFlashCards from './pages/ListaFlashCards';
+import ListaQuizzes from './pages/ListaQuizzes';
+import ErrorPage from './pages/ErrorPage';
+import Sair from './pages/Sair';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Lander />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "home",
+    element: <Home />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "exercicios",
+        element: <ListaExercicios />
+      },
+      {
+        path: "flashcards",
+        element: <ListaFlashCards />
+      },
+      {
+        path: "quizzes",
+        element: <ListaQuizzes />
+      },
+      {
+        path: "logout",
+        element: <Sair />
+      }
+    ]
+  }
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 

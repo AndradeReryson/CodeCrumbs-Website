@@ -1,0 +1,35 @@
+.listaFiltro{
+    display: flex;
+    align-items: center;
+}
+
+    .listaFiltro .button-filtro{
+        margin: 0 0.5rem;
+    }
+
+    .listaFiltro .button-filtro:first-child{
+        margin: 0 0.5rem 0 0;
+    }
+
+
+    .button-filtro{
+        color: var(--preto);
+        padding: 0 2rem;
+        text-align: center;
+        border-radius: 10px;
+        border: 1px solid var(--preto);
+        box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .button-filtro h6{
+        margin: 0;
+    }
+
+    .button-filtro.active{
+        border: none;
+        box-shadow: none;
+        background-color: var(--azul);
+        color: white;
+    }

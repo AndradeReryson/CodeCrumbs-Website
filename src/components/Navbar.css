@@ -1,0 +1,63 @@
+.navbar{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+    .navbar .logo{
+        height: 5vh;
+        justify-self: end;
+    }
+
+.col-usuario{
+    display: flex;
+    align-items: center;
+}
+
+    .col-usuario h6{
+        padding-top: 6px;
+        line-height: 6vh;
+        padding: 0 0.5rem;
+    }
+
+    .col-usuario .foto-perfil{
+        height: 6vh;
+        width: 6vh;
+        border-radius: 50%;
+        background-color: var(--azul);
+        user-select: none;
+        /**/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .col-usuario .foto-perfil > h5{
+        color: var(--branco);
+        height: 6vh;
+        line-height: 6vh;
+    }
+
+.col-navegacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .col-navegacao > .link {
+        margin: 0 0.5rem;
+    }
+
+    .col-navegacao > .link{
+        text-decoration: none;
+        color: none;
+    }
+
+    .col-navegacao > .link:active,
+    .col-navegacao > .link:visited{
+        text-decoration: none;
+        color: none;
+    }

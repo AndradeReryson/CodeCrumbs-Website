@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import './general/Theme.css'
 import './Button.css'
 
@@ -22,8 +21,9 @@ const Button = ({className, cor, texto}) => {
    */
   const getButtonColorClass = (cor) => {
     let classes = "";
+    let cor_lower = cor.toLowerCase();
 
-    switch(cor){
+    switch(cor_lower){
       case 'azul':
         classes = "button buttonAzul";
         break;
@@ -50,7 +50,9 @@ const Button = ({className, cor, texto}) => {
   }
 
   return (
-    <div className={getButtonColorClass(cor)+" "+className}>{texto}</div>
+    <div className={getButtonColorClass(cor)+" font_h6 "+className}>
+      <h6>{texto}</h6>
+    </div>
   )
 }
 

@@ -1,0 +1,19 @@
+.statsDashboard{
+    height: 17dvh;
+    width: 100%;
+    background-color: var(--branco);
+    border: 1px solid var(--preto);
+    user-select: none;
+    /**/
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+    .statsDashboard .statsTitulo{
+        background-color: var(--verde);
+    }
+
+    .statsDashboard .statsTitulo,
+    .statsDashboard .statsValor{
+        text-align: center;
+    }

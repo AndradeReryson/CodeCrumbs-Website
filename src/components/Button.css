@@ -1,9 +1,15 @@
 .button{
     border-radius: 12px;
-    padding: 3px 1rem;
+    padding: 3px 2rem;
     text-align: center;
-    box-shadow: 2px 3px rgba(0,0,0,0.7);
+    box-shadow: 2px 3px 4px rgba(0,0,0,0.8);
+    font-weight: 500;
     cursor: pointer;
+}
+
+.button h6{
+    margin: 0;
+    font-weight: 500;
 }
 
 .buttonBranco{

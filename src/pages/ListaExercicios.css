@@ -1,0 +1,61 @@
+/* LINHA DO BANNER */
+.listaBanner{
+    height: 100%;
+    width: 100%;
+    /**/
+    display: flex;
+    align-items: end;
+}
+
+    .listaBanner img{
+        height: 45px;
+        padding: 0.5rem 0;
+        user-select: none;
+    }
+
+    .listaBanner h3{
+        margin: 0;
+        padding: 0.5rem;
+        height: 36px;
+        line-height: 36px;
+    }
+
+    .listaBanner h6{
+        margin: 0;
+        padding: 0.8rem 0.5rem;
+        height: 18px;
+        line-height: 18px;
+    }
+
+/* LINHA DA LISTA DE CARDS DOS EXERCICIOS */
+.listaCardExercicio{
+    width: 100%;
+    height: calc(26dvh + 2rem);
+    padding: 5% 0;
+    display: grid;
+    grid-template-columns: repeat(8, 13dvh);
+    grid-template-rows: 13dvh 13dvh;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* LINHA DA PAGINACAO */
+.totalResultados{
+    width: 10vw;
+    border-radius: 5px;
+    border: 1px solid var(--preto);
+    /**/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginacaoResultado{
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

@@ -24,7 +24,7 @@ const FormLogin = () => {
           </div>
 
           <div className="useTwoColumns" style={{gridColumn: '1/3'}}>
-            <Button className="font_h6" cor={'azul'} texto='Entrar'/>
+            <Button cor={'azul'} texto='Entrar'/>
           </div>
 
           <div className="useTwoColumns" style={{gridColumn: '1/3'}}>

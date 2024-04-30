@@ -1,0 +1,21 @@
+.button-nav{
+    color: var(--preto);
+    padding: 0 2rem;
+    text-align: center;
+    border: 1px solid var(--preto);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    user-select: none;
+    cursor: pointer;
+}
+
+    .button-nav > h6 {
+        font-size: 16px;
+        margin: 0;
+    }
+
+.button-nav.active{
+    border: none;
+    box-shadow: none;
+    background-color: var(--azul);
+    color: white;
+}

@@ -25,7 +25,7 @@ const FormCadastro = () => {
           <input className="font_h6" id="cadastro_input_conf_senha" type="password" required></input>
 
           <div className="useTwoColumns" style={{gridColumn: '1/3'}}>
-            <Button className="font_h6" cor={'azul'} texto='Fazer Cadastro'/>
+            <Button cor={'azul'} texto='Fazer Cadastro'/>
           </div>
       </form>
     </Container>
