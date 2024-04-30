@@ -21,17 +21,17 @@ const Lander = () => {
         <Container width="60vw" height="30vh" padding="0 5vw 0 5vw" flexDirection="row" alignItems="start" justifyContent="space-between">
           <div style={{width:"18vw", textAlign: 'center'}}>
             <IconeGrande nomeIcone="question"/>
-            <h6>Começou a estudar programação e tem dificuldade para lembrar conceitos ou a sintaxe?</h6>
+            <h6 style={{fontSize:"14px"}}>Começou a estudar programação e tem dificuldade para lembrar conceitos ou a sintaxe?</h6>
           </div>
 
           <div style={{width:"18vw", textAlign: 'center'}}>
             <IconeGrande nomeIcone="coding"/>
-            <h6>Com nossa plataforma, você estuda se divertindo! oferecemos exercicios e quizzes para reforçar seus conhecimentos</h6>
+            <h6 style={{fontSize:"14px"}}>Com nossa plataforma, você estuda se divertindo! oferecemos exercicios e quizzes para reforçar seus conhecimentos</h6>
           </div>
 
           <div style={{width:"18vw", textAlign: 'center'}}>
             <IconeGrande nomeIcone="smartphone"/>
-            <h6>Tem pouco tempo livre? Tá na mão! Utilize nosso aplicativo para estudar em qualquer lugar e por quanto tempo quiser</h6>
+            <h6 style={{fontSize:"14px"}}>Tem pouco tempo livre? Tá na mão! Utilize nosso aplicativo para estudar em qualquer lugar e por quanto tempo quiser</h6>
           </div>
         </Container>
         

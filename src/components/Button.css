@@ -5,9 +5,23 @@
     box-shadow: 2px 3px 4px rgba(0,0,0,0.8);
     font-weight: 500;
     cursor: pointer;
+    
 }
 
+    .link{
+        text-decoration: none;
+        color: none;
+    }
+
+    .link:active,
+    .link:visited{
+        text-decoration: none;
+        color: none;
+    }
+
 .button h6{
+    width: 100%;
+    white-space: nowrap;
     margin: 0;
     font-weight: 500;
 }

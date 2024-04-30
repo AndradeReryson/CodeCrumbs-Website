@@ -3,6 +3,7 @@ import './general/Theme.css'
 import './Formularios.css'
 import Container from './Container'
 import Button from './Button'
+import { Link } from 'react-router-dom'
 
 /**
  * Formulário de Cadastro.
@@ -25,7 +26,7 @@ const FormCadastro = () => {
           <input className="font_h6" id="cadastro_input_conf_senha" type="password" required></input>
 
           <div className="useTwoColumns" style={{gridColumn: '1/3'}}>
-            <Button cor={'azul'} texto='Fazer Cadastro'/>
+            <Link className='link' to="/home/dashboard"> <Button style={{padding: '0'}} cor={'azul'} texto='Cadastrar'/> </Link>
           </div>
       </form>
     </Container>

@@ -3,6 +3,7 @@ import './general/Theme.css'
 import './Formularios.css'
 import Button from './Button'
 import Container from './Container'
+import { Link } from 'react-router-dom'
 
 /**
  * Formulário de Login.
@@ -24,7 +25,7 @@ const FormLogin = () => {
           </div>
 
           <div className="useTwoColumns" style={{gridColumn: '1/3'}}>
-            <Button cor={'azul'} texto='Entrar'/>
+            <Link className="link" to="/home/dashboard"><Button cor={'azul'} texto='Entrar'/></Link>
           </div>
 
           <div className="useTwoColumns" style={{gridColumn: '1/3'}}>
