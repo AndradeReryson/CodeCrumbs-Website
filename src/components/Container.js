@@ -17,7 +17,7 @@ import './Container.css'
  * @param {Node} children recebe todos os elementos inseridos dentro da tag do componente
  * @returns 
  */
-const Container = ({width, height, margin, padding, flexDirection, justifyContent, alignItems, children}) => {
+const Container = ({width, height, margin, padding, flexDirection, justifyContent, alignItems, flexWrap, children}) => {
   return (
     <div 
         className="container" 
@@ -28,7 +28,8 @@ const Container = ({width, height, margin, padding, flexDirection, justifyConten
           flexDirection: flexDirection,
           alignItems: alignItems,
           justifyContent: justifyContent,
-          padding: padding
+          padding: padding,
+          flexWrap: flexWrap
         }}
     >
         <>{children}</>
@@ -44,6 +45,7 @@ Container.propTypes = {
     flexDirection:  PropTypes.string,
     alignItems:     PropTypes.string,
     justifyContent: PropTypes.string,
+    flexWrap:       PropTypes.string,
     children:       PropTypes.node
 }
 
@@ -54,7 +56,8 @@ Container.defaultProps = {
     padding:        '0 0 0 0',
     flexDirection:  'column',
     alignItems:     'center',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+    flexWrap:       'nowrap'
 }
 
 export default Container

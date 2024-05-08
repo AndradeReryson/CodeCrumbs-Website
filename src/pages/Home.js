@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom'
 const Home = () => {
   return (
     /* CONTAINER PAI, segura o nav e o conteudo */
-    <Container width="100vw" height="100vh" flexDirection="column" alignItems="center">
+    <Container width="100vw" height="auto" flexDirection="column" alignItems="center">
       
       {/* NAVBAR */}
       <Container width="80vw" height="10vh">

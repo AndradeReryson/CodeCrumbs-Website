@@ -1,0 +1,41 @@
+.cardQuiz{
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 10% 5% 75% 10%;
+}
+
+    .cardQuiz h6{
+        margin: 0;
+        align-self: center;
+    }
+
+    .cardQuiz .markConcluido{
+        color: var(--verde);
+        font-size: 1.5rem;
+        font-weight: bolder;
+        padding: 0 1rem;
+        text-align: end;
+    }
+
+    .cardQuiz .quizNumero,
+    .cardQuiz .markConcluido,
+    .cardQuiz .quizNota{
+        user-select: none;
+    }
+
+    .cardQuiz .quizTitulo{
+        user-select: none;
+        cursor: pointer;
+    }
+
+.cardQuiz.headerLista{
+    background-color: var(--azul);
+    color: var(--branco);
+}
+
+    .cardQuiz.headerLista h6{
+        font-weight: 500;
+    }

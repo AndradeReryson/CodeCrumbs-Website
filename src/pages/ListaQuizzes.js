@@ -1,8 +1,88 @@
 import React from 'react'
+import Icon_quiz from '../assets/icon_atv_quiz.svg'
+import Container from '../components/Container'
+import '../components/general/Theme.css'
+import './ListaQuizzes.css'
+import ButtonFiltro from '../components/ButtonFiltro'
+import Button from '../components/Button'
+import CardQuiz from '../components/CardQuiz'
 
 const ListaQuizzes = () => {
+
+  const gerarCards = () => {
+    let lista_cards = []
+  }
+
   return (
-    <div>ListaQuizzes</div>
+    <div className='listaQuizzes'>
+      <Container width="80vw" height="25dvh" flexDirection="column" justifyContent="start" padding="5dvh 0 0 0">
+
+        {/* LINHA BANNER - TITULO - DESC */}
+        <Container width="80vw" height="10dvh" flexDirection="row" alignItems="center"> 
+          <div className='listaBanner'>
+            <img src={Icon_quiz} alt="..."></img>
+            <h3> Quizzes </h3>
+            <h6> Teste seu conhecimento e prepare-se para provas </h6>
+          </div>
+        </Container>
+
+        {/* LINHA FILTRO - BTN_BUSCAR */}
+        <Container width="80vw" height="7dvh" flexDirection="row" alignItems="center" flexWrap="wrap"> 
+          <Container width="40vw" height="7dvh" flexDirection="row" alignItems="center">
+            <div className='listaFiltro'>
+              <ButtonFiltro className="active" texto="CSS" />
+              <ButtonFiltro texto="SQL" />
+            </div>
+          </Container>
+
+          <Container width="40vw" height="7dvh" flexDirection="row" alignItems="center" justifyContent="end">
+              <label htmlFor='txt_pesquisa' className='font_h5'> Pesquisar </label>
+              <input id='txt_pesquisa' type='text' className='font_h6'></input>
+              <Button cor="amarelo" texto="Buscar"/>
+          </Container> 
+        </Container>
+
+        {/* LINHA FILTRO MEUS QUIZZES - BTN_CRIAR_QUIZ */}
+        <Container width="80vw" height="7dvh" flexDirection="row" alignItems="center" flexWrap="wrap"> 
+          <Container width="40vw" height="7dvh" flexDirection="row" alignItems="center">
+            <div className='listaFiltro'>
+              <ButtonFiltro className="active" texto="Todos os Quizzes" />
+              <ButtonFiltro texto="Meus Quizzes" />
+            </div>
+          </Container>
+
+          <Container width="40vw" height="7dvh" flexDirection="row" alignItems="center" justifyContent="end">
+            <div className='listaBotoesCrud'>
+              <Button cor="verde" texto="Criar Novo Quiz"/>
+            </div>
+          </Container> 
+        </Container>   
+      </Container>
+
+      
+      {/* LINHA LISTA DE QUIZZES */}
+      <Container width="80vw" height="100vh" flexDirection="row" alignItems="center" justifyContent="center" margin="1rem 0">
+        <div className='listaCardQuizzes'>
+          <div className='listaHeader itemLista'>
+            <CardQuiz className="headerLista" numero="Numero" concluido="" titulo="Titulo" nota="Nota" />
+            <CardQuiz numero="0001" concluido="&#10003;" titulo="Seletores de elementos" nota="--" />
+          </div>
+        </div>
+      </Container>
+
+      {/* LINHA PAGINACAO */}
+      <Container width="80vw" height="10dvh" flexDirection="row" alignItems="center" justifyContent="space-between" margin="0 0 2rem 0">
+          <div className="totalResultados">
+            <h6> 16 de 160 </h6>
+          </div>
+
+          <div className="paginacaoResultado">
+            <Button cor="branco" texto="Primeiro"/>
+            <h6> 1 2 3 4 5 ... 10 </h6>
+            <Button cor="branco" texto="Ultimo" />
+          </div>
+        </Container>
+    </div>
   )
 }
 

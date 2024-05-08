@@ -1,0 +1,17 @@
+input#txt_pesquisa{
+    height: 1rem;
+    border: 2px solid #b7b7b7;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0 1rem;
+    width: 40%;
+}
+
+.listaCardQuizzes{
+    border: 1px solid black;
+    height: calc(100% - 2px);
+    width: calc(100% - 2px);
+    display: grid;
+    grid-template-rows: repeat(16, 6dvh);
+}
+
