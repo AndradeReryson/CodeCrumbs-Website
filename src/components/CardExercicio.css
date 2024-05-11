@@ -2,7 +2,7 @@
     height: 13dvh;
     width: 13dvh;
     border-radius: 15px;
-    border: 2px solid var(--preto);
+    border: 1px solid var(--preto);
     background-color: var(--branco);
     box-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     /**/
@@ -29,7 +29,7 @@
     }
 
     .cardExercicio .cardNumero{
-        border-top: 2px solid var(--preto);
+        border-top: 1px solid var(--preto);
         height: 100%;
         background-color: var(--amarelo);
         border-bottom-left-radius: 15px;

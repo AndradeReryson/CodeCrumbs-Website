@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Container from '../components/Container'
+import Footer from '../components/Footer'
 import { Outlet } from 'react-router-dom'
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       {/* CONTEUDO SENDO INJETADO AQUI EM BAIXO*/}
       <Outlet />
 
+      <Footer />
     </Container>
     
   )

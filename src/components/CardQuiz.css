@@ -7,6 +7,10 @@
     grid-template-columns: 10% 5% 75% 10%;
 }
 
+.cardQuiz:last-child{
+    border-bottom: none;
+}
+
     .cardQuiz h6{
         margin: 0;
         align-self: center;
@@ -31,6 +35,7 @@
         cursor: pointer;
     }
 
+
 .cardQuiz.headerLista{
     background-color: var(--azul);
     color: var(--branco);
@@ -39,3 +44,15 @@
     .cardQuiz.headerLista h6{
         font-weight: 500;
     }
+
+.link{
+    align-self: center;
+    text-decoration: none;
+    color: var(--preto);
+}
+
+.link:active,
+.link:visited{
+    text-decoration: none;
+    color: var(--preto);
+}

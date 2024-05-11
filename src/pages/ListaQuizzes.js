@@ -11,6 +11,21 @@ const ListaQuizzes = () => {
 
   const gerarCards = () => {
     let lista_cards = []
+
+    for(let i = 0; i<16; i++){
+      lista_cards.push(
+        <CardQuiz className="link" 
+          
+          quiz={i+1}
+          numero={(i+1) < 10 ? "#000"+(i+1) : "#00"+(i+1)}
+          titulo="PLACEHOLDER Alinhamento de texto e elementos flexbox" 
+          concluido={i < 4 ? true : false}
+          nota={i < 4 ? Math.floor((i+1)*10)+"%" : "--"}
+        />
+      )
+    }
+
+    return lista_cards;
   }
 
   return (
@@ -61,12 +76,15 @@ const ListaQuizzes = () => {
 
       
       {/* LINHA LISTA DE QUIZZES */}
-      <Container width="80vw" height="100vh" flexDirection="row" alignItems="center" justifyContent="center" margin="1rem 0">
+      <Container width="80vw" height="102dvh" flexDirection="row" alignItems="center" justifyContent="center" margin="1rem 0">
         <div className='listaCardQuizzes'>
-          <div className='listaHeader itemLista'>
-            <CardQuiz className="headerLista" numero="Numero" concluido="" titulo="Titulo" nota="Nota" />
-            <CardQuiz numero="0001" concluido="&#10003;" titulo="Seletores de elementos" nota="--" />
+          <div className='listaHeader'>
+            <h6 style={{textAlign: 'center'}}>#</h6>
+            <h6></h6>
+            <h6>Nome</h6>
+            <h6 style={{textAlign: 'center'}}>Nota</h6>
           </div>
+          {gerarCards()}
         </div>
       </Container>
 

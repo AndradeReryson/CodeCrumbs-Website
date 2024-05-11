@@ -96,3 +96,14 @@ input[type="checkbox"] {
     height: 1rem !important; 
     width: 1rem !important;
 }
+
+.link{
+        text-decoration: none;
+        color: none;
+    }
+
+    .link:active,
+    .link:visited{
+        text-decoration: none;
+        color: none;
+    }
