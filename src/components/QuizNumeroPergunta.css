@@ -1,0 +1,23 @@
+.numeroPergunta{
+    height: 7dvh;
+    width: 7dvh;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--preto);
+    background-color: var(--branco);
+    color: var(--preto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+    .numeroPergunta:first-child{
+        margin: 0 0.5rem 0 0;
+    }
+
+.numeroPergunta.respondida{
+    border: none;
+    background-color: var(--azul);
+    color: var(--branco);
+}

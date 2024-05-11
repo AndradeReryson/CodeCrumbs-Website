@@ -12,7 +12,7 @@ import ListaFlashCards from './pages/ListaFlashCards';
 import ListaQuizzes from './pages/ListaQuizzes';
 import ErrorPage from './pages/ErrorPage';
 import Sair from './pages/Sair';
-import AtividadeQuiz from './components/AtividadeQuiz';
+import AtividadeQuiz from './pages/AtividadeQuiz.js';
 
 const router = createBrowserRouter([
   {
