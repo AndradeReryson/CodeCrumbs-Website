@@ -1,0 +1,56 @@
+/* BANNER E BOTOES DE NAVEGACAO NA LINHA DO BANNER */
+
+.listaBanner{
+    height: 100%;
+    width: 100%;
+    /**/
+    display: flex;
+    align-items: center;
+}
+
+    .listaBanner img{
+        height: 45px;
+        padding: 0.5rem 0;
+        user-select: none;
+    }
+
+    .listaBanner h4{
+        margin: 4px 0 0 0;
+        padding: 0.5rem;
+    }
+
+    .listaBanner h6{
+        margin: 0;
+        padding: 0.8rem 0.5rem;
+        height: 18px;
+        line-height: 18px;
+    }
+
+/* LINHA DO CÓDIGO DO EXERCICIO */
+.codigoExercicio{
+    align-items: center;
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, calc(5dvh - 3px));
+    gap: 3px;
+}
+
+    .codigoExercicio span.linha{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 2px;
+    }
+
+/* LINHA DOS BOTÕES DE ENVIAR RESPOSTA E VER RESPOSTA */
+.exercicioBotoes{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}

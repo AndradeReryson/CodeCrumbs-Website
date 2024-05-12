@@ -13,6 +13,7 @@ import ListaQuizzes from './pages/ListaQuizzes';
 import ErrorPage from './pages/ErrorPage';
 import Sair from './pages/Sair';
 import AtividadeQuiz from './pages/AtividadeQuiz.js';
+import AtividadeExercicio from './pages/AtividadeExercicio.js';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "exercicios",
         element: <ListaExercicios />
+      },
+      {   
+        path: "exercicios/:id",
+        element: <AtividadeExercicio />
       },
       {
         path: "flashcards",

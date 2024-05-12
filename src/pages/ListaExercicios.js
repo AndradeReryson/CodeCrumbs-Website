@@ -13,7 +13,7 @@ const ListaExercicios = () => {
     let lista_cards = []
 
     for(let i = 0; i<16; i++){
-      lista_cards.push(<CardExercicio numero={i < 10 ? "#000"+(i+1) : "#00"+(i+1)}/>)
+      lista_cards.push(<CardExercicio numero={i < 10 ? "#000"+(i+1) : "#00"+(i+1)} exercicio={i+1}/>)
     }
 
     return lista_cards;
