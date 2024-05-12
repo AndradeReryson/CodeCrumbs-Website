@@ -6,6 +6,7 @@ import './ListaExercicios.css'
 import ButtonFiltro from '../components/ButtonFiltro'
 import Button from '../components/Button'
 import CardExercicio from '../components/CardExercicio'
+import { Link } from 'react-router-dom'
 
 const ListaExercicios = () => {
 
@@ -44,7 +45,7 @@ const ListaExercicios = () => {
 
           <Container width="40vw" height="10dvh" flexDirection="row" alignItems="center" justifyContent="end">
             <div className='listaBotoesCrud'>
-              <Button cor="verde" texto="Criar Novo Exercicio"/>
+              <Link className="link" to="./novo"><Button cor="verde" texto="Criar Novo Exercicio"/></Link>
             </div>
           </Container>
           

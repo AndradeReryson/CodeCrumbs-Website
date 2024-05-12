@@ -1,0 +1,67 @@
+/* BANNER E BOTOES DE NAVEGACAO NA LINHA DO BANNER */
+
+.listaBanner{
+    height: 100%;
+    width: 100%;
+    /**/
+    display: flex;
+    align-items: end;
+}
+
+    .listaBanner img{
+        height: 45px;
+        padding: 0.5rem 0;
+        user-select: none;
+    }
+
+    .listaBanner h3{
+        margin: 0;
+        padding: 0.5rem;
+        height: 36px;
+        line-height: 36px;
+    }
+
+    .listaBanner h6{
+        margin: 0;
+        padding: 0.8rem 0.5rem;
+        height: 18px;
+        line-height: 18px;
+    }
+
+.listaBannerBotoes{
+    height: 100%;
+    width: 100%;
+    /**/
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+    .listaBannerBotoes > .link {
+        margin: 0 0.5rem;
+    }
+
+    .listaBannerBotoes > .link{
+        text-decoration: none;
+        color: none;
+    }
+
+    .listaBannerBotoes > .link:active,
+    .listaBannerBotoes > .link:visited{
+        text-decoration: none;
+        color: none;
+    }
+
+/* LINHA DOS BOTÕES DE LEMBREI, GIRAR e ESQUECI */
+.cartaoBotoes{
+    width: 35vw;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+    .cartaoBotoes .cartaoBtnWrapper .btnLegenda{
+        text-align: center;
+        color: rgba(0, 0, 0, 0.5)
+    }

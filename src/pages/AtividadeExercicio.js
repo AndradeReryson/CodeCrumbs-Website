@@ -83,6 +83,7 @@ const AtividadeExercicio = () => {
 					</div>
 				</Container>
 
+				{/* BOTOES DO EXER */}
 				<Container width="80vw" height="10dvh" flexDirection="row" alignItems="end" justifyContent="start">
 					<div className='exercicioBotoes'>
 						<Button cor="verde" texto="Responder"/>

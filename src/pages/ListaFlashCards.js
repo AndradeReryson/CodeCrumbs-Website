@@ -13,7 +13,7 @@ const ListaFlashCards = () => {
     let lista_cards = []
 
     for(let i = 0; i<6; i++){
-      lista_cards.push(<CardBaralho titulo="Alinhamento de texto e elementos flexbox"/>)
+      lista_cards.push(<CardBaralho titulo="Alinhamento de texto e elementos flexbox" baralho={i+1}/>)
     }
 
     return lista_cards;
