@@ -10,7 +10,7 @@ const StatsDashboard = ({titulo, valor}) => {
         </div>
         
         <div className='statsValor'>
-            <h2>{valor}</h2>
+            <h5>{valor}</h5>
         </div>
     </div>
   )

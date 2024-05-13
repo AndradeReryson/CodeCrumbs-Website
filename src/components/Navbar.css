@@ -8,7 +8,7 @@
 }
 
     .navbar .logo{
-        height: 5vh;
+        width: 70%;
         justify-self: end;
     }
 
@@ -24,8 +24,8 @@
     }
 
     .col-usuario .foto-perfil{
-        height: 6vh;
-        width: 6vh;
+        height: 2rem;
+        width: 2rem;
         border-radius: 50%;
         background-color: var(--azul);
         user-select: none;

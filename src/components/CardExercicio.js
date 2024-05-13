@@ -13,8 +13,8 @@ const CardExercicio = ({className, numero, exercicio}) => {
 
   return (
     <div className='cardExercicio' onClick={abrirExercicio}>
-        <div className='cardImg'>
-            <h3>{"{...}"}</h3>
+        <div className='cardSimbolo'>
+            <h5>{"{...}"}</h5>
         </div>
 
         <div className='cardNumero'>

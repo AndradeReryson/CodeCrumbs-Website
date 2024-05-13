@@ -4,16 +4,24 @@
     background-color: var(--branco);
     border: 1px solid var(--preto);
     user-select: none;
+    
     /**/
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
 }
 
     .statsDashboard .statsTitulo{
+        height: 100%;
         background-color: var(--verde);
     }
 
     .statsDashboard .statsTitulo,
     .statsDashboard .statsValor{
+        overflow: hidden;
+        text-wrap: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
     }

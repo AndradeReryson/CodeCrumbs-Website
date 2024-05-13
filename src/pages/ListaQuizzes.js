@@ -30,7 +30,7 @@ const ListaQuizzes = () => {
 
   return (
     <div className='listaQuizzes'>
-      <Container width="80vw" height="25dvh" flexDirection="column" justifyContent="start" padding="5dvh 0 0 0">
+      <Container width="80vw" height="30dvh" flexDirection="column" justifyContent="start" padding="5dvh 0 0 0">
 
         {/* LINHA BANNER - TITULO - DESC */}
         <Container width="80vw" height="10dvh" flexDirection="row" alignItems="center"> 
@@ -42,15 +42,15 @@ const ListaQuizzes = () => {
         </Container>
 
         {/* LINHA FILTRO - BTN_BUSCAR */}
-        <Container width="80vw" height="7dvh" flexDirection="row" alignItems="center" flexWrap="wrap"> 
-          <Container width="40vw" height="7dvh" flexDirection="row" alignItems="center">
+        <Container width="80vw" height="10dvh" flexDirection="row" alignItems="center" flexWrap="wrap"> 
+          <Container width="40vw" height="10dvh" flexDirection="row" alignItems="center">
             <div className='listaFiltro'>
               <ButtonFiltro className="active" texto="CSS" />
               <ButtonFiltro texto="SQL" />
             </div>
           </Container>
 
-          <Container width="40vw" height="7dvh" flexDirection="row" alignItems="center" justifyContent="end">
+          <Container width="40vw" height="10dvh" flexDirection="row" alignItems="center" justifyContent="end">
               <label htmlFor='txt_pesquisa' className='font_h5'> Pesquisar </label>
               <input id='txt_pesquisa' type='text' className='font_h6'></input>
               <Button cor="amarelo" texto="Buscar"/>
@@ -58,15 +58,15 @@ const ListaQuizzes = () => {
         </Container>
 
         {/* LINHA FILTRO MEUS QUIZZES - BTN_CRIAR_QUIZ */}
-        <Container width="80vw" height="7dvh" flexDirection="row" alignItems="center" flexWrap="wrap"> 
-          <Container width="40vw" height="7dvh" flexDirection="row" alignItems="center">
+        <Container width="80vw" height="10dvh" flexDirection="row" alignItems="center" flexWrap="wrap"> 
+          <Container width="40vw" height="10dvh" flexDirection="row" alignItems="center">
             <div className='listaFiltro'>
               <ButtonFiltro className="active" texto="Todos os Quizzes" />
               <ButtonFiltro texto="Meus Quizzes" />
             </div>
           </Container>
 
-          <Container width="40vw" height="7dvh" flexDirection="row" alignItems="center" justifyContent="end">
+          <Container width="40vw" height="10dvh" flexDirection="row" alignItems="center" justifyContent="end">
             <div className='listaBotoesCrud'>
               <Button cor="verde" texto="Criar Novo Quiz"/>
             </div>
@@ -80,7 +80,7 @@ const ListaQuizzes = () => {
         <div className='listaCardQuizzes'>
           <div className='listaHeader'>
             <h6 style={{textAlign: 'center'}}>#</h6>
-            <h6></h6>
+            <h6>{" "}</h6>
             <h6>Nome</h6>
             <h6 style={{textAlign: 'center'}}>Nota</h6>
           </div>

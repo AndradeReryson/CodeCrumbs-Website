@@ -1,28 +1,33 @@
 .cardExercicio{
-    height: 13dvh;
-    width: 13dvh;
+    height: 7vw;
+    width: 7vw;
     border-radius: 15px;
     border: 1px solid var(--preto);
     background-color: var(--branco);
     box-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     /**/
     display: grid;
-    grid-template-rows: 8dvh 5dvh;
+    grid-template-rows: 4vw 3vw;
     align-items: center;
     user-select: none;
     cursor: pointer;
 }
 
-    .cardExercicio .cardImg{
-        height: 100%;
+    .cardExercicio .cardSimbolo{
+        height: 4vw;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    .cardExercicio .cardImg h3{
+    .cardExercicio .cardSimbolo h5{
+        align-self: center;
+        height: 3vw;
+        line-height: 3.5vw;
+        font-size: 3vw;
         text-align: center;
         margin: 0;
         user-select: none;
@@ -30,7 +35,7 @@
 
     .cardExercicio .cardNumero{
         border-top: 1px solid var(--preto);
-        height: 100%;
+        height: 3vw;
         background-color: var(--amarelo);
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
@@ -39,7 +44,8 @@
         justify-content: center;
     }
 
-    .cardExercicio .cardNumero h6{
+    .cardExercicio .cardNumero .font_h6{
+        font-size: 1.5vw;
         font-weight: 500;
         text-align: center;
         margin: 0;

@@ -12,9 +12,9 @@ const Dashboard = () => {
       <Container width="38vw" height="60dvh">
         <h3> Atividades </h3>
         <div className="col-atividades">
-          <ButtonDashboard link="../exercicios" titulo="Exercicios" descricao="Preencha as lacunas" icone="exercicios"/>
-          <ButtonDashboard link="../flashcards" titulo="Flash Cards" descricao="Crie e leia cartões" icone="flashcards"/>
-          <ButtonDashboard link="../quizzes" titulo="Quizzes" descricao="Responda questionários" icone="quizzes"/>
+          <ButtonDashboard link="../exercicios" titulo="Exercicios" descricao="Preencher lacunas" icone="exercicios"/>
+          <ButtonDashboard link="../flashcards" titulo="Flash Cards" descricao="Cartões de memória" icone="flashcards"/>
+          <ButtonDashboard link="../quizzes" titulo="Quizzes" descricao="Questionários" icone="quizzes"/>
         </div>
       </Container>
       

@@ -21,9 +21,23 @@ const IconeGrande = ({nomeIcone}) => {
 		}
 	}
 
+	const getAltText = (nomeIcone) => {
+		let lowerNomeIcone = nomeIcone.toLowerCase();
+		switch(lowerNomeIcone){
+			case 'coding':
+				return "Icone grande formado por duas chaves matématicas e entre elas três pontos, tudo na cor azul e com fundo transparente"
+			case 'question':
+				return "Icone grande formado por três pontos de interrogação, um ao lado do outro sendo o central maior"
+			case 'smartphone':
+				return "Icone grande formado por um desenho de um smartphone, com sua tela transparente"
+			default:
+				return IconeCoding
+		}
+	}
+
   return (
     <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-		<img className="iconeGrande" src={getIconSVGByName(nomeIcone)}/>
+		<img className="iconeGrande" alt={getAltText(nomeIcone)} src={getIconSVGByName(nomeIcone)}/>
     </div>
   )
 }

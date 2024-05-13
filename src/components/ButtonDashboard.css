@@ -1,16 +1,18 @@
 .buttonDashboard{
-    height: 13dvh;
+    height: 17dvh;
     width: 90%;
     background-color: var(--branco);
     border: 1px solid var(--preto);
     box-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-    padding: 2dvh 5%;
+    padding: 0 5%;
     border-radius: 1rem;
     user-select: none;
     cursor: pointer;
+    overflow: hidden;
     /**/
     display: grid;
     grid-template-columns: 2fr 1fr;
+    gap: 0.5rem;
     align-items: center;
     
 }
@@ -21,20 +23,23 @@
     }
 
     .buttonDashboard div{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-rows: 10dvh 7dvh;
         align-items: start;
-        justify-content: center;
     }
 
-    .buttonDashboard div h4{
-        user-select: none;
-        line-height: 30px;
-        margin: 0;
-    }
+        .buttonDashboard div h4{
+            align-self: end;
+            user-select: none;
+            text-wrap: nowrap;
+            overflow: hidden;
+            margin: 0;
+        }
 
-    .buttonDashboard div h6{
-        user-select: none;
-        line-height: 20px;
-        margin: 0;
-    }
+        .buttonDashboard div h6{
+            align-self: start;
+            user-select: none;
+            text-wrap: nowrap;
+            overflow: hidden;
+            margin: 0;
+        }
