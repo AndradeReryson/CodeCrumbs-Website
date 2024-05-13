@@ -30,7 +30,7 @@
 /* LINHA DA LISTA DE CARDS DOS EXERCICIOS */
 .listaCardExercicio{
     width: 100%;
-    height: calc(26dvh + 2rem);
+    height: calc(45dvh + 2rem);
     padding: 5% 0;
     display: grid;
     grid-template-columns: repeat(8, 13dvh);
@@ -38,6 +38,9 @@
     gap: 2rem;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: auto;
 }
 
 /* LINHA DA PAGINACAO */

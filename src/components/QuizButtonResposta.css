@@ -4,7 +4,7 @@
     background-color: var(--branco);
     border: 1px solid var(--preto);
     border-radius: 15px;
-    box-shadow: 2px 3px 4px rgba(0,0,0,0.8);
+    box-shadow: 2px 3px 4px var(--cinza);
     cursor: pointer;
     user-select: none;
     /**/

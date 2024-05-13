@@ -43,8 +43,8 @@ const AtividadeExercicio = () => {
 				</Container>
 
 				{/* WRAPPER DO EXERCICIO */}
-        <Container width="80vw" height="55dvh" flexDirection="column" alignItems="center" justifyContent="center">
-					<div className='codigoExercicio'>
+        <Container width="80vw" height="65dvh" flexDirection="column" alignItems="center" justifyContent="center">
+					<div className='codigoRespostaExercicio'>
 						<span className='linha'>
 							<h6>{"<style>"}</h6>
 						</span>

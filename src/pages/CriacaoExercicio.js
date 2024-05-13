@@ -59,7 +59,7 @@ const CriacaoExercicio = () => {
 
       {/* WRAPPER DO CODIGO DO EXERCICIO */}
       <Container width="80vw" height="55dvh" flexDirection="column" alignItems="center" justifyContent="center">
-        <div ref={divCodigo} className='codigoExercicio'>
+        <div ref={divCodigo} className='codigoCriarExercicio'>
           <InputInvisivel id="inputLinha1"/>
           <InputInvisivel id="inputLinha2"/>
           <InputInvisivel id="inputLinha3"/>

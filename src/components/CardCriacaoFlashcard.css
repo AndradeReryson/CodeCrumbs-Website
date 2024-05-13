@@ -1,0 +1,28 @@
+.CardCriacaoFlashcard{
+    justify-self: center;
+    height: 15dvh;
+    width: calc(90% - 4rem);
+    padding: 0 2rem;
+    border: 1px solid var(--cinzaClaro);
+    box-shadow: 2px 3px 4px var(--cinzaClaro);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1rem 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+    .CardCriacaoFlashcard h4{
+        margin: 0;
+        text-align: center;
+    }
+
+.inserirTermo,
+.inserirDefinicao{
+    height: 75%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.5rem;
+    align-items: center;
+}

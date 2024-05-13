@@ -29,25 +29,14 @@
     width: 100%;
 }
 
-/* LINHA DO CÓDIGO DO EXERCICIO */
-.codigoCriarExercicio{
-    align-items: center;
-    height: auto;
-    border: 2px solid var(--cinzaClaro);
-    border-radius: 5px;
-    width: 80%;
+/* WRAPPER CARDS DE CRIACAO */
+
+.listaCardCriacaoFlashcard{
+    width: 100%;
+    height: 75dvh;
     display: grid;
+    grid-auto-rows: 15dvh;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(10, calc(5dvh - 3px));
-    gap: 3px;
-}
-
-/* LINHA DOS BOTÕES DE ENVIAR RESPOSTA E VER RESPOSTA */
-.lacunaRespostaBotoes{
-    width: auto;
-    height: 100%;
-    display: flex;
     gap: 2rem;
-    align-items: center;
+    overflow: auto;
 }
-

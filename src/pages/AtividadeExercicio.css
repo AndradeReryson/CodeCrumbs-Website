@@ -27,17 +27,20 @@
     }
 
 /* LINHA DO CÓDIGO DO EXERCICIO */
-.codigoExercicio{
+.codigoRespostaExercicio{
     align-items: center;
     height: auto;
-    width: 100%;
+    width: 70%;
+    border: 2px solid var(--cinzaClaro);
+    border-radius: 5px;
+    padding: 1rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(10, calc(5dvh - 3px));
     gap: 3px;
 }
 
-    .codigoExercicio span.linha{
+    .codigoRespostaExercicio span.linha{
         height: 100%;
         width: 100%;
         display: flex;

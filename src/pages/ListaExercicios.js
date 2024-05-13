@@ -52,7 +52,7 @@ const ListaExercicios = () => {
         </Container>
 
         {/* LINHA CARD DOS EXERCICIOS */}
-        <Container width="80vw" height="45dvh" flexDirection="row" alignItems="center" justifyContent="center">
+        <Container width="80vw" height="55dvh" flexDirection="row" alignItems="center" justifyContent="center">
           <div className='listaCardExercicio'>
             {gerarCards()}
           </div>
