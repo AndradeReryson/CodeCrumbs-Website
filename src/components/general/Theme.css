@@ -89,6 +89,20 @@ h6,
     color: var(--cinzaEscuro);
 }
 
+input{
+    height: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 6px;
+}
+
+select{
+    height: 2rem;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 0 1rem 0 1rem;
+}
+
 input[type="checkbox"] {
     accent-color: var(--azul);
     margin: 0 0.5rem;

@@ -14,10 +14,11 @@ import './Container.css'
  * @param {String} flexDirection define o eixo de alinhamento do flex box. 
  * @param {String} justifyContent define o alinhamento horizontal dos items. Varia dependendo do flexDirection
  * @param {String} alignItems define o alinhamento vertical dos items. Varia dependendo do flexDirection
+ * @param {String} flexWrap define se o flex permite quebra de linha e também faz funcionar o atributo "flex" dos elementos
  * @param {Node} children recebe todos os elementos inseridos dentro da tag do componente
  * @returns 
  */
-const Container = ({width, height, margin, padding, flexDirection, justifyContent, alignItems, flexWrap, children}) => {
+const Container = ({width, height, margin, padding, flexDirection, justifyContent, alignItems, flexWrap, gap, children}) => {
   return (
     <div 
         className="container" 
@@ -29,7 +30,8 @@ const Container = ({width, height, margin, padding, flexDirection, justifyConten
           alignItems: alignItems,
           justifyContent: justifyContent,
           padding: padding,
-          flexWrap: flexWrap
+          flexWrap: flexWrap,
+          gap: gap
         }}
     >
         <>{children}</>
@@ -46,6 +48,7 @@ Container.propTypes = {
     alignItems:     PropTypes.string,
     justifyContent: PropTypes.string,
     flexWrap:       PropTypes.string,
+    gap:            PropTypes.string,
     children:       PropTypes.node
 }
 
@@ -57,7 +60,8 @@ Container.defaultProps = {
     flexDirection:  'column',
     alignItems:     'center',
     justifyContent: 'flex-start',
-    flexWrap:       'nowrap'
+    flexWrap:       'nowrap',
+    gap:            '0'
 }
 
 export default Container
