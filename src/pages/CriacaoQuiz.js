@@ -53,7 +53,7 @@ const CriacaoQuiz = () => {
 
         {/* BOTOES RELACIONADOS A CRIACAO DE CARDS - SALVAR BARALHO */}
         <Container width="80vw" height="15dvh" flexDirection="row" alignItems="center" justifyContent="space-between">
-            <Button cor="branco" texto="Adicionar Cartão" />
+            <Button cor="branco" texto="Adicionar pergunta" />
             <Button cor="verde" texto="Salvar novo quiz" />
         </Container>
 
