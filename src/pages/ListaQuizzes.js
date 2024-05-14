@@ -6,6 +6,7 @@ import './ListaQuizzes.css'
 import ButtonFiltro from '../components/ButtonFiltro'
 import Button from '../components/Button'
 import CardQuiz from '../components/CardQuiz'
+import { Link } from 'react-router-dom'
 
 const ListaQuizzes = () => {
 
@@ -68,7 +69,7 @@ const ListaQuizzes = () => {
 
           <Container width="40vw" height="10dvh" flexDirection="row" alignItems="center" justifyContent="end">
             <div className='listaBotoesCrud'>
-              <Button cor="verde" texto="Criar Novo Quiz"/>
+              <Link className='link' to="./novo"><Button cor="verde" texto="Criar Novo Quiz"/></Link>
             </div>
           </Container> 
         </Container>   

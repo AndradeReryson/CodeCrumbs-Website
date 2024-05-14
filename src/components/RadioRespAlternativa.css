@@ -1,0 +1,29 @@
+.checkInvisivel{
+    display: none;
+}
+
+.labelCheck{
+    margin: 0;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 2.5rem;
+    text-align: center;
+    border: 1px solid var(--cinzaEscuro);
+    border-radius: 50%;
+    user-select: none;
+    cursor: pointer;
+    /**/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .labelCheck h5{
+        margin: 0;
+        text-align: center;
+    }
+
+    .labelCheck.radioMarcado{
+        background-color: var(--verde);
+        border: 1px solid var(--verde);
+    }

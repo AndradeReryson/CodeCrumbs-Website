@@ -17,6 +17,7 @@ import AtividadeExercicio from './pages/AtividadeExercicio.js';
 import AtividadeFlashcards from './pages/AtividadeFlashcards.js';
 import CriacaoExercicio from './pages/CriacaoExercicio.js';
 import CriacaoFlashcard from './pages/CriacaoFlashcard.js';
+import CriacaoQuiz from './pages/CriacaoQuiz.js';
 
 const router = createBrowserRouter([
   {
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
       {
         path: "quizzes/:id",
         element: <AtividadeQuiz />
+      },
+      {
+        path: "quizzes/novo",
+        element: <CriacaoQuiz />
       },
       {
         path: "logout",
