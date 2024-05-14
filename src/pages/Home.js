@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar'
 import Container from '../components/Container'
 import Footer from '../components/Footer'
 import { Outlet } from 'react-router-dom'
+import { useEffect } from 'react'
+import '../components/general/Theme.css'
 
 const Home = () => {
   return (

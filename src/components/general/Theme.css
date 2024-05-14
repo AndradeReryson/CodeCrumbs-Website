@@ -42,6 +42,17 @@
     font-size: 16px;
 }
 
+.altoConstraste{
+    --azul: #FFFF00;
+    --verde: #FFFF00;
+    --rosa: #FFFF00;
+    --preto: #ffffff;
+    --branco: #000000;
+    --cinzaClaro: transparent;
+    --cinza: transparent;
+    --cinzaEscuro: transparent;
+}
+
 html, body{
     overflow-x: hidden;
 }
@@ -127,3 +138,35 @@ input[type="checkbox"] {
         text-decoration: none;
         color: none;
     }
+
+@media screen and (max-width: 769px){
+    h2,
+    .font_h2 {
+        font-weight: 500;
+        font-size: 3.2vw /* 23px */;
+    }
+
+    h3,
+    .font_h3 {
+        font-weight: 600;
+        font-size: 2.6vw /* 18px */;
+    }
+
+    h4,
+    .font_h4 {
+        font-weight: 600;
+        font-size: 2.2vw /* 15px */;
+    }
+
+    h5,
+    .font_h5 {
+        font-weight: 500;
+        font-size: 1.8vw /* 12px */;
+    }
+
+    h6,
+    .font_h6{
+        font-weight: 400;
+        font-size: 1.3vw; /* 9px */;
+    }
+}

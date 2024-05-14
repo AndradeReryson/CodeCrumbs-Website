@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './general/Theme.css'
 import './RadioRespAlternativa.css'
 import { useRef } from 'react'

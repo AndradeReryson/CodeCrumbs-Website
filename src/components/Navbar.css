@@ -24,8 +24,8 @@
     }
 
     .col-usuario .foto-perfil{
-        height: 2rem;
-        width: 2rem;
+        height: 3vw;
+        width: 3vw;
         border-radius: 50%;
         background-color: var(--azul);
         user-select: none;
@@ -36,9 +36,8 @@
     }
 
     .col-usuario .foto-perfil > h5{
+        font-size: 2vw;
         color: var(--branco);
-        height: 6vh;
-        line-height: 6vh;
     }
 
 .col-navegacao{
@@ -61,3 +60,54 @@
         text-decoration: none;
         color: none;
     }
+
+@media screen and (max-width: 769px){
+    .navbar{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .navbar .logo{
+            display: none;
+        }
+    
+    .col-usuario{
+        width: 100%;
+    }
+
+        .col-usuario h6{
+            font-size: 1vw;
+            padding-top: 1vw;
+            line-height: 1.3vw;
+            padding: 0 1vw;
+        }
+
+        .col-usuario .foto-perfil{
+            height: 4vw;
+            width: 4vw;
+            border-radius: 50%;
+            background-color: var(--azul);
+            user-select: none;
+            /**/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .col-usuario .foto-perfil > h5{
+            font-size: 1.3vw;
+            color: var(--branco);
+        }
+
+    .col-navegacao{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 1vw;
+    }
+}
