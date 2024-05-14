@@ -24,6 +24,7 @@
     }
 
     .labelCheck.radioMarcado{
-        background-color: var(--verde);
-        border: 1px solid var(--verde);
+        background-color: var(--azul);
+        color: var(--branco);
+        border: 1px solid var(--azul);
     }

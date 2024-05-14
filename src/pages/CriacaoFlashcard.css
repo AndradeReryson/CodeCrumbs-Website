@@ -35,7 +35,7 @@
     width: 100%;
     height: 75dvh;
     display: grid;
-    grid-auto-rows: 15dvh;
+    grid-auto-rows: 20dvh;
     grid-template-columns: 1fr;
     gap: 2rem;
     overflow: auto;
