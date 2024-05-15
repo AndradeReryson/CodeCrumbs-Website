@@ -23,10 +23,10 @@ const ListaExercicios = () => {
 
   return (
     <div className='listaExercicios'>
-      <Container width="80vw" height="85dvh" flexDirection="column" justifyContent="start" padding="5dvh 0 0 0">
+      <Container width="80vw" height="85vh" flexDirection="column" justifyContent="start" padding="5vh 0 0 0">
 
         {/* LINHA BANNER - TITULO - DESC */}
-        <Container width="80vw" height="10dvh" flexDirection="row" alignItems="center"> 
+        <Container width="80vw" height="10vh" flexDirection="row" alignItems="center"> 
           <div className='listaBanner'>
             <img src={Icon_exercicio} alt="..."></img>
             <h3> Exercicios </h3>
@@ -35,16 +35,16 @@ const ListaExercicios = () => {
         </Container>
 
         {/* LINHA FILTRO - BTN_CRIAR_EXERC */}
-        <Container width="80vw" height="10dvh" flexDirection="row" alignItems="center"> 
+        <Container width="80vw" height="10vh" flexDirection="row" alignItems="center"> 
           
-          <Container width="40vw" height="10dvh" flexDirection="row" alignItems="center">
+          <Container width="40vw" height="10vh" flexDirection="row" alignItems="center">
             <div className='listaFiltro'>
               <ButtonFiltro className="active" texto="CSS" />
               <ButtonFiltro texto="SQL" />
             </div>
           </Container>
 
-          <Container width="40vw" height="10dvh" flexDirection="row" alignItems="center" justifyContent="end">
+          <Container width="40vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="end">
             <div className='listaBotoesCrud'>
               <Link className="link" to="./novo"><Button cor="verde" texto="Criar Novo Exercicio"/></Link>
             </div>
@@ -53,14 +53,14 @@ const ListaExercicios = () => {
         </Container>
 
         {/* LINHA CARD DOS EXERCICIOS */}
-        <Container width="80vw" height="55dvh" flexDirection="row" alignItems="center" justifyContent="center">
+        <Container width="80vw" height="55vh" flexDirection="row" alignItems="center" justifyContent="center">
           <div className='listaCardExercicio'>
             {gerarCards()}
           </div>
         </Container>
 
         {/* LINHA PAGINACAO */}
-        <Container width="80vw" height="10dvh" flexDirection="row" alignItems="center" justifyContent="space-between">
+        <Container width="80vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="space-between">
           <div className="totalResultados">
             <h6> 16 de 160 </h6>
           </div>

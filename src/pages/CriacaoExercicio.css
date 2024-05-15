@@ -7,7 +7,7 @@
     width: 80%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(10, calc(5dvh - 3px));
+    grid-template-rows: repeat(10, calc(5vh - 3px));
     gap: 3px;
 }
 

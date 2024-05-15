@@ -1,6 +1,6 @@
 .numeroPergunta{
-    height: 7dvh;
-    width: 7dvh;
+    height: 7vh;
+    width: 7vh;
     margin: 0 0.5rem;
     border-radius: 50%;
     border: 1px solid var(--preto);

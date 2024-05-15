@@ -1,6 +1,6 @@
 /* CARTAO */
 .elemCartao{
-    height: 40dvh;
+    height: 40vh;
     width: 35vw;
     border-radius: 15px;
     border: 1px solid var(--cinzaClaro);

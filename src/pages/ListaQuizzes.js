@@ -32,10 +32,10 @@ const ListaQuizzes = () => {
 
   return (
     <div className='listaQuizzes'>
-      <Container width="80vw" height="30dvh" flexDirection="column" justifyContent="start" padding="5dvh 0 0 0">
+      <Container width="80vw" height="30vh" flexDirection="column" justifyContent="start" padding="5vh 0 0 0">
 
         {/* LINHA BANNER - TITULO - DESC */}
-        <Container width="80vw" height="10dvh" flexDirection="row" alignItems="center"> 
+        <Container width="80vw" height="10vh" flexDirection="row" alignItems="center"> 
           <div className='listaBanner'>
             <img src={Icon_quiz} alt="..."></img>
             <h3> Quizzes </h3>
@@ -44,15 +44,15 @@ const ListaQuizzes = () => {
         </Container>
 
         {/* LINHA FILTRO - BTN_BUSCAR */}
-        <Container className="wrapperResponsivo" width="80vw" height="10dvh" flexDirection="row" alignItems="center" gap="3dvh"> 
-          <Container width="40vw" height="10dvh" flexDirection="row" alignItems="center">
+        <Container className="wrapperResponsivo" width="80vw" height="10vh" flexDirection="row" alignItems="center" gap="3vh"> 
+          <Container width="40vw" height="10vh" flexDirection="row" alignItems="center">
             <div className='listaFiltro'>
               <ButtonFiltro className="active" texto="CSS" />
               <ButtonFiltro texto="SQL" />
             </div>
           </Container>
 
-          <Container className="forceJustifyStart" width="40vw" height="10dvh" flexDirection="row" alignItems="center" justifyContent="end">
+          <Container className="forceJustifyStart" width="40vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="end">
               <label htmlFor='txt_pesquisa' className='font_h5'> Pesquisar </label>
               <input id='txt_pesquisa' type='text' className='font_h6'></input>
               <Button cor="amarelo" texto="Buscar"/>
@@ -60,15 +60,15 @@ const ListaQuizzes = () => {
         </Container>
 
         {/* LINHA FILTRO MEUS QUIZZES - BTN_CRIAR_QUIZ */}
-        <Container className="wrapperResponsivo" width="80vw" height="10dvh" flexDirection="row" alignItems="center" gap="3dvh"> 
-          <Container width="40vw" height="10dvh" flexDirection="row" alignItems="center">
+        <Container className="wrapperResponsivo" width="80vw" height="10vh" flexDirection="row" alignItems="center" gap="3vh"> 
+          <Container width="40vw" height="10vh" flexDirection="row" alignItems="center">
             <div className='listaFiltro'>
               <ButtonFiltro className="active" texto="Todos os Quizzes" />
               <ButtonFiltro texto="Meus Quizzes" />
             </div>
           </Container>
 
-          <Container className="forceJustifyStart" width="40vw" height="10dvh" flexDirection="row" alignItems="center" justifyContent="end">
+          <Container className="forceJustifyStart" width="40vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="end">
             <div className='listaBotoesCrud'>
               <Link className='link' to="./novo"><Button cor="verde" texto="Criar Novo Quiz"/></Link>
             </div>
@@ -79,7 +79,7 @@ const ListaQuizzes = () => {
 
       
       {/* LINHA LISTA DE QUIZZES */}
-      <Container width="80vw" height="102dvh" flexDirection="row" alignItems="center" justifyContent="center" margin="1rem 0">
+      <Container width="80vw" height="102vh" flexDirection="row" alignItems="center" justifyContent="center" margin="1rem 0">
         <div className='listaCardQuizzes'>
           <div className='listaHeader'>
             <h6 style={{textAlign: 'center'}}>#</h6>
@@ -92,7 +92,7 @@ const ListaQuizzes = () => {
       </Container>
 
       {/* LINHA PAGINACAO */}
-      <Container width="80vw" height="10dvh" flexDirection="row" alignItems="center" justifyContent="space-between" margin="0 0 2rem 0">
+      <Container width="80vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="space-between" margin="0 0 2rem 0">
           <div className="totalResultados">
             <h6> 16 de 160 </h6>
           </div>

@@ -12,7 +12,7 @@ const Home = () => {
     <Container width="100vw" height="auto" flexDirection="column" alignItems="center">
       
       {/* NAVBAR */}
-      <Container width="80vw" height="10dvh">
+      <Container width="80vw" height="10vh">
         <Navbar />
       </Container>
 

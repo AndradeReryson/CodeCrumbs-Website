@@ -2,9 +2,9 @@
 
 .listaCardCriacaoFlashcard{
     width: 100%;
-    height: 75dvh;
+    height: 75vh;
     display: grid;
-    grid-auto-rows: 20dvh;
+    grid-auto-rows: 20vh;
     grid-template-columns: 1fr;
     gap: 2rem;
     overflow: auto;

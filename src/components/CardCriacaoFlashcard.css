@@ -1,6 +1,6 @@
 .CardCriacaoFlashcard{
     justify-self: center;
-    height: 20dvh;
+    height: 20vh;
     width: calc(90% - 4rem);
     padding: 0 2rem;
     border: 1px solid var(--cinzaClaro);
@@ -19,8 +19,8 @@
 
 .inserirTermo,
 .inserirDefinicao{
-    height: 17dvh;
-    padding: 1dvh 0;
+    height: 17vh;
+    padding: 1vh 0;
     width: 100%;
     padding: 3% 0;
     display: grid;

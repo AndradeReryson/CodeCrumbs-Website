@@ -2,9 +2,9 @@
 
 .listaCardCriacaoPergunta{
     width: 100%;
-    height: 90dvh;
+    height: 90vh;
     display: grid;
-    grid-auto-rows: 30dvh;
+    grid-auto-rows: 30vh;
     grid-template-columns: 1fr;
     grid-auto-rows: 1fr;
     gap: 3rem;

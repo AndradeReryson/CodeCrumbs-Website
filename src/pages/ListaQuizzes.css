@@ -12,7 +12,7 @@ input#txt_pesquisa{
     height: calc(100% - 2px);
     width: calc(100% - 2px);
     display: grid;
-    grid-template-rows: repeat(17, 6dvh);
+    grid-template-rows: repeat(17, 6vh);
 }
 
 .listaHeader{

@@ -57,7 +57,7 @@ Container.propTypes = {
 Container.defaultProps = {
     className:      '',
     width:          '80vw',
-    height:         '80dvh',
+    height:         '80vh',
     margin:         '0 0 0 0',
     padding:        '0 0 0 0',
     flexDirection:  'column',

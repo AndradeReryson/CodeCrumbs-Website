@@ -1,5 +1,5 @@
 .buttonDashboard{
-    height: 17dvh;
+    height: 17vh;
     width: 90%;
     background-color: var(--branco);
     border: 1px solid var(--preto);
@@ -23,7 +23,7 @@
 
     .buttonDashboard div{
         display: grid;
-        grid-template-rows: 10dvh 7dvh;
+        grid-template-rows: 10vh 7vh;
         align-items: start;
     }
 

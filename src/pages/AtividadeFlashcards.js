@@ -11,18 +11,18 @@ import FlashcardCartao from '../components/FlashcardCartao'
 const AtividadeFlashcards = () => {
   return (
     <div className='atividadeFlashcard'>
-			<Container width="80vw" height="85vh" flexDirection="column" justifyContent="start" padding="5dvh 0 0 0">
+			<Container width="80vw" height="85vh" flexDirection="column" justifyContent="start" padding="5vh 0 0 0">
 
 				{/* LINHA BANNER - TITULO DO BARALHO - BOTOES */}
-        <Container width="80vw" height="10dvh" flexDirection="row" alignItems="center"> 
-          <Container width="50vw" height="10dvh" flexDirection="row" alignItems="center">
+        <Container width="80vw" height="10vh" flexDirection="row" alignItems="center"> 
+          <Container width="50vw" height="10vh" flexDirection="row" alignItems="center">
             <div className='listaBanner'>
               <img src={Icon_flashcard} alt="..."></img>
               <h4> Alinhamento de texto e elementos no flex box </h4>
             </div>
           </Container>
 
-          <Container width="30vw" height="10dvh" flexDirection="row" alignItems="center" justifyContent="center">
+          <Container width="30vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="center">
             <div className='listaBannerBotoes'>
 							<Link className='link'>
                 <Button cor="branco" texto="editar"/>
@@ -35,12 +35,12 @@ const AtividadeFlashcards = () => {
         </Container>
 
 				{/* WRAPPER DO FLASHCARD */}
-        <Container width="80vw" height="60dvh" flexDirection="column" alignItems="center" justifyContent="center">
+        <Container width="80vw" height="60vh" flexDirection="column" alignItems="center" justifyContent="center">
 					<FlashcardCartao textoFrente="Alinha os elementos no eixo vertical da flex box" textoVerso="align-items" isFrente={true} />
 				</Container>
 
 				{/* BOTOES DO CARTAO */}
-				<Container width="80vw" height="10dvh" flexDirection="row" alignItems="center" justifyContent="center">
+				<Container width="80vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="center">
 					<div className='cartaoBotoes'>
 						<div className='cartaoBtnWrapper'>
 							<Button cor="rosa" texto="Errei"/>

@@ -31,10 +31,10 @@ const CriacaoExercicio = () => {
   }, [])
 
   return (
-    <Container width="80vw" height="85vh" flexDirection="column" justifyContent="start" padding="5dvh 0 0 0">
+    <Container width="80vw" height="85vh" flexDirection="column" justifyContent="start" padding="5vh 0 0 0">
       
       {/* LINHA BANNER - BOTAO VOLTAR - TEXTO NOVO EXERCICIO */}
-      <Container width="80vw" height="10dvh" flexDirection="row" alignItems="center">
+      <Container width="80vw" height="10vh" flexDirection="row" alignItems="center">
         <div className='listaBanner'>
           <ButtonVoltar />
           <img src={Icon_exercicio} alt="..."></img>
@@ -43,13 +43,13 @@ const CriacaoExercicio = () => {
       </Container>
 
       {/* LINHA ENUNCIADO + LINGUAGEM */}
-      <Container width="80vw" height="5dvh" flexDirection="row" alignItems="center" gap="4rem">
-        <Container width="60vw" height="5dvh" flexDirection="row" alignItems="center" justifyContent="start" gap="1rem">
+      <Container width="80vw" height="5vh" flexDirection="row" alignItems="center" gap="4rem">
+        <Container width="60vw" height="5vh" flexDirection="row" alignItems="center" justifyContent="start" gap="1rem">
           <label className='font_h5' htmlFor='input_enunciado'>Enunciado</label>
           <input className='font_h6 fillSpace' id='input_enunciado' />
         </Container>
 
-        <Container width="20vw" height="5dvh" flexDirection="row" alignItems="center" justifyContent="start" gap="1rem">
+        <Container width="20vw" height="5vh" flexDirection="row" alignItems="center" justifyContent="start" gap="1rem">
           <label className='font_h5' htmlFor='select_linguagem'>Linguagem</label>
           <select className='font_h6 fillSpace' id="select_linguagem">
             <option value="CSS" selected>CSS</option>
@@ -59,7 +59,7 @@ const CriacaoExercicio = () => {
       </Container>
 
       {/* WRAPPER DO CODIGO DO EXERCICIO */}
-      <Container width="80vw" height="55dvh" flexDirection="column" alignItems="center" justifyContent="center">
+      <Container width="80vw" height="55vh" flexDirection="column" alignItems="center" justifyContent="center">
         <div ref={divCodigo} className='codigoCriarExercicio'>
           <InputInvisivel id="inputLinha1"/>
           <InputInvisivel id="inputLinha2"/>
@@ -75,7 +75,7 @@ const CriacaoExercicio = () => {
       </Container>
 
       {/* BOTOES DO EXER */}
-      <Container width="80vw" height="10dvh" flexDirection="row" alignItems="center" justifyContent="space-between">
+      <Container width="80vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="space-between">
         <div className='lacunaRespostaBotoes'>
           <Button cor="branco" texto="Adicionar lacuna"/>
           <label className="font_h5" htmlFor='input_resposta'>Resposta</label>

@@ -5,32 +5,32 @@
 @media screen and (max-width: 769px){
     .container.wrapperResponsivo{
         flex-direction: column !important;
-        margin: 2dvh 0 !important;
+        margin: 2vh 0 !important;
     }   
         
         .container.wrapperResponsivo > .container{
             width: 80vw  !important;
         }
 
-        /* Esse tamanho de 10dvh costuma ser o container do filtro de linguagem / barra de pesquisa*/
-        .container.wrapperResponsivo .container[style~="10dvh;"]{
-            height: 10dvh !important;
+        /* Esse tamanho de 10vh costuma ser o container do filtro de linguagem / barra de pesquisa*/
+        .container.wrapperResponsivo .container[style~="10vh;"]{
+            height: 10vh !important;
         }
 
-        .container[style~="30dvh;"]{
-            height: 40dvh !important;
+        .container[style~="30vh;"]{
+            height: 40vh !important;
         }
 
-        .container[style~="40dvh;"]{
-            height: 40dvh !important;
+        .container[style~="40vh;"]{
+            height: 40vh !important;
         }
 
-        .container[style~="60dvh;"]{
-            height: 30dvh !important;
+        .container[style~="60vh;"]{
+            height: 30vh !important;
         }
 
-        .container[style~="90dvh;"]{
-            height: 70dvh !important;
+        .container[style~="90vh;"]{
+            height: 70vh !important;
         }   
 
     .forceAlignStart,

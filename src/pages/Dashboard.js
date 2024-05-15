@@ -7,9 +7,9 @@ import StatsDashboard from '../components/StatsDashboard'
 
 const Dashboard = () => {
   return (
-    <Container className="wrapperResponsivo" width="80vw" height="90dvh" flexDirection="row" justifyContent="space-between">
+    <Container className="wrapperResponsivo" width="80vw" height="90vh" flexDirection="row" justifyContent="space-between">
       
-      <Container width="38vw" height="60dvh">
+      <Container width="38vw" height="60vh">
         <h3> Atividades </h3>
         <div className="col-atividades">
           <ButtonDashboard link="../exercicios" titulo="Exercicios" descricao="Preencher lacunas" icone="exercicios"/>
@@ -18,7 +18,7 @@ const Dashboard = () => {
         </div>
       </Container>
       
-      <Container width="38vw" height="60dvh">
+      <Container width="38vw" height="60vh">
         <h3> Progresso </h3>
         <div className="col-dashboard">
           <StatsDashboard titulo="Exercicios Concluidos" valor="100%"/>

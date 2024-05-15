@@ -10,10 +10,10 @@ const Lander = () => {
   return (
     <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
       <Header />
-      <Container className="wrapperResponsivo forceJustifyStart" width="60vw" height="100dvh" flexDirection="column" alignItems="center" justifyContent="center">
+      <Container className="wrapperResponsivo forceJustifyStart" width="60vw" height="100vh" flexDirection="column" alignItems="center" justifyContent="center">
         
         {/* Linha com os dois formulários */}
-        <Container className="responsivoColumn forceJustifyBetween" width="60vw" height="40dvh" padding="0 5vw 0 5vw" margin="5vh 0 10vh 0" flexDirection="row" alignItems="start" justifyContent="space-between">
+        <Container className="responsivoColumn forceJustifyBetween" width="60vw" height="40vh" padding="0 5vw 0 5vw" margin="5vh 0 10vh 0" flexDirection="row" alignItems="start" justifyContent="space-between">
           <FormLogin />
           <FormCadastro />
         </Container>

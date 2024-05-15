@@ -1,5 +1,5 @@
 .cardBaralho{
-    height: 18dvh; 
+    height: 18vh; 
     width: 19vw;   /* 20vw: 19vw + 1vw de padding */
     display: grid;
     grid-template-columns: 1rem 1fr;
@@ -17,7 +17,7 @@
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
         background-color: var(--amarelo);
-        height: 18dvh;
+        height: 18vh;
         margin: 0;
         padding: 0;
         width: 10px;
@@ -26,8 +26,8 @@
     }
 
     .cardBaralho .tituloBaralho{
-        height: 8dvh;   /* total 9dvh:  8dvh de height + 1dvh de padding superior*/
-        padding: 1dvh 0.5vw;
+        height: 8vh;   /* total 9vh:  8vh de height + 1vh de padding superior*/
+        padding: 1vh 0.5vw;
         grid-row: 1 / 2;
         grid-column: 2 / 3;
         overflow-wrap: break-word;
@@ -36,8 +36,8 @@
     }
 
     .cardBaralho .infoBaralho{
-        height: 5dvh;   /* total 6dvh: 5dvh de height + 1dvh de padding superior */
-        padding: 1dvh 0.5vw;
+        height: 5vh;   /* total 6vh: 5vh de height + 1vh de padding superior */
+        padding: 1vh 0.5vw;
         grid-row: 2 / 3;
         grid-column: 2 /3;
         /**/
