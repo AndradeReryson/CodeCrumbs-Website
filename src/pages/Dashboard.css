@@ -7,3 +7,15 @@
     grid-template-rows: 1fr 1fr;
     gap: 1.5rem;
 }
+
+@media screen and (max-width: 769px){
+    .col-atividades,
+    .col-dashboard{
+        width: 90%;
+        /**/
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1.5rem;
+    }
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import '../components/general/Theme.css'
+import './ContainerBanner.css'
 import './AtividadeExercicio.css'
 import Container from '../components/Container'
 import Icon_exercicio from '../assets/icon_atv_exercicio.svg'

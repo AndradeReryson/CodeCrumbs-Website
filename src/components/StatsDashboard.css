@@ -25,3 +25,18 @@
         justify-content: center;
         text-align: center;
     }
+
+@media screen and (max-width: 769px){
+    .statsDashboard{
+        height: 15vw;
+        width: 100%;
+        background-color: var(--branco);
+        border: 1px solid var(--preto);
+        user-select: none;
+        
+        /**/
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+    }
+}

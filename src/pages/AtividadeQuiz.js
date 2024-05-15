@@ -1,5 +1,6 @@
 import React from 'react'
 import '../components/general/Theme.css'
+import './ContainerBanner.css'
 import './AtividadeQuiz.css'
 import Container from '../components/Container.js'
 import Icon_quiz from '../assets/icon_atv_quiz.svg'

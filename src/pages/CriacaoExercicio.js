@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import '../components/general/Theme.css'
 import './CriacaoExercicio.css'
+import './ContainerBanner.css'
 import Icon_exercicio from '../assets/icon_atv_exercicio.svg'
 import Button from '../components/Button'
 import ButtonVoltar from '../components/ButtonVoltar'

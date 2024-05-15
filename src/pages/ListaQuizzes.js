@@ -2,6 +2,7 @@ import React from 'react'
 import Icon_quiz from '../assets/icon_atv_quiz.svg'
 import Container from '../components/Container'
 import '../components/general/Theme.css'
+import './ContainerBanner.css'
 import './ListaQuizzes.css'
 import ButtonFiltro from '../components/ButtonFiltro'
 import Button from '../components/Button'
@@ -43,7 +44,7 @@ const ListaQuizzes = () => {
         </Container>
 
         {/* LINHA FILTRO - BTN_BUSCAR */}
-        <Container width="80vw" height="10dvh" flexDirection="row" alignItems="center" flexWrap="wrap"> 
+        <Container className="wrapperResponsivo" width="80vw" height="10dvh" flexDirection="row" alignItems="center" gap="3dvh"> 
           <Container width="40vw" height="10dvh" flexDirection="row" alignItems="center">
             <div className='listaFiltro'>
               <ButtonFiltro className="active" texto="CSS" />
@@ -51,7 +52,7 @@ const ListaQuizzes = () => {
             </div>
           </Container>
 
-          <Container width="40vw" height="10dvh" flexDirection="row" alignItems="center" justifyContent="end">
+          <Container className="forceJustifyStart" width="40vw" height="10dvh" flexDirection="row" alignItems="center" justifyContent="end">
               <label htmlFor='txt_pesquisa' className='font_h5'> Pesquisar </label>
               <input id='txt_pesquisa' type='text' className='font_h6'></input>
               <Button cor="amarelo" texto="Buscar"/>
@@ -59,7 +60,7 @@ const ListaQuizzes = () => {
         </Container>
 
         {/* LINHA FILTRO MEUS QUIZZES - BTN_CRIAR_QUIZ */}
-        <Container width="80vw" height="10dvh" flexDirection="row" alignItems="center" flexWrap="wrap"> 
+        <Container className="wrapperResponsivo" width="80vw" height="10dvh" flexDirection="row" alignItems="center" gap="3dvh"> 
           <Container width="40vw" height="10dvh" flexDirection="row" alignItems="center">
             <div className='listaFiltro'>
               <ButtonFiltro className="active" texto="Todos os Quizzes" />
@@ -67,12 +68,13 @@ const ListaQuizzes = () => {
             </div>
           </Container>
 
-          <Container width="40vw" height="10dvh" flexDirection="row" alignItems="center" justifyContent="end">
+          <Container className="forceJustifyStart" width="40vw" height="10dvh" flexDirection="row" alignItems="center" justifyContent="end">
             <div className='listaBotoesCrud'>
               <Link className='link' to="./novo"><Button cor="verde" texto="Criar Novo Quiz"/></Link>
             </div>
           </Container> 
         </Container>   
+
       </Container>
 
       

@@ -13,6 +13,13 @@
     text-align: start
 }
 
+    .form_cadastro label.conf_senha{
+        color: var(--black);
+        white-space: nowrap;
+        font-size: '6px';
+        line-height: '12px'
+    }
+
 .form_cadastro input,
 .form_login input{
     height: 1rem;
@@ -35,4 +42,33 @@
 .form_cadastro .useTwoColumns .button,
 .form_login .useTwoColumns .button{
     width: 50%;
+}
+
+@media screen and (max-width: 769px){
+    .form_cadastro,
+    .form_login{
+        height: 30dvh !important;
+        width: 60vw;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-auto-rows: 3dvh;
+        column-gap: 2dvh;
+        align-items: center;
+    }
+
+    .form_cadastro label,
+    .form_login label{
+        height: 3vw;
+        font-size: 3vw !important;
+        align-items: center;
+        text-align: start
+    }
+
+    .form_cadastro input,
+    .form_login input{
+        height: 3vw;
+        border: 2px solid #b7b7b7;
+        border-radius: 5px;
+        padding: 4px;
+    }
 }

@@ -69,30 +69,35 @@ h2, h3, h4, h5, h6{
 
 h2,
 .font_h2 {
+    color: var(--black);
     font-weight: 500;
     font-size: 42px;
 }
 
 h3,
 .font_h3 {
+    color: var(--black);
     font-weight: 600;
     font-size: 36px;
 }
 
 h4,
 .font_h4 {
+    color: var(--black);
     font-weight: 600;
     font-size: 30px;
 }
 
 h5,
 .font_h5 {
+    color: var(--black);
     font-weight: 500;
     font-size: 24px;
 }
 
 h6,
 .font_h6{
+    color: var(--black);
     font-weight: 400;
     font-size: 18px;
 }
@@ -102,6 +107,7 @@ h6,
 }
 
 input{
+    color: var(--black);
     height: 1rem;
     border: 2px solid var(--cinza);
     border-radius: 5px;
@@ -109,11 +115,13 @@ input{
 }
 
 input[type="color"]{
+    color: var(--black);
     height: 2rem;
     padding: 3px;
 }
 
 select{
+    color: var(--black);
     height: 2rem;
     border: 2px solid var(--cinza);
     border-radius: 5px;
@@ -128,7 +136,7 @@ input[type="checkbox"] {
     width: 1rem !important;
 }
 
-.link{
+    .link{
         text-decoration: none;
         color: none;
     }
@@ -143,30 +151,30 @@ input[type="checkbox"] {
     h2,
     .font_h2 {
         font-weight: 500;
-        font-size: 3.2vw /* 23px */;
+        font-size: 4.4vw /* 23px */;
     }
 
     h3,
     .font_h3 {
         font-weight: 600;
-        font-size: 2.6vw /* 18px */;
+        font-size: 3.8vw /* 18px */;
     }
 
     h4,
     .font_h4 {
         font-weight: 600;
-        font-size: 2.2vw /* 15px */;
+        font-size: 3.4vw /* 15px */;
     }
 
     h5,
     .font_h5 {
         font-weight: 500;
-        font-size: 1.8vw /* 12px */;
+        font-size: 3vw /* 12px */;
     }
 
     h6,
     .font_h6{
         font-weight: 400;
-        font-size: 1.3vw; /* 9px */;
+        font-size: 2.5vw; /* 9px */;
     }
 }

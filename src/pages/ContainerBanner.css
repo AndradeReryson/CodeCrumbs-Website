@@ -1,0 +1,93 @@
+/* LINHA DO BANNER */
+.listaBanner{
+    height: 100%;
+    width: 100%;
+    /**/
+    display: flex;
+    align-items: center;
+}
+
+    .listaBanner img{
+        height: 45px;
+        padding: 0.5rem 0;
+        user-select: none;
+    }
+
+    .listaBanner h3{
+        text-wrap: nowrap;
+        white-space: nowrap;
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .listaBanner h4{
+        text-wrap: nowrap;
+        white-space: nowrap;
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .listaBanner h6{
+        margin: 0;
+        padding: 0.8rem 0.5rem;
+        height: 18px;
+        line-height: 18px;
+    }
+
+.listaBannerBotoes{
+    height: 100%;
+    width: 100%;
+    /**/
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+    .listaBannerBotoes > .link {
+        margin: 0 0.5rem;
+    }
+
+    .listaBannerBotoes > .link{
+        text-decoration: none;
+        color: none;
+    }
+
+    .listaBannerBotoes > .link:active,
+    .listaBannerBotoes > .link:visited{
+        text-decoration: none;
+        color: none;
+    }
+
+.fillSpace {
+    width: 100%;
+}
+
+@media screen and (max-width: 769px){
+    .listaBanner{
+        height: 100%;
+        width: 100%;
+        /**/
+        display: flex;
+        align-items: center;
+    }
+    
+        .listaBanner img{
+            height: 10vw !important;
+            padding: 0.5vw 0 !important;
+            user-select: none;
+        }
+    
+        .listaBanner h3{
+            margin: 0 !important;
+            padding: 0.5rem;
+        }
+    
+        .listaBanner h6{
+            width: 100% !important;
+            text-align: end;
+            margin: 0;
+            padding: 1vw 0 !important;
+            height: 2.5vw !important;
+            line-height: 2.5vw !important;
+        }
+}

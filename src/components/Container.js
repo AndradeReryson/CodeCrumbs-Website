@@ -18,11 +18,11 @@ import './Container.css'
  * @param {Node} children recebe todos os elementos inseridos dentro da tag do componente
  * @returns 
  */
-const Container = ({width, height, margin, padding, flexDirection, justifyContent, alignItems, flexWrap, gap, children}) => {
+const Container = ({className, width, height, margin, padding, flexDirection, justifyContent, alignItems, flexWrap, gap, children}) => {
 
   return (
     <div 
-        className="container" 
+        className={"container "+className}
         style={{
           width: width, 
           height: height, 
@@ -41,6 +41,7 @@ const Container = ({width, height, margin, padding, flexDirection, justifyConten
 }
 
 Container.propTypes = {
+    className:      PropTypes.string,
     width:          PropTypes.string,
     height:         PropTypes.string,
     margin:         PropTypes.string,
@@ -54,6 +55,7 @@ Container.propTypes = {
 }
 
 Container.defaultProps = {
+    className:      '',
     width:          '80vw',
     height:         '80dvh',
     margin:         '0 0 0 0',

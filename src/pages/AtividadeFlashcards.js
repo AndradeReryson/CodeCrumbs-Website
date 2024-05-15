@@ -1,5 +1,6 @@
 import React from 'react'
 import '../components/general/Theme.css'
+import './ContainerBanner.css'
 import './AtividadeFlashcards.css'
 import Container from '../components/Container'
 import Icon_flashcard from '../assets/icon_atv_flashcards.svg'

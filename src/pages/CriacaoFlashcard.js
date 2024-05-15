@@ -1,5 +1,6 @@
 import React from 'react'
 import '../components/general/Theme.css'
+import './ContainerBanner.css'
 import './CriacaoFlashcard.css'
 import Icon_flashcard from '../assets/icon_atv_flashcards.svg'
 import Button from '../components/Button'

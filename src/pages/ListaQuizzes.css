@@ -31,3 +31,14 @@ input#txt_pesquisa{
     margin: 0;
     align-self: center;
 }
+
+@media screen and (max-width: 769px){
+    input#txt_pesquisa{
+        height: 2.5vw;
+        border: 2px solid #b7b7b7;
+        border-radius: 5px;
+        padding: 4px;
+        margin: 0 1rem;
+        width: 40%;
+    }
+}

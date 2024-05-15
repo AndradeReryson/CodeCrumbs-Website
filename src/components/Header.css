@@ -10,3 +10,10 @@
     height: 9vh;
     overflow:visible;
 }
+
+@media screen and (max-width: 769px){
+    .header .logo{
+        height: 5vh;
+        overflow:visible;
+    }
+}

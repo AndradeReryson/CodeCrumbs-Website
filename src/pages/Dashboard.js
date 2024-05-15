@@ -7,7 +7,7 @@ import StatsDashboard from '../components/StatsDashboard'
 
 const Dashboard = () => {
   return (
-    <Container width="80vw" height="90dvh" flexDirection="row" justifyContent="space-between">
+    <Container className="wrapperResponsivo" width="80vw" height="90dvh" flexDirection="row" justifyContent="space-between">
       
       <Container width="38vw" height="60dvh">
         <h3> Atividades </h3>
