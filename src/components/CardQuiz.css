@@ -16,11 +16,19 @@
         align-self: center;
     }
 
+    .cardQuiz .font_h6{
+        font-size: 16px;
+        white-space: wrap;
+        line-break: wrap;
+        line-height: 18px;
+        max-height: 36px;
+    }
+
     .cardQuiz .markConcluido{
         color: var(--verde);
         font-size: 1.5rem;
         font-weight: bolder;
-        padding: 0 1rem;
+        padding: 0 0.5rem;
         text-align: end;
     }
 
@@ -55,4 +63,56 @@
 .link:visited{
     text-decoration: none;
     color: var(--preto);
+}
+
+@media screen and (max-width: 769px){
+    .cardQuiz{
+        border-bottom: 1px solid black;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 10% 75% 15%;
+    }
+    
+    .cardQuiz:last-child{
+        border-bottom: none;
+    }
+    
+        .cardQuiz .quizNumero{
+            display: none;
+        }
+
+        .cardQuiz h6{
+            font-size: 3.5vw;
+            margin: 0;
+            align-self: center;
+        }
+
+        .cardQuiz .font_h6{
+            white-space: wrap;
+            line-break: wrap;
+            font-size: 3.2vw;
+            line-height: 3.2vw;
+            max-height: 9.6vw;
+        }
+    
+        .cardQuiz .markConcluido{
+            color: var(--verde);
+            font-size: 4vw;
+            font-weight: bolder;
+            padding: 0 2vw;
+            text-align: end;
+        }
+    
+        .cardQuiz .quizNumero,
+        .cardQuiz .markConcluido,
+        .cardQuiz .quizNota{
+            user-select: none;
+        }
+    
+        .cardQuiz .quizTitulo{
+            user-select: none;
+            cursor: pointer;
+        }
 }

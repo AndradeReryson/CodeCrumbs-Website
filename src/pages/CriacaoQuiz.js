@@ -10,9 +10,9 @@ import CardCriacaoPergunta from '../components/CardCriacaoPergunta'
 
 const CriacaoQuiz = () => {
   return (
-    <Container width="80vw" height="140vh" flexDirection="column" justifyContent="start" padding="5vh 0 0 0">
+    <Container className="containerConteudoCriacaoQuiz" width="80vw" height="140vh" flexDirection="column" justifyContent="start" padding="5vh 0 0 0">
         
-        {/* LINHA BANNER - BOTAO VOLTAR - TEXTO NOVO EXERCICIO */}
+        {/* LINHA BANNER - BOTAO VOLTAR */}
         <Container width="80vw" height="10vh" flexDirection="row" alignItems="center">
             <div className='listaBanner'>
             <ButtonVoltar />
@@ -22,7 +22,7 @@ const CriacaoQuiz = () => {
         </Container>
 
         {/* LINHA TITULO + LINGUAGEM */}
-        <Container width="80vw" height="10vh" flexDirection="row" alignItems="center" gap="4rem">
+        <Container className="divTituloLinguagem" width="80vw" height="10vh" flexDirection="row" alignItems="center" gap="4rem">
             <Container width="60vw" height="5vh" flexDirection="row" alignItems="center" justifyContent="start" gap="1rem">
             <label className='font_h5' htmlFor='input_quiz_titulo'>Titulo</label>
             <input className='font_h6 fillSpace' id='input_quiz_titulo' />
@@ -40,7 +40,7 @@ const CriacaoQuiz = () => {
         {/* LINHA ORIENTAÇÃO */}
         <Container width="80vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="space-between" gap="4rem">
             <h4>Perguntas</h4>
-            <h6>Clique na letra da alternativa para definir qual resposta é a correta</h6>
+            <h6 className='criacaoPerguntaDica'>Clique na letra da alternativa para definí-la como correta</h6>
         </Container>
 
         {/* WRAPPER CARDS DE CRIACAO */}

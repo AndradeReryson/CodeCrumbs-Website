@@ -10,7 +10,7 @@ import CardCriacaoFlashcard from '../components/CardCriacaoFlashcard'
 
 const CriacaoFlashcard = () => {
   return (
-    <Container width="80vw" height="130vh" flexDirection="column" justifyContent="start" padding="5vh 0 0 0">
+    <Container className="containerConteudoCriacaoFlashcard" width="80vw" height="130vh" flexDirection="column" justifyContent="start" padding="5vh 0 0 0">
 
       {/* LINHA BANNER - BOTAO VOLTAR - TEXTO NOVO EXERCICIO */}
       <Container width="80vw" height="10vh" flexDirection="row" alignItems="center">
@@ -22,7 +22,7 @@ const CriacaoFlashcard = () => {
       </Container>
 
       {/* LINHA TITULO + LINGUAGEM + COR*/}
-      <Container width="80vw" height="10vh" flexDirection="row" alignItems="center" gap="4rem">
+      <Container className="divEnunciadoLinguagemCor" width="80vw" height="10vh" flexDirection="row" alignItems="center" gap="4rem">
         <Container width="50vw" height="5vh" flexDirection="row" alignItems="center" justifyContent="start" gap="1rem">
           <label className='font_h5' htmlFor='input_titulo'>Titulo</label>
           <input className='font_h6 fillSpace' id='input_titulo' />

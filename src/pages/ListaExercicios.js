@@ -14,8 +14,8 @@ const ListaExercicios = () => {
   const gerarCards = () => {
     let lista_cards = []
 
-    for(let i = 0; i<16; i++){
-      lista_cards.push(<CardExercicio numero={i < 10 ? "#000"+(i+1) : "#00"+(i+1)} exercicio={i+1}/>)
+    for(let i = 0; i<10; i++){
+      lista_cards.push(<CardExercicio numero={i < 9 ? "#000"+(i+1) : "#00"+(i+1)} exercicio={i+1}/>)
     }
 
     return lista_cards;
@@ -53,7 +53,7 @@ const ListaExercicios = () => {
         </Container>
 
         {/* LINHA CARD DOS EXERCICIOS */}
-        <Container width="80vw" height="55vh" flexDirection="row" alignItems="center" justifyContent="center">
+        <Container width="80vw" height="55vh" flexDirection="column" alignItems="center" justifyContent="center">
           <div className='listaCardExercicio'>
             {gerarCards()}
           </div>
@@ -62,7 +62,7 @@ const ListaExercicios = () => {
         {/* LINHA PAGINACAO */}
         <Container width="80vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="space-between">
           <div className="totalResultados">
-            <h6> 16 de 160 </h6>
+            <h6> 10 de 100 </h6>
           </div>
 
           <div className="paginacaoResultado">

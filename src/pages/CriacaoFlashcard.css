@@ -7,5 +7,42 @@
     grid-auto-rows: 20vh;
     grid-template-columns: 1fr;
     gap: 2rem;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 769px){
+    input{
+        font-size: 3vw !important; 
+    }
+
+    .containerConteudoCriacaoFlashcard{
+        height: 150vh !important;
+    }
+
+    .divEnunciadoLinguagemCor{
+        flex-direction: column !important;
+        margin: 2vh 0 !important;
+        height: 19vh !important;    /* 15vh de altura (5vh de três linha) + 4vh do gap ( temos dois gaps)*/
+        gap: 2vh !important;
+        align-items: start !important;
+    }
+
+    .divEnunciadoLinguagemCor > .container{
+        width: 80vw  !important;
+    }
+
+    .listaCardCriacaoFlashcard{
+        width: 65vw;
+        height: 75vh;
+        border: 1px solid var(--cinzaClaro);
+        display: grid;
+        padding: 2vh 4vw;
+        grid-auto-rows: 30vh;
+        grid-template-columns: 1fr;
+        gap: 5vw;
+        overflow-x: hidden;
+        overflow-y: auto;
+        justify-content: center;
+    }
 }

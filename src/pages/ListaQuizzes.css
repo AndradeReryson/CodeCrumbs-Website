@@ -15,17 +15,17 @@ input#txt_pesquisa{
     grid-template-rows: repeat(17, 6vh);
 }
 
-.listaHeader{
-    background-color: var(--azul);
-    color: white;
-    /**/
-    border-bottom: 1px solid black;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 10% 5% 75% 10%;
-}
+    .listaHeader{
+        background-color: var(--azul);
+        color: white;
+        /**/
+        border-bottom: 1px solid black;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 10% 5% 75% 10%;
+    }
 
 .listaHeader h6{
     margin: 0;
@@ -38,7 +38,41 @@ input#txt_pesquisa{
         border: 2px solid #b7b7b7;
         border-radius: 5px;
         padding: 4px;
-        margin: 0 1rem;
+        margin: 0 2.5vw;
         width: 40%;
+    }
+
+    /*
+        SE AUMENTAR O TAMANHO DO TEMPLATE-ROW, MUDAR TAMBEM O TAMANHO DO CONTAINER QUE SEGURA ESSA LISTA -> "ListaQuizzes.js" 
+        NO CASO DA RESPONSIVIDADE, ALTERAR O TAMANHO DO CONTAINER QUANDO O SEU HEIGHT FOR 102VH (tamanho original) -> "Container.css"
+    */
+    .listaCardQuizzes{
+        border: 1px solid black;
+        height: calc(100% - 2px);
+        width: calc(100% - 2px);
+        display: grid;
+        grid-template-rows: repeat(17, 9vh);
+    }
+
+    .listaHeader{
+        background-color: var(--azul);
+        color: white;
+        /**/
+        border-bottom: 1px solid black;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 10% 75% 15%;
+    }
+
+        .listaHeader .headerColumnNumero{
+            display: none;
+        }
+
+    .listaHeader h6{
+        font-size: 3vw;
+        margin: 0;
+        align-self: center;
     }
 }

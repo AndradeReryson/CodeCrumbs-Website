@@ -7,6 +7,44 @@
     grid-auto-rows: 30vh;
     grid-template-columns: 1fr;
     grid-auto-rows: 1fr;
+    justify-content: center;
     gap: 3rem;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
+
+@media screen and (max-width: 769px){
+    .listaCardCriacaoPergunta{
+        width: 65vw;
+        height: 90vh;
+        padding: 2vh 4vw;
+        border: 1px solid var(--cinzaClaro);
+        display: grid;
+    }
+
+    input{
+        font-size: 3vw !important; 
+    }
+
+    .criacaoPerguntaDica{
+        text-align: right;
+    }
+
+    .containerConteudoCriacaoQuiz{
+        height: 160vh !important;
+    }
+
+    .divTituloLinguagem{
+        flex-direction: column !important;
+        margin: 2vh 0 !important;
+        height: 12vh !important;    /* 12vh de altura (5vh de duas linhas) + 2vh do gap */
+        gap: 2vh !important;
+        align-items: start !important;
+    }
+
+    .divTituloLinguagem > .container{
+        width: 80vw  !important;
+    }
+}
+
+

@@ -1,14 +1,15 @@
 /* LINHA DA LISTA DE CARDS DOS EXERCICIOS */
 .listaCardBaralho{
-    width: 100%;
-    height: calc(36vh + 2rem);
-    padding: 5% 0;
+    width: fit-content;
+    padding: 2vh 2vh;
     display: grid;
     grid-template-columns: repeat(3, 20vw);
     grid-template-rows: 18vh 18vh;
     gap: 2rem;
     align-items: center;
     justify-content: center;
+    overflow-y: hidden;
+    overflow-x: auto;
 }
 
 /* LINHA DA PAGINACAO */
@@ -16,6 +17,8 @@
     width: 10vw;
     border-radius: 5px;
     border: 1px solid var(--preto);
+    text-wrap: none;
+    white-space: nowrap;
     /**/
     display: flex;
     justify-content: center;
@@ -29,4 +32,22 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+@media screen and (max-width: 769px){
+    .listaCardBaralho{
+        border: 1px solid var(--cinzaClaro);
+        height: 45vh;
+        width: fit-content;
+        padding: 2vh 3vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        row-gap: 4vw;
+        align-items: center;
+        justify-content: center;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
 }

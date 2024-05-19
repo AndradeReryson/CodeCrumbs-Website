@@ -11,6 +11,10 @@
         margin: 0 0.5rem 0 0;
     }
 
+    .listaFiltro .button-filtro:last-child{
+        margin: 0 0 0 0.5rem;
+    }
+
 
     .button-filtro{
         color: var(--preto);
@@ -37,7 +41,7 @@
 @media screen and (max-width: 769px){
     .button-filtro{
         min-width: 10vw;
-        height: 3.5vw;
+        height: 5vw;
         color: var(--preto);
         padding: 3px 3vw;
         text-align: center;
@@ -46,9 +50,14 @@
         box-shadow: 1px 1px 5px var(--cinza);
         user-select: none;
         cursor: pointer;
+        /**/
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .button-filtro h6{
+        text-wrap: nowrap;
         white-space: nowrap;
         margin: 0;
         font-weight: 500;

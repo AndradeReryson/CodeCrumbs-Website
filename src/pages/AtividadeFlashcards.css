@@ -24,7 +24,7 @@
 
 /* LINHA DOS BOTÕES DE LEMBREI, GIRAR e ESQUECI */
 .cartaoBotoes{
-    width: 35vw;
+    width: 60%;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);

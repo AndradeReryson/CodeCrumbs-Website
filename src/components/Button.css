@@ -64,10 +64,11 @@
 @media screen and (max-width: 769px){
 
     .button{
+        width: fit-content;
         min-width: 10vw;
-        height: 3.5vw;
+        height: 5vw;
         border-radius: 12px;
-        padding: 3px 3vw;
+        padding: 3px 4vw;
         text-align: center;
         box-shadow: 2px 3px 4px var(--cinzaEscuro);
         font-weight: 500;

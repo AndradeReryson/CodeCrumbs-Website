@@ -20,7 +20,7 @@ const ListaQuizzes = () => {
           
           quiz={i+1}
           numero={(i+1) < 10 ? "#000"+(i+1) : "#00"+(i+1)}
-          titulo="PLACEHOLDER Alinhamento de texto e elementos flexbox" 
+          titulo="PLACEHOLDER Alinhamento de texto e elementos flexbox de texto e elementos flexbox" 
           concluido={i < 4 ? true : false}
           nota={i < 4 ? Math.floor((i+1)*10)+"%" : "--"}
         />
@@ -32,7 +32,7 @@ const ListaQuizzes = () => {
 
   return (
     <div className='listaQuizzes'>
-      <Container width="80vw" height="30vh" flexDirection="column" justifyContent="start" padding="5vh 0 0 0">
+      <Container width="80vw" height="30vh" flexDirection="column" justifyContent="start" padding="5vh 0 0 0" gap="1vh">
 
         {/* LINHA BANNER - TITULO - DESC */}
         <Container width="80vw" height="10vh" flexDirection="row" alignItems="center"> 
@@ -44,15 +44,15 @@ const ListaQuizzes = () => {
         </Container>
 
         {/* LINHA FILTRO - BTN_BUSCAR */}
-        <Container className="wrapperResponsivo" width="80vw" height="10vh" flexDirection="row" alignItems="center" gap="3vh"> 
-          <Container width="40vw" height="10vh" flexDirection="row" alignItems="center">
+        <Container className="wrapperResponsivo" width="80vw" height="10vh" flexDirection="row" alignItems="center" gap="1vh" > 
+          <Container className="forceJustifyStart" width="40vw" height="10vh" flexDirection="row" alignItems="center">
             <div className='listaFiltro'>
               <ButtonFiltro className="active" texto="CSS" />
               <ButtonFiltro texto="SQL" />
             </div>
           </Container>
 
-          <Container className="forceJustifyStart" width="40vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="end">
+          <Container className="forceJustifyStart" width="40vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="end" padding="1vh 0 0 0">
               <label htmlFor='txt_pesquisa' className='font_h5'> Pesquisar </label>
               <input id='txt_pesquisa' type='text' className='font_h6'></input>
               <Button cor="amarelo" texto="Buscar"/>
@@ -60,15 +60,15 @@ const ListaQuizzes = () => {
         </Container>
 
         {/* LINHA FILTRO MEUS QUIZZES - BTN_CRIAR_QUIZ */}
-        <Container className="wrapperResponsivo" width="80vw" height="10vh" flexDirection="row" alignItems="center" gap="3vh"> 
-          <Container width="40vw" height="10vh" flexDirection="row" alignItems="center">
+        <Container className="wrapperResponsivo" width="80vw" height="10vh" flexDirection="row" alignItems="center" gap="1vh"> 
+          <Container className="forceJustifyStart" width="40vw" height="10vh" flexDirection="row" alignItems="center">
             <div className='listaFiltro'>
               <ButtonFiltro className="active" texto="Todos os Quizzes" />
               <ButtonFiltro texto="Meus Quizzes" />
             </div>
           </Container>
 
-          <Container className="forceJustifyStart" width="40vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="end">
+          <Container className="forceJustifyStart" width="40vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="end" padding="1vh 0 0 0">
             <div className='listaBotoesCrud'>
               <Link className='link' to="./novo"><Button cor="verde" texto="Criar Novo Quiz"/></Link>
             </div>
@@ -82,10 +82,10 @@ const ListaQuizzes = () => {
       <Container width="80vw" height="102vh" flexDirection="row" alignItems="center" justifyContent="center" margin="1rem 0">
         <div className='listaCardQuizzes'>
           <div className='listaHeader'>
-            <h6 style={{textAlign: 'center'}}>#</h6>
-            <h6>{" "}</h6>
-            <h6>Nome</h6>
-            <h6 style={{textAlign: 'center'}}>Nota</h6>
+            <h6 className='headerColumnNumero'style={{textAlign: 'center'}}>#</h6>
+            <h6 className='headerColumnMark'>{" "}</h6>
+            <h6 className='headerColumnTitulo'>Titulo</h6>
+            <h6 className='headerColumnNota' style={{textAlign: 'center'}}>Nota</h6>
           </div>
           {gerarCards()}
         </div>

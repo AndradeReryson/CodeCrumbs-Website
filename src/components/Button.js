@@ -56,5 +56,8 @@ const Button = ({className, cor, texto}) => {
   )
 }
 
+Button.defaultProps = {
+  className: ""
+}
 
 export default Button

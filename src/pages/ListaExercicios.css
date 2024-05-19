@@ -1,16 +1,15 @@
 /* LINHA DA LISTA DE CARDS DOS EXERCICIOS */
 .listaCardExercicio{
-    width: 100%;
-    height: calc(45vh + 2rem);
-    padding: 5% 0;
+    width: fit-content;
+    padding: 2vh 2vh;
     display: grid;
-    grid-template-columns: repeat(8, 13vh);
-    grid-template-rows: 13vh 13vh;
-    gap: 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    column-gap: 3vw;
+    row-gap: 2vw;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: auto;
 }
 
@@ -19,6 +18,8 @@
     width: 10vw;
     border-radius: 5px;
     border: 1px solid var(--preto);
+    text-wrap: none;
+    white-space: nowrap;
     /**/
     display: flex;
     justify-content: center;
@@ -32,4 +33,22 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+@media screen and (max-width: 769px){
+    .listaCardExercicio{
+        border: 1px solid var(--cinzaClaro);
+        width: fit-content;
+        padding: 4vh 4vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        column-gap: 5vw;
+        row-gap: 6vw;
+        align-items: center;
+        justify-content: center;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
 }

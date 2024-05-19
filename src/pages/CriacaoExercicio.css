@@ -13,10 +13,64 @@
 
 /* LINHA DOS BOTÕES DE ENVIAR RESPOSTA E VER RESPOSTA */
 .lacunaRespostaBotoes{
-    width: auto;
+    width: 100%;
     height: 100%;
     display: flex;
     gap: 2rem;
     align-items: center;
 }
 
+@media screen and (max-width: 769px){
+    input,
+    select.font_h6{
+        font-size: 3vw !important; 
+    }
+
+    .lacunaRespostaBotoes{
+        gap: 2vw !important; 
+        justify-content: end !important;
+    }
+
+        .lacunaRespostaBotoes > input{
+            justify-content: end !important;
+            width: 35vw;
+        }
+    
+    /* Abaixo Mudando a estrutura dos containers*/
+
+    .containerConteudoCriacaoExercicio{
+        height: 100vh !important;
+    }
+    
+    .divExercEnunciadoLinguagem{
+        flex-direction: column !important;
+        margin: 2vh 0 !important;
+        height: 12vh !important;    /* 10vh de altura + 2vh do gap */
+        gap: 2vh !important;
+        align-items: start !important;
+    }
+
+        .divExercEnunciadoLinguagem > .container{
+            width: 80vw  !important;
+        }
+        
+
+    .divLacunaResposta{
+        flex-direction: column !important;
+        margin: 2vh 0 !important;
+        height: 14vh !important;    /* 10vh de altura + 4vh do gap */
+        gap: 4vh !important;
+        align-items: start !important;
+    }
+    
+        /* os filhos da div lacuna são duas divs sem estilizacao*/
+        .divLacunaResposta > :first-child{
+            justify-content: start !important;
+        }
+
+        .divLacunaResposta > :nth-child(2){
+            width: 100%;
+            display: flex;
+            justify-content: end !important;
+        }
+}
