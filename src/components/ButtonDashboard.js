@@ -32,7 +32,7 @@ const ButtonDashboard = ({titulo, descricao, icone, link}) => {
         <h4>{titulo}</h4>
         <h6>{descricao}</h6>
       </div>
-      <img src={getIconeByNome(icone)} alt="..." />
+      <img className="imgIcone" src={getIconeByNome(icone)} alt="..." />
       
     </div>
   );

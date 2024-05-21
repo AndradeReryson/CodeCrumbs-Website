@@ -2,6 +2,7 @@ import Logo from '../assets/logo_CodeCrumbs.svg'
 import './general/Theme.css'
 import "./Navbar.css"
 import ButtonNav from './ButtonNav'
+import ButtonCorTema from './ButtonCorTema'
 import { useLocation, Link } from 'react-router-dom'
 
 /**
@@ -47,14 +48,19 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
 
-        <div className="col-usuario">
+        <div className="nav-col-usuario">
+          <div style={{display: 'flex', alignItems: 'center'}}>
             <div className='foto-perfil'>
-                <h5>R</h5>
+              <h5>R</h5>
             </div>
             <h6> RerysonAndrade</h6>
+          </div>
+          <div>
+            <ButtonCorTema />
+          </div>
         </div>
 
-        <div className="col-navegacao">
+        <div className="nav-col-navegacao">
             <Link className="link" to="/home/dashboard">
               <ButtonNav className={getActive("Dashboard")} texto="Dashboard" />
             </Link>
@@ -76,7 +82,11 @@ const Navbar = () => {
             </Link>
         </div>
 
-        <img src={Logo} className="logo" alt="Logo da plataforma CodeCrumbs, onde as letras são Azuis, fundo transparente e um par de chaves (Simbolo matemático) de cor amarelo pêra se localiza entre as palavras 'Code' e 'Crumbs'"/>
+        <div className='nav-col-logo'>
+          <ButtonCorTema />
+        </div>
+
+        
         
         
     </nav>

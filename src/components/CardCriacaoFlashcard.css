@@ -29,8 +29,43 @@
     align-items: center;
 }
 
+/************** ALTO CONTRASTE *********************/
+
+    #root.altoContraste .CardCriacaoFlashcard{
+        justify-self: center;
+        height: 20vh;
+        width: calc(90% - 4rem);
+        padding: 0 2rem;
+        border: 1px solid var(--branco);
+        box-shadow: none;
+        border-radius: 15px;
+        display: grid;
+        grid-template-columns: 1rem 1fr 1fr;
+        align-items: center;
+        gap: 2rem;
+    }
+
+        #root.altoContraste .CardCriacaoFlashcard h4{
+            margin: 0;
+            text-align: center;
+        }
+
+    #root.altoContraste .inserirTermo,
+    #root.altoContraste .inserirDefinicao{
+        height: 17vh;
+        padding: 1vh 0;
+        width: 100%;
+        padding: 3% 0;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+    
+/***************************************************/
 @media screen and (max-width: 769px){
-    .CardCriacaoFlashcard{
+    .CardCriacaoFlashcard,
+    #root.altoContraste .CardCriacaoFlashcard{
         justify-self: center;
         height: 26vh;
         width: 60vw;
@@ -42,13 +77,16 @@
         row-gap: 1vh;
     }
 
-        .CardCriacaoFlashcard h4{
+        .CardCriacaoFlashcard h4,
+        #root.altoContraste .CardCriacaoFlashcard h4{
             align-self: start !important;
             font-size: 5vw;
         }
 
     .inserirTermo,
-    .inserirDefinicao{
+    .inserirDefinicao,
+    #root.altoContraste .inserirTermo,
+    #root.altoContraste .inserirDefinicao{
         height: 12vh;
         padding: 1vh 0;
         width: 54vw !important;
@@ -58,25 +96,33 @@
         grid-template-columns: 1fr;
         align-items: center;
     }
-        .inserirTermo{
+        .inserirTermo,
+        #root.altoContraste .inserirTermo{
             grid-row: 1 / 2;
             grid-column: 2 / 3;
         }
 
-        .inserirDefinicao{
+        .inserirDefinicao,
+        #root.altoContraste .inserirDefinicao{
             grid-row: 2 / 3;
             grid-column: 2 / 3;
         }
 
         .inserirTermo > label,
-        .inserirDefinicao > label{
+        .inserirDefinicao > label,
+        #root.altoContraste .inserirTermo > label,
+        #root.altoContraste .inserirDefinicao > label{
             align-self: flex-end;
         }
 
         .inserirTermo > input,
         .inserirTermo > label,
         .inserirDefinicao > input,
-        .inserirDefinicao > label{
+        .inserirDefinicao > label,
+        #root.altoContraste .inserirTermo > input,
+        #root.altoContraste .inserirTermo > label,
+        #root.altoContraste .inserirDefinicao > input,
+        #root.altoContraste .inserirDefinicao > label{
             width: 90%;
         }
 }

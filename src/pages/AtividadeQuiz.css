@@ -46,3 +46,98 @@
         justify-content: center;
     }
 
+@media screen and (max-width: 769px){
+    input{
+        font-size: 3vw !important; 
+    }
+
+    .containerConteudoAtividadeQuiz{
+        height: 110vh !important;
+    }
+
+        .divAtividadeQuizBannerBotoes{
+            flex-direction: column !important;
+            margin: 2vh 0 0 0 !important;
+            height: 22vh !important;    /* 20vh de altura (10vh de duas linhas) + 2vh do gap*/
+            gap: 2vh !important;
+            align-items: start !important;
+        }
+
+        .divAtividadeQuizBannerBotoes > .container{
+            width: 80vw  !important;
+        }
+
+    .containerWrapperPerguntasQuiz{
+        height: 70vh !important;
+        display: flex;
+        align-items: center;
+    }
+
+    .wrapperPerguntas{
+        height: 60vh;
+        width: 100%;
+        /**/
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5vh 10vh 10vh 10vh 10vh;
+        gap: 3vh;
+        /**/
+        align-items: center !important;
+    }
+
+        .linhaPergunta{
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .colunaResposta1{
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .colunaResposta2{
+            grid-row: 3 / 4;
+            grid-column: 1 / 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .colunaResposta3{
+            grid-row: 4 / 5;
+            grid-column: 1 / 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .colunaResposta4{
+            grid-row: 5 / 6;
+            grid-column: 1 / 2;
+            display: flex;
+            justify-content: center;
+        }
+    
+    .divNumerosPerguntas{
+        flex-direction: column !important;
+        margin: 2vh 0 0 0 !important;
+        height: 20vh !important;    /* 20vh de altura (10vh de duas linhas) + 2vh do gap*/
+        align-items: start !important;
+    }
+
+        .divNumerosPerguntas > :nth-child(1){
+            width: 80vw !important;
+            align-items: center !important;
+        }
+
+        .divNumerosPerguntas > :nth-child(2){
+            width: 80vw !important;
+            align-items: center !important;
+        }
+
+        .divNumerosPerguntas > :nth-child(2) .button.font_h6 h6{
+            font-size: 3.5vw !important;
+        }
+}

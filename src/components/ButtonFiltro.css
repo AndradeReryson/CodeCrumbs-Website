@@ -38,16 +38,44 @@
         color: white;
     }
 
+/************** ALTO CONTRASTE *********************/
+
+    #root.altoContraste .button-filtro{
+        color: var(--branco);
+        padding: 0 2rem;
+        text-align: center;
+        border-radius: 10px;
+        border: 1px solid var(--branco);
+        box-shadow: none;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    #root.altoContraste .button-filtro h6{
+        color: var(--branco);
+        margin: 0;
+    }
+
+    #root.altoContraste .button-filtro.active{
+        border: none;
+        box-shadow: none;
+        background-color: var(--branco);
+    }
+
+    #root.altoContraste .button-filtro.active h6{
+        color: var(--preto);
+    }
+
+/***************************************************/
+
 @media screen and (max-width: 769px){
-    .button-filtro{
+    .button-filtro,
+    #root.altoContraste .button-filtro{
         min-width: 10vw;
         height: 5vw;
-        color: var(--preto);
         padding: 3px 3vw;
         text-align: center;
         border-radius: 12px;
-        border: 1px solid var(--preto);
-        box-shadow: 1px 1px 5px var(--cinza);
         user-select: none;
         cursor: pointer;
         /**/
@@ -56,7 +84,9 @@
         justify-content: center;
     }
 
-    .button-filtro h6{
+    .button-filtro h6,
+    #root.altoContraste .button-filtro h6{
+        font-size: 3vw !important;
         text-wrap: nowrap;
         white-space: nowrap;
         margin: 0;

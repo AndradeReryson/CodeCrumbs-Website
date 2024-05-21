@@ -1,0 +1,44 @@
+@media screen and (max-width: 769px){
+    .conteudoLander{
+        width: 80vw !important;
+        height: 170vh !important;
+        flex-direction: column !important;
+        justify-content: start !important;
+        display: grid !important;
+        grid-template-rows: 90vh 75vh !important;
+        gap: 5vh !important; 
+        align-items: start !important;
+        justify-content: center !important;
+        overflow: hidden;
+    }
+
+    .divFormulariosCadastroLogin{
+        height: 90vh !important;
+        flex-direction: column !important;
+        align-items: center;
+        display: grid !important;
+        grid-template-rows: 40vh 40vh !important;
+        margin: 0;
+        gap: 5vh !important;
+        
+    }
+
+    .container.responsivoHide{
+        display: none !important;
+    }
+
+    .divInformativoSistema{
+        height: 80vh !important;
+        display: grid !important;
+        grid-template-rows: 20vh 20vh 20vh;
+        gap: 5vh !important;
+        
+    }
+
+        .divInformativoSistema > div {
+            width: 60vw !important;
+            display: grid !important;
+            grid-template-columns: 1fr 2fr;
+            align-items: center !important;
+        }
+}

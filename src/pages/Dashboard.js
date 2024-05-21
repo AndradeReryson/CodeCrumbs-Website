@@ -1,13 +1,14 @@
 import React from 'react'
 import Container from '../components/Container'
 import '../components/general/Theme.css'
+import '../components/general/ContrastTheme.css'
 import "./Dashboard.css"
 import ButtonDashboard from '../components/ButtonDashboard'
 import StatsDashboard from '../components/StatsDashboard'
 
 const Dashboard = () => {
   return (
-    <Container className="wrapperResponsivo" width="80vw" height="90vh" flexDirection="row" justifyContent="space-between">
+    <Container className="containerConteudoDashboard" width="80vw" height="90vh" flexDirection="row" justifyContent="space-between">
       
       <Container width="38vw" height="60vh">
         <h3> Atividades </h3>
@@ -27,8 +28,6 @@ const Dashboard = () => {
           <StatsDashboard titulo="Linguagem Favorita" valor="CSS"/>
         </div>
       </Container>
-      
-
     </Container>
   )
 }

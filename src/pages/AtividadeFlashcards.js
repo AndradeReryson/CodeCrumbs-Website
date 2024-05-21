@@ -1,5 +1,6 @@
 import React from 'react'
 import '../components/general/Theme.css'
+import '../components/general/ContrastTheme.css'
 import './ContainerBanner.css'
 import './AtividadeFlashcards.css'
 import Container from '../components/Container'
@@ -11,19 +12,19 @@ import FlashcardCartao from '../components/FlashcardCartao'
 const AtividadeFlashcards = () => {
   return (
     <div className='atividadeFlashcard'>
-			<Container width="80vw" height="85vh" flexDirection="column" justifyContent="start" padding="5vh 0 0 0">
+			<Container className="containerConteudoAtividadeFlashcard" width="80vw" height="90vh" flexDirection="column" justifyContent="start" padding="5vh 0 0 0">
 
 				{/* LINHA BANNER - TITULO DO BARALHO - BOTOES */}
-        <Container width="80vw" height="10vh" flexDirection="row" alignItems="center"> 
-          <Container width="50vw" height="10vh" flexDirection="row" alignItems="center">
+        <Container width="80vw" height="20vh" flexDirection="column" alignItems="center"> 
+          <Container width="80vw" height="10vh" flexDirection="row" alignItems="center">
             <div className='listaBanner'>
-              <img src={Icon_flashcard} alt="..."></img>
+              <img className="imgIcone" src={Icon_flashcard} alt="..."/>
               <h4> Alinhamento de texto e elementos no flex box </h4>
             </div>
           </Container>
 
-          <Container width="30vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="center">
-            <div className='listaBannerBotoes'>
+          <Container width="80vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="center">
+            <div className='listaBannerBotoesAtvFlashcard'>
 							<Link className='link'>
                 <Button cor="branco" texto="editar"/>
               </Link>
@@ -35,7 +36,7 @@ const AtividadeFlashcards = () => {
         </Container>
 
 				{/* WRAPPER DO FLASHCARD */}
-        <Container width="80vw" height="60vh" flexDirection="column" alignItems="center" justifyContent="center">
+        <Container className="divCartaoAtividadeFlashcard" width="80vw" height="50vh" flexDirection="column" alignItems="center" justifyContent="center">
 					<FlashcardCartao textoFrente="Alinha os elementos no eixo vertical da flex box" textoVerso="align-items" isFrente={true} />
 				</Container>
 

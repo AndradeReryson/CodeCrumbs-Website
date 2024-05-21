@@ -46,4 +46,35 @@
     .buttonResposta.selecionado .radioBorder .radioFill{
         background-color: var(--branco);
     }
-    
+
+@media screen and (max-width: 769px){
+    .buttonResposta{
+        width: calc(90% - 6vw);
+        padding: 0 3vw;
+        background-color: var(--branco);
+        border: 1px solid var(--preto);
+        border-radius: 15px;
+        box-shadow: 2px 3px 4px var(--cinza);
+        cursor: pointer;
+        user-select: none;
+        /**/
+        display: grid;
+        grid-template-columns: 1fr 9fr;
+        gap: 2vw;
+        align-items: center;
+    }
+
+        .buttonResposta .respostaTexto h6{
+            font-size: 3vw !important;
+        }
+
+        .radioBorder{
+            height: 4vw;
+            width: 4vw;
+        }
+
+        .radioFill{
+            width: 3vw;
+            height: 3vw;
+        }
+}

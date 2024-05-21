@@ -21,3 +21,10 @@
     background-color: var(--azul);
     color: var(--branco);
 }
+
+@media screen and (max-width: 769px){
+    .numeroPergunta{
+        height: 8vw;
+        width: 8vw;
+    }
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import Icon_exercicio from '../assets/icon_atv_exercicio.svg'
 import Container from '../components/Container'
 import '../components/general/Theme.css'
+import '../components/general/ContrastTheme.css'
 import './ContainerBanner.css'
 import './ListaExercicios.css'
 import ButtonFiltro from '../components/ButtonFiltro'
@@ -28,7 +29,7 @@ const ListaExercicios = () => {
         {/* LINHA BANNER - TITULO - DESC */}
         <Container width="80vw" height="10vh" flexDirection="row" alignItems="center"> 
           <div className='listaBanner'>
-            <img src={Icon_exercicio} alt="..."></img>
+            <img className="imgIcone" src={Icon_exercicio} alt="..."/>
             <h3> Exercicios </h3>
             <h6> Preencha as lacunas e aprimore seus conhecimentos </h6>
           </div>

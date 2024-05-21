@@ -37,7 +37,7 @@ const IconeGrande = ({nomeIcone}) => {
 
   return (
     <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-		<img className="iconeGrande" alt={getAltText(nomeIcone)} src={getIconSVGByName(nomeIcone)}/>
+		<img className="imgIcone iconeGrande" alt={getAltText(nomeIcone)} src={getIconSVGByName(nomeIcone)}/>
     </div>
   )
 }

@@ -11,7 +11,7 @@
 
     .button-nav > h6 {
         white-space: nowrap;
-        font-size: 14px;
+        font-size: 1vw;
         margin: 0;
     }
 
@@ -22,21 +22,54 @@
     color: white;
 }
 
-@media screen and (max-width: 769px){
-    .button-nav{
-        width: 90%;
-        color: var(--preto);
-        padding: 0 1vw;
+/************** ALTO CONTRASTE *********************/
+
+    #root.altoContraste .button-nav{
+        width: calc(100% - 2rem);
+        color: var(--amarelo-contraste);
+        padding: 0 1rem;
         text-align: center;
-        border: 1px solid var(--preto);
-        box-shadow: 1px 1px 5px var(--cinza);
+        border: 1px solid var(--branco);
+        box-shadow: none;
         user-select: none;
         cursor: pointer;
     }
 
-        .button-nav > h6 {
+    #root.altoContraste .button-nav > h6 {
+        color: var(--amarelo-contraste);
+        white-space: nowrap;
+        font-size: 1vw;
+        margin: 0;
+    }
+
+    #root.altoContraste .button-nav.active{
+        border: none;
+        box-shadow: none;
+        background-color: var(--branco);
+    }
+
+    #root.altoContraste .button-nav.active h6{
+        color: var(--preto)
+    }
+
+/***************************************************/
+
+@media screen and (max-width: 769px){
+    .button-nav,
+    #root.altoContraste .button-nav{
+        width: 90%;
+        color: var(--preto);
+        padding: 0 1vw;
+        text-align: center;
+        user-select: none;
+        cursor: pointer;
+    }
+
+        .button-nav > h6,
+        #root.altoContraste .button-nav > h6{
             white-space: nowrap;
             font-size: 3vw;
             margin: 0;
         }
+        
 }

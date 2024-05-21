@@ -1,7 +1,7 @@
 /* CARTAO */
 .elemCartao{
     height: 40vh;
-    width: 35vw;
+    width: 40vw;
     border-radius: 15px;
     border: 1px solid var(--cinzaClaro);
     box-shadow: 2px 2px 4px var(--cinzaClaro);
@@ -29,4 +29,21 @@
 
 .faceInvisivel{
     display: none;
+}
+
+@media screen and (max-width: 769px){
+    .elemCartao{
+        height: 30vh !important;
+        width: 60vw !important;
+    }
+
+    .elemCartao h4{
+        font-size: 3.8vw;
+    }
+
+    .elemCartao h5{
+        font-size: 4vw;
+        text-align: center;
+        width: 40vw;
+    }
 }

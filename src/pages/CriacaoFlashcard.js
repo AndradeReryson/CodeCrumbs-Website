@@ -1,5 +1,6 @@
 import React from 'react'
 import '../components/general/Theme.css'
+import '../components/general/ContrastTheme.css'
 import './ContainerBanner.css'
 import './CriacaoFlashcard.css'
 import Icon_flashcard from '../assets/icon_atv_flashcards.svg'
@@ -16,7 +17,7 @@ const CriacaoFlashcard = () => {
       <Container width="80vw" height="10vh" flexDirection="row" alignItems="center">
         <div className='listaBanner'>
           <ButtonVoltar />
-          <img src={Icon_flashcard} alt="..."></img>
+          <img className="imgIcone" src={Icon_flashcard} alt="..."/>
           <h3> Novo Baralho de Flashcards </h3>
         </div>
       </Container>

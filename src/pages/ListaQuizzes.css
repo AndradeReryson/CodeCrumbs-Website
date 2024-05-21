@@ -33,6 +33,7 @@ input#txt_pesquisa{
 }
 
 @media screen and (max-width: 769px){
+
     input#txt_pesquisa{
         height: 2.5vw;
         border: 2px solid #b7b7b7;
@@ -42,10 +43,33 @@ input#txt_pesquisa{
         width: 40%;
     }
 
-    /*
-        SE AUMENTAR O TAMANHO DO TEMPLATE-ROW, MUDAR TAMBEM O TAMANHO DO CONTAINER QUE SEGURA ESSA LISTA -> "ListaQuizzes.js" 
-        NO CASO DA RESPONSIVIDADE, ALTERAR O TAMANHO DO CONTAINER QUANDO O SEU HEIGHT FOR 102VH (tamanho original) -> "Container.css"
-    */
+    .conteudoListaQuizzes{
+        height: 50vh !important;
+    }
+
+    .divListaQuizzesFiltroBusca,
+    .divListaQuizzesMeusQuizzes{
+        flex-direction: column !important;
+        height: 16vh !important;
+    }
+
+        .divListaQuizzesFiltroBusca > :nth-child(1),
+        .divListaQuizzesMeusQuizzes > :nth-child(1){
+            height: 7vh !important;
+            width: 80vw !important;
+        }
+
+        .divListaQuizzesFiltroBusca > :nth-child(2),
+        .divListaQuizzesMeusQuizzes > :nth-child(2){
+            height: 7vh !important;
+            width: 80vw !important;
+            justify-content: start !important;
+        }
+
+    .divListaCardsQuiz{
+        height: 153vh !important;
+    }
+
     .listaCardQuizzes{
         border: 1px solid black;
         height: calc(100% - 2px);
@@ -57,7 +81,7 @@ input#txt_pesquisa{
     .listaHeader{
         background-color: var(--azul);
         color: white;
-        /**/
+
         border-bottom: 1px solid black;
         box-sizing: border-box;
         width: 100%;

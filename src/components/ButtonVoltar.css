@@ -20,14 +20,28 @@
         margin: 0;
     }
 
+/************** ALTO CONTRASTE *********************/
+    
+        #root.altoContraste .buttonVoltar h6,
+        #root.altoContraste .buttonVoltar h4{
+            color: var(--branco);
+            font-weight: 600;
+            padding: 0;
+            margin: 0;
+        }
+
+/***************************************************/
+
 @media screen and (max-width: 769px){
-    .buttonVoltar h4{
+    .buttonVoltar h4,
+    #root.altoContraste .buttonVoltar h4{
         line-height: 6vw;
         font-size: 6vw;
         align-self: end;
     }
 
-    .buttonVoltar h6{
+    .buttonVoltar h6,
+    #root.altoContraste{
         font-size: 3vw;
         align-self: start;
     }

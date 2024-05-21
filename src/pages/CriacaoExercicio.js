@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import '../components/general/Theme.css'
+import '../components/general/ContrastTheme.css'
 import './CriacaoExercicio.css'
 import './ContainerBanner.css'
 import Icon_exercicio from '../assets/icon_atv_exercicio.svg'
@@ -37,7 +38,7 @@ const CriacaoExercicio = () => {
       <Container width="80vw" height="10vh" flexDirection="row" alignItems="center">
         <div className='listaBanner'>
           <ButtonVoltar />
-          <img src={Icon_exercicio} alt="..."></img>
+          <img className="imgIcone" src={Icon_exercicio} alt="..."/>
           <h3> Novo Exercicio </h3>
         </div>
       </Container>

@@ -1,0 +1,59 @@
+.buttonCorTema{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--cinza);
+    box-shadow: 2px 2px 2px var(--cinzaEscuro);
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .iconeInternoTema{
+        height: 1.5rem;
+        width: 1.5rem;
+        filter: var(--iconeAzul)
+    }
+
+/************** ALTO CONTRASTE *********************/
+
+    #root.altoContraste .iconeInternoTema{
+        height: 1.5rem;
+        width: 1.5rem;
+        filter: contrast(0) brightness(100)
+    }
+
+    #root.altoContraste .buttonCorTema{
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        border: 1px solid var(--branco);
+        box-shadow: none;
+        user-select: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+/***************************************************/
+
+@media screen and (max-width: 769px){
+    .buttonCorTema,
+    #root.altoContraste .buttonCorTema{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 7vw;
+        width: 7vw;
+    }
+
+    .iconeInternoTema,
+    #root.altoContraste .iconeInternoTema{
+        height: 5vw;
+        width: 5vw;
+    }
+
+}

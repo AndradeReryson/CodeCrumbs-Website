@@ -2,6 +2,7 @@ import React from 'react'
 import Icon_flashcard from '../assets/icon_atv_flashcards.svg'
 import Container from '../components/Container'
 import '../components/general/Theme.css'
+import '../components/general/ContrastTheme.css'
 import './ContainerBanner.css'
 import './ListaFlashCards.css'
 import ButtonFiltro from '../components/ButtonFiltro'
@@ -28,7 +29,7 @@ const ListaFlashCards = () => {
         {/* LINHA BANNER - TITULO - DESC */}
         <Container width="80vw" height="10vh" flexDirection="row" alignItems="center"> 
           <div className='listaBanner'>
-            <img src={Icon_flashcard} alt="..."></img>
+            <img className="imgIcone" src={Icon_flashcard} alt="..."/>
             <h3> Flash Cards </h3>
             <h6> Crie cartões de memorização para auxiliar nos estudos </h6>
           </div>

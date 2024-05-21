@@ -2,6 +2,7 @@ import React from 'react'
 import Icon_quiz from '../assets/icon_atv_quiz.svg'
 import Container from '../components/Container'
 import '../components/general/Theme.css'
+import '../components/general/ContrastTheme.css'
 import './ContainerBanner.css'
 import './ListaQuizzes.css'
 import ButtonFiltro from '../components/ButtonFiltro'
@@ -32,27 +33,27 @@ const ListaQuizzes = () => {
 
   return (
     <div className='listaQuizzes'>
-      <Container width="80vw" height="30vh" flexDirection="column" justifyContent="start" padding="5vh 0 0 0" gap="1vh">
+      <Container className="conteudoListaQuizzes" width="80vw" height="30vh" flexDirection="column" justifyContent="start" padding="5vh 0 0 0">
 
         {/* LINHA BANNER - TITULO - DESC */}
         <Container width="80vw" height="10vh" flexDirection="row" alignItems="center"> 
           <div className='listaBanner'>
-            <img src={Icon_quiz} alt="..."></img>
+            <img className="imgIcone" src={Icon_quiz} alt="..."/>
             <h3> Quizzes </h3>
             <h6> Teste seu conhecimento e prepare-se para provas </h6>
           </div>
         </Container>
 
         {/* LINHA FILTRO - BTN_BUSCAR */}
-        <Container className="wrapperResponsivo" width="80vw" height="10vh" flexDirection="row" alignItems="center" gap="1vh" > 
-          <Container className="forceJustifyStart" width="40vw" height="10vh" flexDirection="row" alignItems="center">
+        <Container className="divListaQuizzesFiltroBusca" width="80vw" height="10vh" flexDirection="row" alignItems="center" > 
+          <Container width="40vw" height="10vh" flexDirection="row" alignItems="center">
             <div className='listaFiltro'>
               <ButtonFiltro className="active" texto="CSS" />
               <ButtonFiltro texto="SQL" />
             </div>
           </Container>
 
-          <Container className="forceJustifyStart" width="40vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="end" padding="1vh 0 0 0">
+          <Container width="40vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="end" padding="1vh 0 0 0">
               <label htmlFor='txt_pesquisa' className='font_h5'> Pesquisar </label>
               <input id='txt_pesquisa' type='text' className='font_h6'></input>
               <Button cor="amarelo" texto="Buscar"/>
@@ -60,15 +61,15 @@ const ListaQuizzes = () => {
         </Container>
 
         {/* LINHA FILTRO MEUS QUIZZES - BTN_CRIAR_QUIZ */}
-        <Container className="wrapperResponsivo" width="80vw" height="10vh" flexDirection="row" alignItems="center" gap="1vh"> 
-          <Container className="forceJustifyStart" width="40vw" height="10vh" flexDirection="row" alignItems="center">
+        <Container className="divListaQuizzesMeusQuizzes" width="80vw" height="10vh" flexDirection="row" alignItems="center"> 
+          <Container width="40vw" height="10vh" flexDirection="row" alignItems="center">
             <div className='listaFiltro'>
               <ButtonFiltro className="active" texto="Todos os Quizzes" />
               <ButtonFiltro texto="Meus Quizzes" />
             </div>
           </Container>
 
-          <Container className="forceJustifyStart" width="40vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="end" padding="1vh 0 0 0">
+          <Container width="40vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="end" padding="1vh 0 0 0">
             <div className='listaBotoesCrud'>
               <Link className='link' to="./novo"><Button cor="verde" texto="Criar Novo Quiz"/></Link>
             </div>
@@ -79,7 +80,7 @@ const ListaQuizzes = () => {
 
       
       {/* LINHA LISTA DE QUIZZES */}
-      <Container width="80vw" height="102vh" flexDirection="row" alignItems="center" justifyContent="center" margin="1rem 0">
+      <Container className="divListaCardsQuiz" width="80vw" height="102vh" flexDirection="row" alignItems="center" justifyContent="center" margin="1rem 0">
         <div className='listaCardQuizzes'>
           <div className='listaHeader'>
             <h6 className='headerColumnNumero'style={{textAlign: 'center'}}>#</h6>

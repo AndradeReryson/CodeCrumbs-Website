@@ -1,5 +1,6 @@
 import React from 'react'
 import '../components/general/Theme.css'
+import '../components/general/ContrastTheme.css'
 import './ContainerBanner.css'
 import './CriacaoQuiz.css'
 import Icon_quiz from '../assets/icon_atv_quiz.svg'
@@ -16,7 +17,7 @@ const CriacaoQuiz = () => {
         <Container width="80vw" height="10vh" flexDirection="row" alignItems="center">
             <div className='listaBanner'>
             <ButtonVoltar />
-            <img src={Icon_quiz} alt="..."></img>
+            <img className="imgIcone" src={Icon_quiz} alt="..."/>
             <h3> Novo Quiz </h3>
             </div>
         </Container>

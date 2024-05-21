@@ -28,7 +28,7 @@
 
 @media screen and (max-width: 769px){
     .statsDashboard{
-        height: 15vw;
+        height: 10vh;
         width: 100%;
         background-color: var(--branco);
         border: 1px solid var(--preto);

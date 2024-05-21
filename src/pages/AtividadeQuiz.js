@@ -1,5 +1,6 @@
 import React from 'react'
 import '../components/general/Theme.css'
+import '../components/general/ContrastTheme.css'
 import './ContainerBanner.css'
 import './AtividadeQuiz.css'
 import Container from '../components/Container.js'
@@ -21,13 +22,13 @@ const AtividadeQuiz = () => {
   }
   return (
     <div className='atividadeQuiz'>
-      <Container width="80vw" height="85vh" flexDirection="column" justifyContent="start" padding="5vh 0 0 0">
+      <Container className="containerConteudoAtividadeQuiz" width="80vw" height="85vh" flexDirection="column" justifyContent="start" padding="5vh 0 0 0">
         
         {/* LINHA BANNER - TITULO DO QUIZ - BOTOES */}
-        <Container width="80vw" height="10vh" flexDirection="row" alignItems="center"> 
+        <Container className="divAtividadeQuizBannerBotoes" width="80vw" height="10vh" flexDirection="row" alignItems="center"> 
           <Container width="50vw" height="10vh" flexDirection="row" alignItems="center">
             <div className='listaBanner'>
-              <img src={Icon_quiz} alt="..."></img>
+              <img className="imgIcone" src={Icon_quiz} alt="..."/>
               <h4> Alinhamento de textos e elementos flexbox </h4>
             </div>
           </Container>
@@ -43,7 +44,7 @@ const AtividadeQuiz = () => {
         </Container>
 
         {/* WRAPPER DAS PERGUNTAS E RESPOSTAS */}
-        <Container width="80vw" height="60vh" flexDirection="column" alignItems="center" justifyContent="center">
+        <Container className="containerWrapperPerguntasQuiz" width="80vw" height="60vh" flexDirection="column" alignItems="center" justifyContent="center">
           <div className="wrapperPerguntas">
             <div className='linhaPergunta'>
               <h5> No CSS, como selecionamos um elemento pelo seu id? </h5>
@@ -64,8 +65,8 @@ const AtividadeQuiz = () => {
         </Container>
 
         {/* LINHA NUMERO PERGUNTA - BOTAO PROXIMA PERGUNTA */}
-        <Container width="80vw" height="10vh" flexDirection="row" alignItems="center">
-
+        <Container className="divNumerosPerguntas" width="80vw" height="10vh" flexDirection="row" alignItems="center">
+          
           <Container width="60vw" height="10vh" flexDirection="row" alignItems="end" justifyContent="start">
             {gerarNumeros()}
           </Container>
@@ -73,6 +74,7 @@ const AtividadeQuiz = () => {
           <Container width="20vw" height="10vh" flexDirection="row" alignItems="end" justifyContent="end">
             <Button cor="branco" texto="Próxima &#10137;"/>
           </Container>
+
         </Container>
       </Container>
     </div>

@@ -16,6 +16,7 @@ const FlashcardCartao = ({textoFrente, textoVerso, isFrente}) => {
 		} else {
 			return (
 				<>
+					<h4 className='indicadorFace'>VERSO</h4>
 					<h5 className='frenteCartao faceInvisivel'>{textoFrente}</h5>
 					<h5 className='versoCartao'>{textoVerso}</h5>
 				</>

@@ -61,16 +61,15 @@
     color: #000000;
 }
 
-@media screen and (max-width: 769px){
+/************** ALTO CONTRASTE *********************/
 
-    .button{
-        width: fit-content;
-        min-width: 10vw;
-        height: 5vw;
+    #root.altoContraste .button{
+        height: 28px;
         border-radius: 12px;
-        padding: 3px 4vw;
+        border: 1px solid var(--branco);
+        padding: 3px 2rem;
         text-align: center;
-        box-shadow: 2px 3px 4px var(--cinzaEscuro);
+        box-shadow: none;
         font-weight: 500;
         cursor: pointer;
         /**/
@@ -78,10 +77,48 @@
         align-items: center;
     }
 
-    .button h6{
+    #root.altoContraste .button h6{
+        color: var(--amarelo-contraste);
+    }
+
+    #root.altoContraste .buttonBranco,
+    #root.altoContraste .buttonAzul,
+    #root.altoContraste .buttonAmarelo,
+    #root.altoContraste .buttonVerde,
+    #root.altoContraste .buttonRosa,
+    #root.altoContraste .buttonCinza{
+        background-color: var(--preto);
+        color: var(--amarelo-contraste);
+    }
+
+/***************************************************/
+
+@media screen and (max-width: 769px){
+
+    .button,
+    #root.altoContraste .button{
+        width: fit-content;
+        min-width: 10vw;
+        height: 5vw;
+        border-radius: 12px;
+        padding: 3px 4vw;
+        text-align: center;
+        box-shadow: 1px 2px 2px var(--cinzaEscuro);
+        font-weight: 500;
+        cursor: pointer;
+        /**/
+        display: flex;
+        align-items: center;
+    }
+
+    .button h6,
+    #root.altoContraste .button h6{
+        font-size: 3vw !important;
         width: 100%;
         white-space: nowrap;
         margin: 2px 0 0 0;
         font-weight: 500;
     }
+
+
 }

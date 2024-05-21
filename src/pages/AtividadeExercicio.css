@@ -30,3 +30,30 @@
     align-items: center;
 }
 
+@media screen and (max-width: 769px){
+    input{
+        font-size: 3vw !important; 
+    }
+
+    .containerConteudoAtividadeExercicio{
+        height: 110vh !important;
+    }
+
+    .divAtividadeExercBannerBotoes{
+        flex-direction: column-reverse !important;
+        margin: 2vh 0 0 0 !important;
+        height: 22vh !important;    /* 20vh de altura (10vh de duas linhas) + 2vh do gap*/
+        gap: 2vh !important;
+        align-items: start !important;
+    }
+
+    .divAtividadeExercBannerBotoes > .container{
+        width: 80vw  !important;
+    }
+
+    .listaBannerBotoesAtvExercicio{
+        display: flex !important;
+        justify-content: center !important;
+        gap: 2vw;
+    }
+}

@@ -1,5 +1,7 @@
 import React from 'react'
 import '../components/general/Theme.css'
+import '../components/general/DarkTheme.css'
+import '../components/general/ContrastTheme.css'
 import './ContainerBanner.css'
 import './AtividadeExercicio.css'
 import Container from '../components/Container'
@@ -12,27 +14,27 @@ import TabSpace from '../components/TabSpace'
 const AtividadeExercicio = () => {
   return (
     <div className='atividadeExercicio'>
-			<Container width="80vw" height="85vh" flexDirection="column" justifyContent="start" padding="5vh 0 0 0">
+			<Container className="containerConteudoAtividadeExercicio" width="80vw" height="85vh" flexDirection="column" justifyContent="start" padding="5vh 0 0 0">
 
 				{/* LINHA BANNER - LINGUAGEM + NUMERO EXERCICIO - BOTOES */}
-        <Container width="80vw" height="10vh" flexDirection="row" alignItems="center"> 
+        <Container className="divAtividadeExercBannerBotoes" width="80vw" height="10vh" flexDirection="row" alignItems="center"> 
           <Container width="30vw" height="10vh" flexDirection="row" alignItems="center">
             <div className='listaBanner'>
-              <img src={Icon_exercicio} alt="..."></img>
+              <img className="imgIcone" src={Icon_exercicio} alt="..."/>
               <h4> CSS - #0002 </h4>
             </div>
           </Container>
 
           <Container width="50vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="center">
-            <div className='listaBannerBotoes'>
+            <div className='listaBannerBotoesAtvExercicio'>
 							<Link className='link'>
-                <Button cor="branco" texto="&larr;"/>
+                <Button cor="branco" texto="<"/>
               </Link>
               <Link className='link' to="/home/exercicios">
                 <Button cor="azul" texto="Todos os Exercicios"/>
               </Link>
 							<Link className='link'>
-                <Button cor="branco" texto="&rarr;"/>
+                <Button cor="branco" texto=">"/>
               </Link>
             </div>
           </Container>

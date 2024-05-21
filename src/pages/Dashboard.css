@@ -18,4 +18,24 @@
         grid-template-rows: 1fr 1fr;
         gap: 1.5rem;
     }
+
+    .containerConteudoDashboard{
+        height: 70vh !important;
+        flex-direction: column !important;
+        margin: 2vh 0 0 0 !important;
+        padding: 3vh 0 0 0 !important;
+        align-items: start !important;
+        justify-content: start !important;
+        gap: 5vh !important;
+    }
+
+    .containerConteudoDashboard > :nth-child(1),
+    .containerConteudoDashboard > :nth-child(2){
+        height: 35vh !important;
+        overflow-y: hidden;
+    }
+
+    .containerConteudoDashboard > .container{
+        width: 80vw  !important;
+    }
 }
