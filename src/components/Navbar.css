@@ -76,6 +76,15 @@
     align-items: center;
 }
 
+/************** ALTO CONTRASTE *********************/
+
+    /* 
+        Não foi necessário alterar nada no contraste,
+        pois os componentes do navbar possuem sua propria
+        estilização. 
+    */
+/***************************************************/
+
 @media screen and (max-width: 769px){
     .navbar{
         width: 100%;

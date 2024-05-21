@@ -5,3 +5,13 @@
     padding: 4px;
     text-align: center;
 }
+
+/************** ALTO CONTRASTE *********************/
+
+#root.altoContraste .inputLacuna{
+    height: 1rem;
+    border: 2px solid var(--branco);
+    border-radius: 5px;
+    padding: 4px;
+    text-align: center;
+}

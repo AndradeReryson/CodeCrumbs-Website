@@ -47,14 +47,70 @@
         background-color: var(--branco);
     }
 
+/************** ALTO CONTRASTE *********************/
+
+    #root.altoContraste .buttonResposta{
+        height: 10vh;
+        width: 90%;
+        background-color: var(--preto);
+        border: 1px solid var(--branco);
+        border-radius: 15px;
+        box-shadow: none;
+        cursor: pointer;
+        user-select: none;
+        /**/
+        display: grid;
+        grid-template-columns: 1fr 9fr;
+        gap: 1rem;
+        align-items: center;
+    }
+
+        #root.altoContraste .radioBorder{
+            justify-self: center;
+            height: 1.5rem;
+            width: 1.5rem;
+            border-radius: 50%;
+            border: 1px solid var(--branco);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #root.altoContraste .radioFill{
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: transparent;
+        }
+
+    #root.altoContraste .buttonResposta.selecionado{
+        border: none;
+        box-shadow: none;
+        background-color: var(--branco);
+        color: var(--preto)
+    }
+
+    #root.altoContraste .buttonResposta.selecionado h6{
+        color: var(--preto)
+    }
+    
+        #root.altoContraste .buttonResposta.selecionado .radioBorder{
+            border: 1px solid var(--preto);
+            background-color: var(--preto);
+        }
+    
+        #root.altoContraste .buttonResposta.selecionado .radioBorder .radioFill{
+            background-color: var(--branco);
+        }
+
+/***************************************************/
+
 @media screen and (max-width: 769px){
-    .buttonResposta{
+    .buttonResposta,
+    #root.altoContraste .buttonResposta{
         width: calc(90% - 6vw);
         padding: 0 3vw;
-        background-color: var(--branco);
-        border: 1px solid var(--preto);
         border-radius: 15px;
-        box-shadow: 2px 3px 4px var(--cinza);
         cursor: pointer;
         user-select: none;
         /**/
@@ -64,16 +120,19 @@
         align-items: center;
     }
 
-        .buttonResposta .respostaTexto h6{
+        .buttonResposta .respostaTexto h6,
+        #root.altoContraste .buttonResposta .respostaTexto h6{
             font-size: 3vw !important;
         }
 
-        .radioBorder{
+        #root.altoContraste .radioBorder,
+        #root.altoContraste .radioBorder{
             height: 4vw;
             width: 4vw;
         }
 
-        .radioFill{
+        #root.altoContraste .radioFill,
+        #root.altoContraste .radioFill{
             width: 3vw;
             height: 3vw;
         }

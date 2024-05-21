@@ -53,14 +53,72 @@
         user-select: none;
     }
 
+/************** ALTO CONTRASTE *********************/
+
+    #root.altoContraste .cardExercicio{
+        justify-self: center;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 15px;
+        border: 1px solid var(--branco);
+        background-color: var(--preto);
+        box-shadow: none;
+        /**/
+        display: grid;
+        grid-template-rows: 4rem 2rem;
+        align-items: center;
+        user-select: none;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+        #root.altoContraste .cardExercicio .cardSimbolo{
+            height: 4rem;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #root.altoContraste .cardExercicio .cardSimbolo h3{
+            align-self: center;
+            height: 2rem;
+            line-height: 36px;
+            text-align: center;
+            margin: 0;
+            user-select: none;
+        }
+
+        #root.altoContraste .cardExercicio .cardNumero{
+            border-top: 1px solid var(--branco);
+            height: 2rem;
+            background-color: var(--preto);
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        #root.altoContraste .cardExercicio .cardNumero .font_h6{
+            color: var(--amarelo-contraste);
+            font-weight: 500;
+            text-align: center;
+            margin: 0;
+            user-select: none;
+        }
+
+/***************************************************/
+
 @media screen and (max-width: 769px){
-    .cardExercicio{
+    .cardExercicio,
+    #root.altoContraste .cardExercicio{
         height: 15vw;
         width: 25vw;
         border-radius: 15px;
-        border: 1px solid var(--preto);
-        background-color: var(--branco);
-        box-shadow: 2px 2px 4px var(--cinza);
         /**/
         display: grid;
         grid-template-columns: 1fr;
@@ -71,7 +129,8 @@
         overflow: hidden;
     }
     
-        .cardExercicio .cardSimbolo{
+        .cardExercicio .cardSimbolo,
+        #root.altoContraste .cardExercicio .cardSimbolo{
             height: 9vw;
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
@@ -81,7 +140,8 @@
             justify-content: center;
         }
 
-            .cardExercicio .cardSimbolo h3{
+            .cardExercicio .cardSimbolo h3,
+            #root.altoContraste .cardExercicio .cardSimbolo h3{
                 font-size: 5vw;
                 height: 2rem;
                 line-height: 36px;
@@ -91,10 +151,9 @@
                 user-select: none;
             }
 
-        .cardExercicio .cardNumero{
+        .cardExercicio .cardNumero,
+        #root.altoContraste .cardExercicio .cardNumer{
             height: 6vw;
-            border-top: 1px solid var(--preto);
-            background-color: var(--amarelo);
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
             display: flex;
@@ -103,7 +162,8 @@
             
         }
 
-        .cardExercicio .cardNumero .font_h6{
+        .cardExercicio .cardNumero .font_h6,
+        #root.altoContraste .cardExercicio .cardNumero .font_h6{
             font-size: 4vw;
             font-weight: 500;
             text-align: center;

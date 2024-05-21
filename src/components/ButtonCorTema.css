@@ -1,6 +1,6 @@
 .buttonCorTema{
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     border: 1px solid var(--cinza);
     box-shadow: 2px 2px 2px var(--cinzaEscuro);
@@ -12,22 +12,22 @@
 }
 
     .iconeInternoTema{
-        height: 1.5rem;
-        width: 1.5rem;
+        height: 1.2rem;
+        width: 1.2rem;
         filter: var(--iconeAzul)
     }
 
 /************** ALTO CONTRASTE *********************/
 
     #root.altoContraste .iconeInternoTema{
-        height: 1.5rem;
-        width: 1.5rem;
+        height: 1.2rem;
+        width: 1.2rem;
         filter: contrast(0) brightness(100)
     }
 
     #root.altoContraste .buttonCorTema{
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2rem;
+        height: 2rem;
         border-radius: 50%;
         border: 1px solid var(--branco);
         box-shadow: none;
@@ -46,14 +46,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 7vw;
-        width: 7vw;
+        height: 5vw;
+        width: 5vw;
     }
 
     .iconeInternoTema,
     #root.altoContraste .iconeInternoTema{
-        height: 5vw;
-        width: 5vw;
+        height: 3vw;
+        width: 3vw;
     }
 
 }

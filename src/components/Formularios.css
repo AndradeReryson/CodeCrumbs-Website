@@ -32,6 +32,7 @@
 .form_login .useTwoColumns{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .form_cadastro button,
@@ -40,15 +41,49 @@
     padding: 0;
 }
 
-.form_cadastro .useTwoColumns .button,
-.form_login .useTwoColumns .button{
-    background-color: var(--azul);
-    width: 50%;
-}
+
+
+/************** ALTO CONTRASTE *********************/
+    #root.altoContraste .form_cadastro input,
+    #root.altoContraste .form_login input{
+        height: 1rem;
+        border: 2px solid var(--branco);
+        border-radius: 5px;
+        padding: 4px;
+    }
+
+    #root.altoContraste .form_cadastro label,
+    #root.altoContraste .form_login label{
+        text-align: start
+    }
+
+        #root.altoContraste .form_cadastro label.conf_senha{
+            color: var(--branco);
+            white-space: nowrap;
+            font-size: '6px';
+            line-height: '12px'
+        }
+
+    #root.altoContraste .form_cadastro .useTwoColumns,
+    #root.altoContraste .form_login .useTwoColumns{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #root.altoContraste .form_cadastro button,
+    #root.altoContraste .form_login button{
+        padding: 0;
+    }
+        
+
+/***************************************************/
 
 @media screen and (max-width: 769px){
     .form_cadastro,
-    .form_login{
+    .form_login,
+    #root.altoContraste .form_cadastro,
+    #root.altoContraste .form_login{
         height: 30vh !important;
         width: 60vw;
         display: grid;
@@ -60,7 +95,9 @@
     }
 
     .form_cadastro label,
-    .form_login label{
+    .form_login label,
+    #root.altoContraste .form_cadastro label,
+    #root.altoContraste .form_login label{
         height: 3vw;
         font-size: 3vw !important;
         align-items: center;
@@ -68,9 +105,10 @@
     }
 
     .form_cadastro input,
-    .form_login input{
+    .form_login input,
+    #root.altoContraste .form_cadastro input,
+    #root.altoContraste .form_login input{
         height: 3vw;
-        border: 2px solid #b7b7b7;
         border-radius: 5px;
         padding: 4px;
     }

@@ -28,20 +28,58 @@
     }
 
 .faceInvisivel{
-    display: none;
+    visibility: hidden;
 }
 
+/************** ALTO CONTRASTE *********************/
+
+    #root.altoContraste .elemCartao{
+        height: 40vh;
+        width: 40vw;
+        border-radius: 15px;
+        border: 1px solid var(--cinzaClaro);
+        box-shadow: 2px 2px 4px var(--cinzaClaro);
+        /**/
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        text-wrap: wrap;
+    }
+
+        #root.altoContraste .elemCartao h4{
+            top: 0rem;
+            left: 0.5rem;
+            color: var(--cinzaClaro);
+            position: absolute;
+        }
+
+        #root.altoContraste .elemCartao h5{
+            width: 30vw;
+            text-align: center;
+        }
+
+    #root.altoContraste .faceInvisivel{
+        visibility: hidden;
+    }
+
+/***************************************************/
 @media screen and (max-width: 769px){
-    .elemCartao{
+    .elemCartao,
+    #root.altoContraste .elemCartao{
         height: 30vh !important;
         width: 60vw !important;
     }
 
-    .elemCartao h4{
+    .elemCartao h4,
+    #root.altoContraste .elemCartao h4{
         font-size: 3.8vw;
     }
 
-    .elemCartao h5{
+    .elemCartao h5,
+    #root.altoContraste .elemCartao h5{
         font-size: 4vw;
         text-align: center;
         width: 40vw;

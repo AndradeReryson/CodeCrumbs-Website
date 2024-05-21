@@ -1,4 +1,31 @@
 
+/*********** SCROLLBAR ***********/
+    /* width */
+    body:has(#root.altoContraste)::-webkit-scrollbar,
+    #root.altoContraste div::-webkit-scrollbar{
+        width: 10px;
+    }
+    
+    /* Track */
+    body:has(#root.altoContraste)::-webkit-scrollbar-track, 
+    #root.altoContraste div::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    }
+
+    /* Handle */
+    body:has(#root.altoContraste)::-webkit-scrollbar-thumb,
+    #root.altoContraste div::-webkit-scrollbar-thumb{
+    background: var(--branco); 
+    }
+
+    /* Handle on hover */
+    body:has(#root.altoContraste)::-webkit-scrollbar-thumb:hover,
+    #root.altoContraste div::-webkit-scrollbar-thumb:hover{
+    background: var(--branco); 
+    }
+/*********************************/
+
 body:has(#root.altoContraste){
     height: 100vh;
     background-color: #000000;
