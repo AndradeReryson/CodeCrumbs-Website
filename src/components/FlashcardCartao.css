@@ -13,6 +13,9 @@
     justify-content: center;
     white-space: nowrap;
     text-wrap: wrap;
+    /**/
+    user-select: none;
+    cursor: pointer;
 }
 
     .elemCartao h4{
@@ -28,7 +31,7 @@
     }
 
 .faceInvisivel{
-    visibility: hidden;
+    display: none;
 }
 
 /************** ALTO CONTRASTE *********************/
@@ -37,8 +40,8 @@
         height: 40vh;
         width: 40vw;
         border-radius: 15px;
-        border: 1px solid var(--cinzaClaro);
-        box-shadow: 2px 2px 4px var(--cinzaClaro);
+        border: 1px solid var(--branco);
+        box-shadow: none;
         /**/
         position: relative;
         display: flex;

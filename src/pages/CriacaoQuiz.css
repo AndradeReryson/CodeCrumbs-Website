@@ -13,8 +13,12 @@
     overflow-y: auto;
 }
 
+/************** ALTO CONTRASTE *********************/
+/***************************************************/
+
 @media screen and (max-width: 769px){
-    .listaCardCriacaoPergunta{
+    .listaCardCriacaoPergunta,
+    #root.altoContraste .listaCardCriacaoPergunta{
         width: 65vw;
         height: 90vh;
         padding: 2vh 4vw;
@@ -22,19 +26,28 @@
         display: grid;
     }
 
-    input{
+    input,
+    #root.altoContraste input{
         font-size: 3vw !important; 
     }
 
-    .criacaoPerguntaDica{
+    select.font_h6,
+    #root.altoContraste select.font_h6{
+        font-size: 3vw !important;
+    }
+
+    .criacaoPerguntaDica,
+    #root.altoContraste .criacaoPerguntaDica{
         text-align: right;
     }
 
-    .containerConteudoCriacaoQuiz{
+    .containerConteudoCriacaoQuiz,
+    #root.altoContraste .containerConteudoCriacaoQuiz{
         height: 160vh !important;
     }
 
-    .divTituloLinguagem{
+    .divTituloLinguagem,
+    #root.altoContraste .divTituloLinguagem{
         flex-direction: column !important;
         margin: 2vh 0 !important;
         height: 12vh !important;    /* 12vh de altura (5vh de duas linhas) + 2vh do gap */
@@ -42,7 +55,13 @@
         align-items: start !important;
     }
 
-    .divTituloLinguagem > .container{
+    .divTituloLinguagem > .container,
+    #root.altoContraste .divTituloLinguagem > .container{
+        width: 80vw  !important;
+    }
+
+    .divTituloLinguagem .container select, 
+    #root.altoContraste .divTituloLinguagem .container select{
         width: 80vw  !important;
     }
 }

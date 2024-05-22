@@ -11,16 +11,27 @@
     overflow-y: auto;
 }
 
+/************** ALTO CONTRASTE *********************/
+/***************************************************/
+
 @media screen and (max-width: 769px){
-    input{
+    input,
+    #root.altoContraste input{
         font-size: 3vw !important; 
     }
 
-    .containerConteudoCriacaoFlashcard{
+    select.font_h6,
+    #root.altoContraste select.font_h6{
+        font-size: 3vw !important;
+    }
+
+    .containerConteudoCriacaoFlashcard,
+    #root.altoContraste .containerConteudoCriacaoFlashcard{
         height: 150vh !important;
     }
 
-    .divEnunciadoLinguagemCor{
+    .divEnunciadoLinguagemCor,
+    #root.altoContraste .containerConteudoCriacaoFlashcard .divEnunciadoLinguagemCor{
         flex-direction: column !important;
         margin: 2vh 0 !important;
         height: 19vh !important;    /* 15vh de altura (5vh de três linha) + 4vh do gap ( temos dois gaps)*/
@@ -28,11 +39,18 @@
         align-items: start !important;
     }
 
-    .divEnunciadoLinguagemCor > .container{
+    .divEnunciadoLinguagemCor > .container,
+    #root.altoContraste .divEnunciadoLinguagemCor > .container{
         width: 80vw  !important;
     }
 
-    .listaCardCriacaoFlashcard{
+    .divEnunciadoLinguagemCor .container select,
+    #root.altoContraste .divEnunciadoLinguagemCor .container select{
+        width: 80vw  !important;
+    }
+
+    .listaCardCriacaoFlashcard,
+    #root.altoContraste .listaCardCriacaoFlashcard{
         width: 65vw;
         height: 75vh;
         border: 1px solid var(--cinzaClaro);

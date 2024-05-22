@@ -46,9 +46,15 @@
         color: var(--cinza)
     }
 
+/************** ALTO CONTRASTE *********************/
 
+    /* Esse elemento tem uma classe nele que faz a fonte ficar cinza. REMOVER DEPOIS */
+    #root.altoContraste .cartaoBotoes .cartaoBtnWrapper .btnLegenda{
+        text-align: center;
+        color: var(--branco)
+    }
 
-    
+/***************************************************/
 
 @media screen and (max-width: 769px){
     input{

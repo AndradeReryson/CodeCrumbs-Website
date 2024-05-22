@@ -34,8 +34,25 @@
     text-align: center;
 }
 
+/************** ALTO CONTRASTE *********************/
+
+    #root.altoContraste .totalResultados{
+        width: 10vw;
+        border-radius: 5px;
+        border: 1px solid var(--branco);
+        text-wrap: none;
+        white-space: nowrap;
+        /**/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+/***************************************************/
+
 @media screen and (max-width: 769px){
-    .listaCardBaralho{
+    .listaCardBaralho,
+    #root.altoContraste .listaCardBaralho{
         border: 1px solid var(--cinzaClaro);
         height: 45vh;
         width: fit-content;

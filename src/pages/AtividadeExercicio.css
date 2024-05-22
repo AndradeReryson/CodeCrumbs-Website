@@ -1,3 +1,11 @@
+/**/
+.listaBannerBotoesAtvExercicio{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
 /* LINHA DO CÓDIGO DO EXERCICIO */
 .codigoRespostaExercicio{
     align-items: center;

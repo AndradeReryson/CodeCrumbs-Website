@@ -178,6 +178,7 @@ input[type="checkbox"] {
 
 
 @media screen and (max-width: 769px){
+    
     h2,
     .font_h2 {
         font-weight: 500;

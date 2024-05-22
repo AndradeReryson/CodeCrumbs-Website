@@ -35,8 +35,26 @@
     text-align: center;
 }
 
+/************** ALTO CONTRASTE *********************/
+
+
+    #root.altoContraste .totalResultados{
+        width: 10vw;
+        border-radius: 5px;
+        border: 1px solid var(--branco);
+        text-wrap: none;
+        white-space: nowrap;
+        /**/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+/***************************************************/
+
 @media screen and (max-width: 769px){
-    .listaCardExercicio{
+    .listaCardExercicio,
+    #root.altoContraste .listaCardExercicio{
         border: 1px solid var(--cinzaClaro);
         width: fit-content;
         padding: 4vh 4vh;

@@ -20,29 +20,62 @@
     align-items: center;
 }
 
+/************** ALTO CONTRASTE *********************/
+
+    #root.altoContraste .codigoCriarExercicio{
+        align-items: center;
+        height: auto;
+        border: 2px solid var(--branco);
+        border-radius: 5px;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(10, calc(5vh - 3px));
+        gap: 3px;
+    }
+
+    #root.altoContraste .lacunaRespostaBotoes{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+/***************************************************/
+
 @media screen and (max-width: 769px){
     input,
-    select.font_h6{
+    #root.altoContraste input{
         font-size: 3vw !important; 
     }
 
-    .lacunaRespostaBotoes{
+    select.font_h6,
+    #root.altoContraste select.font_h6{
+        font-size: 3vw !important;
+    }
+
+    .lacunaRespostaBotoes,
+    #root.altoContraste .lacunaRespostaBotoes{
         gap: 2vw !important; 
         justify-content: end !important;
     }
 
-        .lacunaRespostaBotoes > input{
+        .lacunaRespostaBotoes > input,
+        #root.altoContraste .lacunaRespostaBotoes > input{
             justify-content: end !important;
             width: 35vw;
         }
     
     /* Abaixo Mudando a estrutura dos containers*/
 
-    .containerConteudoCriacaoExercicio{
+    .containerConteudoCriacaoExercicio,
+    #root.altoContraste .containerConteudoCriacaoExercicio{
         height: 100vh !important;
     }
     
-    .divExercEnunciadoLinguagem{
+    .divExercEnunciadoLinguagem,
+    #root.altoContraste .divExercEnunciadoLinguagem{
         flex-direction: column !important;
         margin: 2vh 0 !important;
         height: 12vh !important;    /* 10vh de altura + 2vh do gap */
@@ -50,12 +83,19 @@
         align-items: start !important;
     }
 
-        .divExercEnunciadoLinguagem > .container{
+        .divExercEnunciadoLinguagem > .container,
+        #root.altoContraste .divExercEnunciadoLinguagem > .container{
+            width: 80vw  !important;
+        }
+
+        .divExercEnunciadoLinguagem .container select,
+        #root.altoContraste .divExercEnunciadoLinguagem .container select{
             width: 80vw  !important;
         }
         
 
-    .divLacunaResposta{
+    .divLacunaResposta,
+    #root.altoContraste .divLacunaResposta{
         flex-direction: column !important;
         margin: 2vh 0 !important;
         height: 14vh !important;    /* 10vh de altura + 4vh do gap */
@@ -64,11 +104,13 @@
     }
     
         /* os filhos da div lacuna são duas divs sem estilizacao*/
-        .divLacunaResposta > :first-child{
+        .divLacunaResposta > :first-child,
+        #root.altoContraste .divLacunaResposta > :first-child{
             justify-content: start !important;
         }
 
-        .divLacunaResposta > :nth-child(2){
+        .divLacunaResposta > :nth-child(2),
+        #root.altoContraste .divLacunaResposta > :nth-child(2){
             width: 100%;
             display: flex;
             justify-content: end !important;

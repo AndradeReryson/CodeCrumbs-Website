@@ -28,3 +28,45 @@
         color: var(--branco);
         border: 1px solid var(--azul);
     }
+
+/************** ALTO CONTRASTE *********************/
+
+    #root.altoContraste .checkInvisivel{
+        display: none;
+    }
+
+    #root.altoContraste .labelCheck{
+        margin: 0;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        width: 2.5rem;
+        text-align: center;
+        border: 1px solid var(--branco);
+        border-radius: 50%;
+        user-select: none;
+        cursor: pointer;
+        /**/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        #root.altoContraste .labelCheck h5{
+            margin: 0;
+            text-align: center;
+        }
+
+        #root.altoContraste .labelCheck.radioMarcado{
+            background-color: var(--branco);
+            color: var(--preto);
+        }
+
+        #root.altoContraste .labelCheck.radioMarcado h5{
+            color: var(--preto);
+        }
+
+/***************************************************/
+
+@media screen and (max-width: 769px){
+
+}

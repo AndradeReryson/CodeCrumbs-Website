@@ -8,9 +8,14 @@
     gap: 1.5rem;
 }
 
+/************** ALTO CONTRASTE *********************/
+/***************************************************/
+
 @media screen and (max-width: 769px){
     .col-atividades,
-    .col-dashboard{
+    .col-dashboard,
+    #root.altoContraste .col-atividades,
+    #root.altoContraste .col-dashboard{
         width: 90%;
         /**/
         display: grid;
@@ -19,7 +24,8 @@
         gap: 1.5rem;
     }
 
-    .containerConteudoDashboard{
+    .containerConteudoDashboard,
+    #root.altoContraste .containerConteudoDashboard{
         height: 70vh !important;
         flex-direction: column !important;
         margin: 2vh 0 0 0 !important;
@@ -30,12 +36,15 @@
     }
 
     .containerConteudoDashboard > :nth-child(1),
-    .containerConteudoDashboard > :nth-child(2){
+    .containerConteudoDashboard > :nth-child(2),
+    #root.altoContraste .containerConteudoDashboard > :nth-child(1),
+    #root.altoContraste .containerConteudoDashboard > :nth-child(2){
         height: 35vh !important;
         overflow-y: hidden;
     }
 
-    .containerConteudoDashboard > .container{
+    .containerConteudoDashboard > .container,
+    #root.altoContraste .containerConteudoDashboard > .container{
         width: 80vw  !important;
     }
 }

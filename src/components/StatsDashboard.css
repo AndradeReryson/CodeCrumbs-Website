@@ -26,12 +26,51 @@
         text-align: center;
     }
 
+/************** ALTO CONTRASTE *********************/
+
+    #root.altoContraste .statsDashboard{
+        height: 17vh;
+        width: 100%;
+        background-color: var(--preto);
+        border: 1px solid var(--branco);
+        user-select: none;
+        
+        /**/
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+    }
+
+        #root.altoContraste .statsDashboard .statsTitulo{
+            height: 100%;
+            background-color: var(--branco);
+        }
+
+        #root.altoContraste .statsDashboard .statsTitulo,
+        #root.altoContraste .statsDashboard .statsValor{
+            overflow: hidden;
+            text-wrap: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #root.altoContraste .statsDashboard .statsTitulo h5{
+            color: var(--preto);
+        }
+
+        #root.altoContraste .statsDashboard .statsValor h5{
+            color: var(--branco);
+        }
+        
+/***************************************************/
+
 @media screen and (max-width: 769px){
-    .statsDashboard{
+    .statsDashboard,
+    #root.altoContraste .statsDashboard{
         height: 10vh;
         width: 100%;
-        background-color: var(--branco);
-        border: 1px solid var(--preto);
         user-select: none;
         
         /**/

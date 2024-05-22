@@ -63,7 +63,7 @@ const ListaFlashCards = () => {
         {/* LINHA PAGINACAO */}
         <Container width="80vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="space-between">
           <div className="totalResultados">
-            <h6> 16 de 160 </h6>
+            <h6> 6 de 60 </h6>
           </div>
 
           <div className="paginacaoResultado">
