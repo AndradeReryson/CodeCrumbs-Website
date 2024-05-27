@@ -9,7 +9,7 @@ import './Button.css'
  * @param {String} texto Texto do botão
  * @returns 
  */
-const Button = ({className, cor, texto}) => {
+const Button = ({id, className, cor, texto}) => {
 
   /**
    * Método que retorna uma classe que altera a cor do botão
@@ -50,14 +50,15 @@ const Button = ({className, cor, texto}) => {
   }
 
   return (
-    <div className={getButtonColorClass(cor)+" font_h6 "+className}>
+    <div id={id} className={getButtonColorClass(cor)+" font_h6 "+className}>
       <h6>{texto}</h6>
     </div>
   )
 }
 
 Button.defaultProps = {
-  className: ""
+  className: "",
+  id: null
 }
 
 export default Button

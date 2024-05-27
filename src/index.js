@@ -18,6 +18,7 @@ import AtividadeFlashcards from './pages/AtividadeFlashcards.js';
 import CriacaoExercicio from './pages/CriacaoExercicio.js';
 import CriacaoFlashcard from './pages/CriacaoFlashcard.js';
 import CriacaoQuiz from './pages/CriacaoQuiz.js';
+import { useState } from 'react';
 
 const router = createBrowserRouter([
   {

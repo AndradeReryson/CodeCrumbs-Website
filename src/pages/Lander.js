@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import secureLocalStorage from 'react-secure-storage';
 import Header from '../components/Header';
 import Container from '../components/Container';
 import FormCadastro from '../components/FormCadastro';
@@ -7,8 +8,25 @@ import IconeGrande from '../components/IconeGrande';
 import './Lander.css'
 import '../components/general/ContrastTheme.css'
 import '../components/general/Theme.css'
+import { useLocation, Navigate } from 'react-router-dom';
 
 const Lander = () => {
+  const API_BASE_URL = "http://localhost:8080/"
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  
+
+  const enviarDadosCadastro = () => {
+
+  }
+
+  useEffect(() => {
+    if(secureLocalStorage.getItem("username") != null ||
+        secureLocalStorage.getItem("password") != null){
+
+        }
+  }, [])
 
   return (
     <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
