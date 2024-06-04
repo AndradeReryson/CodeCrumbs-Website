@@ -15,6 +15,7 @@
 }
 
     .radioBorder{
+        pointer-events: none;
         justify-self: center;
         height: 1.5rem;
         width: 1.5rem;
@@ -26,26 +27,46 @@
     }
 
     .radioFill{
+        pointer-events: none;
         width: 1rem;
         height: 1rem;
         border-radius: 50%;
         background-color: transparent;
     }
 
-.buttonResposta.selecionado{
+    .buttonResposta h6{
+        pointer-events: none;
+    }
+
+    .buttonResposta .respostaTexto{
+        pointer-events: none;
+    }
+
+/* Classes para mostrar se a resposta está certa ou errada */
+
+.buttonResposta.respostaCorreta{
     border: none;
     box-shadow: none;
     background-color: var(--azul);
+    color: var(--branco);
+}   
+
+.buttonResposta.respostaIncorreta{
+    border: none;
+    box-shadow: none;
+    background-color: var(--rosa);
     color: var(--branco)
+}   
+
+.buttonResposta.respostaCorreta .radioBorder,
+.buttonResposta.respostaIncorreta .radioBorder{
+    border: 1px solid var(--branco);
 }
 
-    .buttonResposta.selecionado .radioBorder{
-        border: 1px solid var(--branco);
-    }
-
-    .buttonResposta.selecionado .radioBorder .radioFill{
-        background-color: var(--branco);
-    }
+.buttonResposta.respostaCorreta .radioBorder .radioFill,
+.buttonResposta.respostaIncorreta .radioBorder .radioFill{
+    background-color: var(--branco);
+}
 
 /************** ALTO CONTRASTE *********************/
 
@@ -66,6 +87,7 @@
     }
 
         #root.altoContraste .radioBorder{
+            pointer-events: none;
             justify-self: center;
             height: 1.5rem;
             width: 1.5rem;
@@ -77,11 +99,21 @@
         }
 
         #root.altoContraste .radioFill{
+            pointer-events: none;
             width: 1rem;
             height: 1rem;
             border-radius: 50%;
             background-color: transparent;
         }
+
+        #root.altoContraste .buttonResposta h6{
+            pointer-events: none;
+        }
+
+        #root.altoContraste .buttonResposta .respostaTexto{
+            pointer-events: none;
+        }
+    
 
     #root.altoContraste .buttonResposta.selecionado{
         border: none;
@@ -127,12 +159,14 @@
 
         #root.altoContraste .radioBorder,
         #root.altoContraste .radioBorder{
+            pointer-events: none;
             height: 4vw;
             width: 4vw;
         }
 
         #root.altoContraste .radioFill,
         #root.altoContraste .radioFill{
+            pointer-events: none;
             width: 3vw;
             height: 3vw;
         }

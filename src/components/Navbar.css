@@ -140,7 +140,6 @@
             margin: 0 0 0 0.5rem;
             width: 5vw;
             border-radius: 50%;
-            background-color: var(--azul);
             user-select: none;
             /**/
             display: flex;
@@ -151,7 +150,6 @@
         .nav-col-usuario .foto-perfil > h5,
         #root.altoContraste .nav-col-usuario .foto-perfil > h5{
             font-size: 3vw;
-            color: var(--branco);
         }
 
         .nav-col-usuario .buttonCorTema,

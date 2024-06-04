@@ -1,0 +1,247 @@
+@keyframes fadeIn {
+    0% {
+        visibility: visible;
+        z-index: 20;
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    
+    100% {
+        visibility: visible;
+        z-index: 20;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        visibility: visible;
+        z-index: 20;
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    99% {
+        visibility: visible;
+        z-index: 20;
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        visibility: hidden;
+        z-index: -20;
+    }
+}
+
+.ToastAlerta{
+    top: 5vh;
+    right: 5vh;
+    position: fixed;
+    width: 35vw;
+    height: 10vh;  
+    box-shadow: 2px 2px 4px var(--cinzaEscuro), -2px 4px 4px var(--cinzaEscuro), 0px -2px 2px var(--branco);
+    border: none;
+    /*animacao*/
+    visibility: hidden;
+    z-index: -20;
+    /**/
+    display: grid;
+    grid-template-columns: 10vh auto;
+    align-items: center;
+}
+
+    .ToastAlerta > div:nth-child(1){
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .ToastAlerta.tipoErro > div:nth-child(1){
+            background-color: var(--vermelho);
+        }
+
+            .ToastAlerta.tipoErro .ToastImagem{
+                filter: var(--iconeBranco);
+            }
+
+        .ToastAlerta.tipoAviso > div:nth-child(1){
+            background-color: var(--amarelo);
+        }
+
+            .ToastAlerta.tipoAviso .ToastImagem{
+                filter: var(--iconePreto);
+            }
+
+        .ToastAlerta.tipoSucesso > div:nth-child(1){
+            background-color: var(--verde);
+        }
+
+            .ToastAlerta.tipoSucesso .ToastImagem{
+                filter: var(--iconePreto);
+            }
+
+        .ToastAlerta.tipoInfo > div:nth-child(1){
+            background-color: var(--cinza);
+        }
+
+            .ToastAlerta.tipoInfo .ToastImagem{
+                filter: var(--iconeBranco);
+            }
+
+
+
+    .ToastAlerta > div:nth-child(2){
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        white-space: nowrap;
+        text-wrap: wrap;
+        background-color: var(--branco);
+        padding: 0 2vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+.ToastImagem{
+    justify-self: center;
+    height: 5vh;
+    width: 5vh;
+}
+
+.ToastTexto{
+    color: var(--preto);
+    width: 100%;
+    margin: 0;
+    text-align: left;
+}
+
+.fadeIn{
+    animation: fadeIn 0.5s ease-in-out forwards; 
+} 
+
+.fadeOut{
+    animation: fadeOut 0.5s 5s ease-in-out forwards; 
+}
+
+/* Essas duas animações ocorrem ao mesmo tempo, porem a de fade out demora 5s para iniciar, assim escondendo a notificacao*/
+.fadeInWaitFadeOut,
+#root.altoContraste .fadeInWaitFadeOut{
+    animation:  fadeIn 0.5s 0s ease-in-out forwards, 
+                fadeOut 0.5s 5s ease-in-out forwards ;
+}
+
+/************** ALTO CONTRASTE *********************/
+/***************************************************/
+
+    #root.altoContraste .ToastAlerta{
+        top: 5vh;
+        right: 5vh;
+        position: fixed;
+        width: 35vw;
+        height: 10vh;  
+        box-shadow: none;
+        border: 1px solid var(--branco);
+        /*animacao*/
+        visibility: hidden;
+        z-index: -20;
+        /**/
+        display: grid;
+        grid-template-columns: 10vh auto;
+        align-items: center;
+    }
+
+        #root.altoContraste .ToastAlerta > div:nth-child(1){
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            #root.altoContraste .ToastAlerta.tipoErro > div:nth-child(1){
+                background-color: var(--preto);
+            }
+
+                #root.altoContraste .ToastAlerta.tipoErro .ToastImagem{
+                    filter: var(--iconeBranco);
+                }
+
+            #root.altoContraste .ToastAlerta.tipoAviso > div:nth-child(1){
+                background-color: var(--preto);
+            }
+
+                #root.altoContraste .ToastAlerta.tipoAviso .ToastImagem{
+                    filter: var(--iconeBranco);
+                }
+
+            #root.altoContraste .ToastAlerta.tipoSucesso > div:nth-child(1){
+                background-color: var(--preto);
+            }
+
+                #root.altoContraste .ToastAlerta.tipoSucesso .ToastImagem{
+                    filter: var(--iconeBranco);
+                }
+
+            #root.altoContraste .ToastAlerta.tipoInfo > div:nth-child(1){
+                background-color: var(--preto);
+            }
+
+                #root.altoContraste .ToastAlerta.tipoInfo .ToastImagem{
+                    filter: var(--iconeBranco);
+                }
+
+
+
+        #root.altoContraste .ToastAlerta > div:nth-child(2){
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            white-space: nowrap;
+            text-wrap: wrap;
+            background-color: var(--preto);
+            padding: 0 2vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+    #root.altoContraste .ToastImagem{
+        justify-self: center;
+        height: 5vh;
+        width: 5vh;
+    }
+
+    #root.altoContraste .ToastTexto{
+        color: var(--branco);
+        width: 100%;
+        margin: 0;
+        text-align: left;
+    }
+
+/***************************************************/
+
+@media screen and (max-width: 769px){
+
+    .ToastAlerta,
+    #root.altoContraste .ToastAlerta{
+        top: 5vh;
+        right: 5vh;
+        position: fixed;
+        width: 80vw;
+        height: 10vh;  
+        /*animacao*/
+        visibility: hidden;
+        z-index: -20;
+        /**/
+        display: grid;
+        grid-template-columns: 10vh auto;
+        align-items: center;
+    }
+}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import './QuizButtonResposta.css'
 import './general/Theme.css'
 
-const QuizButtonResposta = ({isSelecionado, texto}) => {
+const QuizButtonResposta = ({id, isSelecionado, texto}) => {
 
 	const getSelectedClass = (isSelecionado) => {
 		if(isSelecionado){
@@ -19,7 +19,7 @@ const QuizButtonResposta = ({isSelecionado, texto}) => {
         </div>
 
         <div className='respostaTexto'>
-            <h6>{texto}</h6>
+            <h6 id={id}>{texto}</h6>
         </div>
     </div>
   )

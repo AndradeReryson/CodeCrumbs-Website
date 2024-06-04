@@ -28,10 +28,12 @@
     }
 
     .divInformativoSistema{
-        height: 80vh !important;
+        padding-top: 2vh !important;
+        height: 78vh !important;
         display: grid !important;
         grid-template-rows: 20vh 20vh 20vh;
         gap: 5vh !important;
+        align-items: center !important;
         
     }
 

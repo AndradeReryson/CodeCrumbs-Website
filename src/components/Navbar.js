@@ -1,15 +1,21 @@
-import Logo from '../assets/logo_CodeCrumbs.svg'
 import './general/Theme.css'
 import "./Navbar.css"
 import ButtonNav from './ButtonNav'
 import ButtonCorTema from './ButtonCorTema'
 import { useLocation, Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import secureLocalStorage from 'react-secure-storage'
 
 /**
  * Elemento Navbar, contem os links pra maioria das paginas
  */
 const Navbar = () => {
   let location = useLocation().pathname;
+  const [apelido, setApelido] = useState("");
+  
+  useEffect(() => {
+    setApelido(secureLocalStorage.getItem('apelido'))
+  }, []);
 
   const getActive = (botao_texto) => {
     let classe_retorno = "";
@@ -51,9 +57,9 @@ const Navbar = () => {
         <div className="nav-col-usuario">
           <div style={{display: 'flex', alignItems: 'center'}}>
             <div className='foto-perfil'>
-              <h5>R</h5>
+              <h5>{apelido.charAt(0).toUpperCase()}</h5>
             </div>
-            <h6> RerysonAndrade</h6>
+            <h6>{apelido}</h6>
           </div>
           <div>
             <ButtonCorTema />
@@ -77,7 +83,7 @@ const Navbar = () => {
               <ButtonNav className={getActive("Quizzes")} texto="Quizzes" />
             </Link>
 
-            <Link className="link" to="/">
+            <Link className="link" to="/home/logout">
               <ButtonNav texto="Sair" />
             </Link>
         </div>

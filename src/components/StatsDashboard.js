@@ -2,7 +2,7 @@ import React from 'react'
 import './general/Theme.css'
 import './StatsDashboard.css'
 
-const StatsDashboard = ({titulo, valor}) => {
+const StatsDashboard = ({idValor, titulo, valor}) => {
   return (
     <div className='statsDashboard'>
         <div className='statsTitulo'>
@@ -10,7 +10,7 @@ const StatsDashboard = ({titulo, valor}) => {
         </div>
         
         <div className='statsValor'>
-            <h5>{valor}</h5>
+            <h5 id={idValor}>{valor}</h5>
         </div>
     </div>
   )

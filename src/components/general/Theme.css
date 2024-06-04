@@ -31,6 +31,7 @@
     --amarelo: #C3C53A;
     --verde: #3AC581;
     --rosa: #C53A7E;
+    --vermelho: #D72829;
     --preto: #000000;
     --branco: #ffffff;
     --cinzaClaro: #b8b8b8;
@@ -39,6 +40,7 @@
     --amarelo-contraste: #FFFF00;
 
     --iconeAzul: brightness(0) saturate(100%) invert(27%) sepia(17%) saturate(5694%) hue-rotate(219deg) brightness(97%) contrast(109%);
+    --iconePreto: brightness(0) saturate(100%);
     --iconeBranco: contrast(0) brightness(100);
 
     font-family: 'Khand';

@@ -4,11 +4,11 @@ import { useLocation, Link } from 'react-router-dom'
 import './CardQuiz.css'
 import './general/Theme.css'
 
-const CardQuiz = ({className, quiz, numero, concluido, titulo, nota}) => {
+const CardQuiz = ({key, className, quiz, numero, concluido, titulo, nota}) => {
   let location = useLocation().pathname;
 
   return (
-    <div key={quiz} className={'cardQuiz '+className}>
+    <div className={'cardQuiz '+className}>
       <h6 className="quizNumero" style={{textAlign: "center"}}>{numero}</h6>
       <h6 className='markConcluido'>{concluido ? "\u2713" : "" }</h6>
       <Link className="link quizTitulo font_h6" to={{pathname: location+"/"+quiz}} style={{textAlign: "left"}}>{titulo}

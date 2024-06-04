@@ -1,42 +1,41 @@
-import React, { useState, useEffect } from 'react'
-import secureLocalStorage from 'react-secure-storage';
+import React, { useState } from 'react'
 import Header from '../components/Header';
 import Container from '../components/Container';
 import FormCadastro from '../components/FormCadastro';
 import FormLogin from '../components/FormLogin';
 import IconeGrande from '../components/IconeGrande';
+import LoadingWheel from '../components/LoadingWheel';
+import ToastAlerta from '../components/ToastAlerta';
 import './Lander.css'
 import '../components/general/ContrastTheme.css'
 import '../components/general/Theme.css'
-import { useLocation, Navigate } from 'react-router-dom';
 
 const Lander = () => {
-  const API_BASE_URL = "http://localhost:8080/"
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  // Controle de estado do elemento <LoadingWheel />
+  const [isLoadingVisivel, setIsLoadingVisivel] = useState(false);
 
-  
+  // Controle da notificação, quando for chamada
+  const [toastTexto, setToastTexto] = useState(null);
+  const [toastTipo, setToastTipo] = useState(null);
 
-  const enviarDadosCadastro = () => {
-
-  }
-
-  useEffect(() => {
-    if(secureLocalStorage.getItem("username") != null ||
-        secureLocalStorage.getItem("password") != null){
-
-        }
-  }, [])
+  /** 
+   * As funções set desses useStates vão ser passados para os componentes <FormLogin /> e <FormCadastro />.
+   * 
+   * Eles também são passados para os componentes que usam eles diretamente para alterá-los, <ToastAlerta /> e <LoadingWheel />
+   * Ambos os componentes precisam ser chamados pelos formulários, por isso, passamos as funções Set para eles e mantemos esses useState nesse componente pai.
+   */
 
   return (
     <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+      <ToastAlerta toastTexto={toastTexto} toastTipo={toastTipo} toastTextSetter={setToastTexto} toastTipoSetter={setToastTipo}/>
+      <LoadingWheel isLoadingVisivel={isLoadingVisivel}/>
       <Header />
       <Container className="conteudoLander" width="60vw" height="100vh" flexDirection="column" alignItems="center" justifyContent="center">
         
         {/* Linha com os dois formulários */}
         <Container className="divFormulariosCadastroLogin" width="60vw" height="40vh" padding="0 5vw 0 5vw" margin="5vh 0 10vh 0" flexDirection="row" alignItems="start" justifyContent="space-between">
-          <FormLogin />
-          <FormCadastro />
+          <FormLogin setIsLoadingVisivel={setIsLoadingVisivel} toastSetters={[setToastTexto, setToastTipo]}/>
+          <FormCadastro setIsLoadingVisivel={setIsLoadingVisivel} toastSetters={[setToastTexto, setToastTipo]}/>
         </Container>
 
         {/* Linha com os icones */}

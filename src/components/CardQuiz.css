@@ -7,7 +7,7 @@
     grid-template-columns: 10% 5% 75% 10%;
 }
 
-.cardQuiz:last-child{
+.cardQuiz:nth-child(16){
     border-bottom: none;
 }
 
@@ -66,7 +66,7 @@
         grid-template-columns: 10% 5% 75% 10%;
     }
 
-    #root.altoContraste .cardQuiz:last-child{
+    #root.altoContraste .cardQuiz:nth-child(16){
         border-bottom: none;
     }
 
@@ -126,8 +126,8 @@
         grid-template-columns: 10% 75% 15%;
     }
     
-    .cardQuiz:last-child,
-    #root.altoContraste .cardQuiz:last-child{
+    .cardQuiz:nth-child(16),
+    #root.altoContraste .cardQuiz:nth-child(16){
         border-bottom: none;
     }
     
