@@ -115,25 +115,31 @@
         }
     
 
-    #root.altoContraste .buttonResposta.selecionado{
+    /* Classes para mostrar se a resposta está certa ou errada */
+
+    #root.altoContraste .buttonResposta.respostaCorreta{
         border: none;
         box-shadow: none;
-        background-color: var(--branco);
-        color: var(--preto)
+        background-color: var(--azul);
+        color: var(--branco);
+    }   
+
+    #root.altoContraste .buttonResposta.respostaIncorreta{
+        border: none;
+        box-shadow: none;
+        background-color: var(--rosa);
+        color: var(--branco)
+    }   
+
+    #root.altoContraste .buttonResposta.respostaCorreta .radioBorder,
+    #root.altoContraste .buttonResposta.respostaIncorreta .radioBorder{
+        border: 1px solid var(--branco);
     }
 
-    #root.altoContraste .buttonResposta.selecionado h6{
-        color: var(--preto)
+    #root.altoContraste .buttonResposta.respostaCorreta .radioBorder .radioFill,
+    #root.altoContraste .buttonResposta.respostaIncorreta .radioBorder .radioFill{
+        background-color: var(--branco);
     }
-    
-        #root.altoContraste .buttonResposta.selecionado .radioBorder{
-            border: 1px solid var(--preto);
-            background-color: var(--preto);
-        }
-    
-        #root.altoContraste .buttonResposta.selecionado .radioBorder .radioFill{
-            background-color: var(--branco);
-        }
 
 /***************************************************/
 

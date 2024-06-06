@@ -14,11 +14,13 @@
     .telaConclusaoAtividade .telaConclusaoTitulo{
         font-size: 60px;
         color: var(--branco);
+        text-align: center;
     }
 
     .telaConclusaoAtividade #telaTextoConclusao{
         font-size: 42px;
         color: var(--branco);
+        text-align: center;
     }
 
 .conclusao-stop-scroll{
@@ -28,4 +30,18 @@
 
 .conclusao-hide{
     display: none;
+}
+
+@media screen and (max-width: 769px){
+
+    
+        .telaConclusaoAtividade .telaConclusaoTitulo{
+            font-size: 6vw;
+            text-align: center;
+        }
+    
+        .telaConclusaoAtividade #telaTextoConclusao{
+            font-size: 5vw;
+            text-align: center;
+        }
 }
