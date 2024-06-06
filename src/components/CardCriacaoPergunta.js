@@ -35,7 +35,7 @@ const CardCriacaoPergunta = ({numero}) => {
 
   return (
     <div className='cardCriacaoPergunta'>
-        <h4>{numero}</h4>
+        <h4 className="btnNumeroExcluir" id={"btnExcluirPergunta"+numero}>{numero}</h4>
         <div className='wrapperInputs'>
             <div className='wrapperPergunta'>
                 <label className='font_h5'>Pergunta</label>
