@@ -14,16 +14,72 @@
 }
 
 .btnNumeroExcluir{
+    position: relative;
     height: 35px;
     width: 35px;
     border: 2px solid var(--preto);
+    border-radius: 50%;
+    display: table;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
+
+    /* NUMERO DA PERGUNTA 
+    .btnNumeroExcluir h5.numeroPergunta{
+        position: absolute;
+        top: 0;
+        left: calc(50% - 17.5px);
+        visibility: visible;
+        border: none;
+        user-select: none;
+        pointer-events: none;
+        height: 35px;
+        width: 35px;
+        line-height: 38px;
+        margin: 0;
+    }
+    */
+
+    /* LETRA X */
+    .btnNumeroExcluir h5.excluirPergunta{
+        position: absolute;
+        top: 0;
+        left: calc(50% - 17.5px);
+        visibility: visible;
+        /**/
+        border: none;
+        cursor: pointer;
+        user-select: none;
+        pointer-events: none;
+        height: 35px;
+        width: 35px;
+        line-height: 38px;
+        margin: 0;
+    }
+
+    .btnNumeroExcluir:hover{
+        background-color: var(--rosa);
+        border-color: var(--rosa);
+        transition: 0.2s;
+    }
+
+    /*
+    .btnNumeroExcluir:hover h5.numeroPergunta{
+        color: var(--branco);
+        visibility: hidden;
+    }
+    */
+
+    .btnNumeroExcluir:hover h5.excluirPergunta{
+        color: var(--branco);
+    }
 
 .wrapperInputs{
     height: 100%;
     width: 56vw;
     display: grid;
-    grid-template-columns: 27vw 27vw;
+    grid-template-columns: 25vw 25vw;
     grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
     column-gap: 2vw;
@@ -46,7 +102,7 @@
         height: 100%;
         width: 27vw;
         display: grid;
-        grid-template-columns: 5vw 21vw;
+        grid-template-columns: 5vw 19vw;
         align-items: center;
         gap: 1vw;
     }

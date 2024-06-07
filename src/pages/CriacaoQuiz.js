@@ -23,10 +23,14 @@ const CriacaoQuiz = () => {
   const [toastTipo, setToastTipo] = useState(null);
 
   // Lista deos cards "criação de pergunta"
-	const [quantPerguntas, setQuantPerguntas] = useState(0);
+	const [quantPerguntas, setQuantPerguntas] = useState(null);
   const [listaPerguntas, setListaPerguntas] = useState(null);
 
 	const idUsuario = secureLocalStorage.getItem('id');
+
+	// botoes
+	const [divLista, setDivLista] = useState(null);
+	const [btnAdicionarPergunta, setBtnAdicionarPergunta] = useState(null);
 
   const [fetchResource, setResource] = useState(null);
   const [fetchReqBody, setReqBody] = useState(JSON.stringify(null));
@@ -52,19 +56,86 @@ const CriacaoQuiz = () => {
     
   }, [error]);
 
-  useEffect(() => {
-		let listaCardsPerguntas = [];
 
-		for(let i = 1; i <= 5; i++){
-			listaCardsPerguntas.push(
-				<CardCriacaoPergunta numero={i} />
-			)
+	/** */
+	useEffect(() => {
+		if(listaPerguntas !== null){
+			//console.log(listaPerguntas);
+			let cardsPergunta = document.querySelectorAll('.cardCriacaoPergunta');
+			console.log(cardsPergunta.length)
+		}
+	}, [listaPerguntas])
+
+
+	/** Evento do Botão de "Adicionar Pergunta" */
+	useEffect(() => {
+		if(listaPerguntas !== null){
+			if(listaPerguntas.length < 10){
+				const clickHandler = () => {
+					setListaPerguntas((listaAntiga) => [...listaAntiga, <CardCriacaoPergunta numero={quantPerguntas + 1}/>])
+					setQuantPerguntas(quantPerguntas + 1)
+				}
+	
+				btnAdicionarPergunta.addEventListener('click', clickHandler);
+				return () => btnAdicionarPergunta.removeEventListener("click", clickHandler);
+			} else {
+				const clickHandler = () => {
+					setToastTipo("INFO")
+					setToastTexto("Você atingiu o limite de 10 perguntas")
+				}
+	
+				btnAdicionarPergunta.addEventListener('click', clickHandler);
+				return () => btnAdicionarPergunta.removeEventListener("click", clickHandler);
+				
+			}
+
+			
+			
 		}
 
-		setQuantPerguntas(5)
-		setListaPerguntas(listaCardsPerguntas);
+		
+	}, [listaPerguntas]);
 
-		const BTN_ADICIONAR_PERGUNTA = document.querySelector("#btnAdicionarPergunta");
+	/** Evento dos Botões de excluir pergunta (numero da pergunta) */
+	useEffect(() => {
+		if(listaPerguntas !== null){
+			let arrayBotoesExcluir = document.querySelectorAll(".cardCriacaoPergunta .btnNumeroExcluir")
+			
+			const clickHandler = (e) => {
+				let numeroCard = parseInt(e.target.getAttribute('data-numero-pergunta'))
+				let cardPergunta = e.target.parentNode;
+
+				/** 
+				 * 		Aqui a remoção está sendo feita apenas no DOM, pois caso eu remova do Array "ListaPerguntas" 
+				 *	o React vai renderizar novamente as perguntas da lista e vai modificar os textos das outras 
+				 *	perguntas, pois elas mudaram de posição no Array por conta da remoção;
+				 * 
+				 * 		Por hora vamos manter assim, mas sabendo que há o Array "ListaPerguntas" com todos os cards já
+				 * 	criados, inclusive os que foram apagados. 
+				 */
+				divLista.removeChild(cardPergunta);
+			}
+
+			for(let i = 0; i < arrayBotoesExcluir.length; i++){
+				arrayBotoesExcluir[i].addEventListener("click", clickHandler);
+			}
+
+			return () => {
+			for(let i = 0; i < arrayBotoesExcluir.length; i++){
+				arrayBotoesExcluir[i].removeEventListener("click", clickHandler);
+			}
+		}
+		}
+		
+	}, [listaPerguntas])
+
+
+	/* USE EFFECT INICIAL */
+  useEffect(() => {
+		setBtnAdicionarPergunta(document.querySelector("#btnAdicionarPergunta"));
+		setDivLista(document.querySelector('.listaCardCriacaoPergunta'));
+		setListaPerguntas([]);
+		setQuantPerguntas(0);
 		
   }, [])
 
