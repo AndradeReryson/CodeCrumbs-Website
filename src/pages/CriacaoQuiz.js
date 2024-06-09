@@ -28,9 +28,12 @@ const CriacaoQuiz = () => {
 
 	const idUsuario = secureLocalStorage.getItem('id');
 
-	// botoes
 	const [divLista, setDivLista] = useState(null);
+
+	// botoes de "adicionar pergunta" e "salvar pergunta"
 	const [btnAdicionarPergunta, setBtnAdicionarPergunta] = useState(null);
+	const [btnSalvarQuiz, setBtnSalvarQuiz] = useState(null);
+
 
   const [fetchResource, setResource] = useState(null);
   const [fetchReqBody, setReqBody] = useState(JSON.stringify(null));
@@ -43,6 +46,11 @@ const CriacaoQuiz = () => {
     setResource(null)
     if(data !== null && data !== "null"){
       let json_data = JSON.parse(data);
+			setToastTipo("sucesso")
+			setToastTexto("Novo Quiz cadastrado com Sucesso!")
+			setTimeout(() => {
+				window.location.reload();
+			}, 3000)
     } 
   }, [data])
 
@@ -51,7 +59,7 @@ const CriacaoQuiz = () => {
     setResource(null)
     if(error !== null && error !== "null"){
       setToastTipo("Erro");
-      setToastTexto("Erro ao se comunicar com o servidor")
+      setToastTexto(error.errorMessage+": Erro ao se comunicar com o servidor")
     }
     
   }, [error]);
@@ -61,11 +69,122 @@ const CriacaoQuiz = () => {
 	useEffect(() => {
 		if(listaPerguntas !== null){
 			//console.log(listaPerguntas);
-			let cardsPergunta = document.querySelectorAll('.cardCriacaoPergunta');
-			console.log(cardsPergunta.length)
+			
 		}
 	}, [listaPerguntas])
 
+	/** Evento do Botão de "Salvar novo Quiz" */
+	useEffect(() => {
+		if(listaPerguntas !== null){
+			const salvarQuizHandler = () => {
+				let tituloQuiz = document.querySelector('#input_quiz_titulo').value;
+				let linguagemQuiz = document.querySelector('#select_linguagem').value;
+				let listaPerguntasQuiz = [];
+
+				/** Verificação se o quiz tem um nome */
+				if (tituloQuiz.length <= 0){
+					setToastTipo("erro")
+					setToastTexto("Dê um nome ao seu quiz")
+					return
+				} 
+
+				/** Criar um objeto POJO para cada pergunta, e tambem para cada resposta dentro da pergunta */
+				let contador = 0;
+				let arrayCardsPerguntas = document.querySelectorAll('.cardCriacaoPergunta');
+				for (const card of arrayCardsPerguntas){
+					contador++;
+
+					let cardPerguntaEnunciado = card.querySelector('.wrapperInputs .wrapperPergunta input').value;
+					
+					if(cardPerguntaEnunciado.length <= 0 || cardPerguntaEnunciado === " "){
+						setToastTipo("erro")
+						setToastTexto("Dê um enunciado para todas as perguntas")
+						return;
+					}
+
+						let cardPerguntaResp01 = {
+							texto: card.querySelector('.wrapperInputs .wrapperResp01 .inputResposta').value,
+							isCorreta: (card.querySelector('.wrapperInputs .wrapperResp01 .labelCheck').getAttribute("ischecked") === 'true' ? true : false)
+						}
+
+						let cardPerguntaResp02 = {
+							texto: card.querySelector('.wrapperInputs .wrapperResp02 .inputResposta').value,
+							isCorreta: (card.querySelector('.wrapperInputs .wrapperResp02 .labelCheck').getAttribute("ischecked") === 'true' ? true : false)
+						}
+
+						let cardPerguntaResp03 = {
+							texto: card.querySelector('.wrapperInputs .wrapperResp03 .inputResposta').value,
+							isCorreta: (card.querySelector('.wrapperInputs .wrapperResp03 .labelCheck').getAttribute("ischecked") === 'true' ? true : false)
+						}
+
+						let cardPerguntaResp04 = {
+							texto: card.querySelector('.wrapperInputs .wrapperResp04 .inputResposta').value,
+							isCorreta: (card.querySelector('.wrapperInputs .wrapperResp04 .labelCheck').getAttribute("ischecked") === 'true' ? true : false)
+						}
+
+					let arrayRespostas = [cardPerguntaResp01, cardPerguntaResp02, cardPerguntaResp03, cardPerguntaResp04];
+
+					/** Objeto pergunta */
+					let json_pergunta = {
+						enunciado: cardPerguntaEnunciado,
+						lista_respostas: arrayRespostas
+					}
+					
+					
+					/** Vamos verificar os valores antes de mandar essa pergunta pra lista de perguntas*/
+					if(cardPerguntaResp01.texto.length <= 0 ||
+							cardPerguntaResp02.texto.length <= 0 ||
+							cardPerguntaResp03.texto.length <= 0 ||
+							cardPerguntaResp04.texto.length <= 0)
+					{
+						setToastTipo("erro")
+						setToastTexto('Erro na '+(contador)+'ª pergunta\nCampos Vazios')
+						return;
+					}
+
+					if(cardPerguntaResp01.isCorreta === false &&
+							cardPerguntaResp02.isCorreta === false &&
+							cardPerguntaResp03.isCorreta === false &&
+							cardPerguntaResp04.isCorreta === false)
+					{
+						setToastTipo("erro")
+						setToastTexto('Erro na '+(contador)+'ª pergunta\nNenhuma resposta correta')
+						return;
+					}
+					
+					/** Envia o objeto da pergunta para o Array "listaPerguntasQuiz" */
+					listaPerguntasQuiz.push(json_pergunta)
+
+				}
+
+				/** Verificamos se há ao menos 5 perguntas adicionadas */
+				if(listaPerguntasQuiz.length < 5){
+					setToastTipo("erro")
+					setToastTexto("Crie pelo menos 5 perguntas para o Quiz")
+					return;
+				}
+
+				/** Montando o POJO do novo quiz */
+				let json_novoQuiz = {
+					titulo: tituloQuiz,
+					linguagem: linguagemQuiz,
+					id_criador: idUsuario,
+					lista_perguntas: listaPerguntasQuiz
+				} 
+
+				/** Desativando o botão */
+				btnSalvarQuiz.style.opacity = '0.5';
+				btnSalvarQuiz.style.pointerEvents = 'none';
+
+				setReqBody(JSON.stringify(json_novoQuiz))
+				setResource("quizzes")
+				
+			}
+
+			btnSalvarQuiz.addEventListener("click", salvarQuizHandler);
+			return () => btnSalvarQuiz.removeEventListener("click", salvarQuizHandler);
+		}
+	}, [listaPerguntas]);
 
 	/** Evento do Botão de "Adicionar Pergunta" */
 	useEffect(() => {
@@ -96,10 +215,10 @@ const CriacaoQuiz = () => {
 		
 	}, [listaPerguntas]);
 
-	/** Evento dos Botões de excluir pergunta (numero da pergunta) */
+	/** Evento dos Botões de excluir pergunta */
 	useEffect(() => {
 		if(listaPerguntas !== null){
-			let arrayBotoesExcluir = document.querySelectorAll(".cardCriacaoPergunta .btnNumeroExcluir")
+			let arrayBotoesExcluir = document.querySelectorAll(".cardCriacaoPergunta .btnExcluir")
 			
 			const clickHandler = (e) => {
 				let numeroCard = parseInt(e.target.getAttribute('data-numero-pergunta'))
@@ -133,6 +252,7 @@ const CriacaoQuiz = () => {
 	/* USE EFFECT INICIAL */
   useEffect(() => {
 		setBtnAdicionarPergunta(document.querySelector("#btnAdicionarPergunta"));
+		setBtnSalvarQuiz(document.querySelector("#btnSalvarQuiz"));
 		setDivLista(document.querySelector('.listaCardCriacaoPergunta'));
 		setListaPerguntas([]);
 		setQuantPerguntas(0);
@@ -186,7 +306,7 @@ const CriacaoQuiz = () => {
 					{/* BOTOES RELACIONADOS A CRIACAO DE CARDS - SALVAR BARALHO */}
 					<Container width="80vw" height="15vh" flexDirection="row" alignItems="center" justifyContent="space-between">
 							<Button id="btnAdicionarPergunta" cor="branco" texto="Adicionar pergunta" />
-							<Button id="btnCriarQuiz" cor="verde" texto="Salvar novo quiz" />
+							<Button id="btnSalvarQuiz" cor="verde" texto="Salvar novo quiz" />
 					</Container>
 
 			</Container>

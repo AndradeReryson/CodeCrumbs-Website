@@ -2,7 +2,7 @@
     justify-self: center;
     height: 30vh;
     width: 60vw;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     border: 1px solid var(--cinza);
     box-shadow: 2px 3px 4px var(--cinzaClaro);
     border-radius: 15px;
@@ -13,7 +13,7 @@
     gap: 2vw;
 }
 
-.btnNumeroExcluir{
+.btnExcluir{
     position: relative;
     height: 35px;
     width: 35px;
@@ -23,26 +23,11 @@
     text-align: center;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
-    /* NUMERO DA PERGUNTA 
-    .btnNumeroExcluir h5.numeroPergunta{
-        position: absolute;
-        top: 0;
-        left: calc(50% - 17.5px);
-        visibility: visible;
-        border: none;
-        user-select: none;
-        pointer-events: none;
-        height: 35px;
-        width: 35px;
-        line-height: 38px;
-        margin: 0;
-    }
-    */
-
     /* LETRA X */
-    .btnNumeroExcluir h5.excluirPergunta{
+    .btnExcluir h5.excluirPergunta{
         position: absolute;
         top: 0;
         left: calc(50% - 17.5px);
@@ -58,20 +43,13 @@
         margin: 0;
     }
 
-    .btnNumeroExcluir:hover{
+    .btnExcluir:hover{
         background-color: var(--rosa);
         border-color: var(--rosa);
         transition: 0.2s;
     }
 
-    /*
-    .btnNumeroExcluir:hover h5.numeroPergunta{
-        color: var(--branco);
-        visibility: hidden;
-    }
-    */
-
-    .btnNumeroExcluir:hover h5.excluirPergunta{
+    .btnExcluir:hover h5.excluirPergunta{
         color: var(--branco);
     }
 
@@ -139,9 +117,60 @@
         border-radius: 15px;
         /**/
         display: grid;
-        grid-template-columns: 2vw 56vw;
+        grid-template-columns: 4vw 54vw;
         grid-template-rows: 1fr;
         gap: 2vw;
+    }
+
+    #root.altoContraste .btnExcluir{
+        position: relative;
+        height: 35px;
+        width: 35px;
+        border: 2px solid var(--branco);
+        border-radius: 50%;
+        display: table;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+        /* LETRA X */
+        #root.altoContraste .btnExcluir h5.excluirPergunta{
+            position: absolute;
+            top: 0;
+            left: calc(50% - 17.5px);
+            visibility: visible;
+            /**/
+            border: none;
+            cursor: pointer;
+            user-select: none;
+            pointer-events: none;
+            height: 35px;
+            width: 35px;
+            line-height: 38px;
+            margin: 0;
+        }
+    
+        #root.altoContraste .btnExcluir:hover{
+            background-color: var(--branco);
+            border-color: var(--branco);
+            transition: 0.2s;
+        }
+    
+        #root.altoContraste .btnExcluir:hover h5.excluirPergunta{
+            color: var(--preto);
+        }
+
+    #root.altoContraste .wrapperInputs{
+        height: 100%;
+        width: 56vw;
+        display: grid;
+        grid-template-columns: 25vw 25vw;
+        grid-template-rows: 1fr 1fr 1fr;
+        align-items: center;
+        column-gap: 2vw;
+        row-gap: 1vw;
     }
 
         #root.altoContraste .wrapperPergunta{
@@ -160,7 +189,7 @@
             height: 100%;
             width: 27vw;
             display: grid;
-            grid-template-columns: 5vw 21vw;
+            grid-template-columns: 5vw 19vw;
             align-items: center;
             gap: 1vw;
         }
@@ -196,7 +225,7 @@
         border-radius: 15px;
         /**/
         display: grid;
-        grid-template-columns: 4vw 54vw;
+        grid-template-columns: 6vw 52vw;
         grid-template-rows: 1fr;
         column-gap: 2vw;
     }
@@ -207,6 +236,30 @@
             padding: 3px 5px;
         }
     
+    .btnExcluir,
+    #root.altoContraste .btnExcluir{
+        position: relative;
+        height: 6vw;
+        width: 6vw;
+    }
+    
+        /* LETRA X */
+        .btnExcluir h5.excluirPergunta,
+        #root.altoContraste .btnExcluir h5.excluirPergunta{
+            position: absolute;
+            top: 0;
+            left: calc(50% - 3vw);
+            visibility: visible;
+            /**/
+            border: none;
+            cursor: pointer;
+            user-select: none;
+            pointer-events: none;
+            height: 6vw;
+            width: 6vw;
+            line-height: 6.2vw;
+            margin: 0;
+        }
         
     .wrapperInputs,
     #root.altoContraste .wrapperInputs{
@@ -228,7 +281,7 @@
         #root.altoContraste .wrapperResp03,
         #root.altoContraste .wrapperResp04{
             height: 100%;
-            width: 52vw;
+            width: 50vw;
             display: grid;
             grid-template-columns: 1fr 9fr;
             align-items: center;
@@ -240,7 +293,7 @@
             grid-row: 1 / 2;
             grid-column: 1 / 2;
             /**/
-            width: 52vw;
+            width: 50vw;
             display: flex;
             gap: 1rem;
             align-items: center;

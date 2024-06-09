@@ -20,7 +20,7 @@
 @media screen and (max-width: 769px){
     .listaCardCriacaoPergunta,
     #root.altoContraste .listaCardCriacaoPergunta{
-        width: 65vw;
+        width: 70vw;
         height: 90vh;
         padding: 2vh 4vw;
         border: 1px solid var(--cinzaClaro);

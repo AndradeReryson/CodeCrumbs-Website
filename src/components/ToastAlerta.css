@@ -98,7 +98,7 @@
         height: 100%;
         width: 100%;
         box-sizing: border-box;
-        white-space: nowrap;
+        white-space: pre-line;
         text-wrap: wrap;
         background-color: var(--branco);
         padding: 0 2vw;
@@ -202,7 +202,7 @@
             height: 100%;
             width: 100%;
             box-sizing: border-box;
-            white-space: nowrap;
+            white-space: pre-line;
             text-wrap: wrap;
             background-color: var(--preto);
             padding: 0 2vw;

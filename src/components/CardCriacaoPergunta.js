@@ -35,7 +35,7 @@ const CardCriacaoPergunta = ({numero}) => {
 
   return (
     <div className='cardCriacaoPergunta'>
-				<div className="btnNumeroExcluir" data-numero-pergunta={numero}>
+				<div className="btnExcluir" data-numero-pergunta={numero}>
 					{/* <h5 className="numeroPergunta">{numero}</h5> */}
 					<h5 className="excluirPergunta">&#10005;</h5>
 				</div>
