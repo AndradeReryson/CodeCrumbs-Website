@@ -262,21 +262,6 @@ const AtividadeQuiz = () => {
     })
   }, [])
 
-  
-    
-    //console.log(e.target.querySelector("div.respostaTexto h6").innerHTML)
-  
-  /*
-  const gerarNumeros = () => {
-    let lista_numeros = [];
-
-    for (let i = 0; i < 5; i++) {
-      lista_numeros.push(<QuizNumeroPergunta className={i === 0 ? "respondida" : ""} numero={""+(i+1)} />)
-    }
-
-    return lista_numeros;
-  }
-  */
   return (
     <>
       <ToastAlerta toastTexto={toastTexto} toastTipo={toastTipo} toastTextSetter={setToastTexto} toastTipoSetter={setToastTipo} />

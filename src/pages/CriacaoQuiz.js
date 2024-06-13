@@ -23,18 +23,22 @@ const CriacaoQuiz = () => {
   const [toastTipo, setToastTipo] = useState(null);
 
   // Lista deos cards "criação de pergunta"
+	const [quantCardsDOM, setQuantCardsDOM] = useState(0);
 	const [quantPerguntas, setQuantPerguntas] = useState(null);
   const [listaPerguntas, setListaPerguntas] = useState(null);
 
 	const idUsuario = secureLocalStorage.getItem('id');
 
-	const [divLista, setDivLista] = useState(null);
+	const [divListaDOM, setdivListaDOM] = useState(null);
 
 	// botoes de "adicionar pergunta" e "salvar pergunta"
-	const [btnAdicionarPergunta, setBtnAdicionarPergunta] = useState(null);
+	const [btnAdicionarPerguntaTop, setbtnAdicionarPerguntaTop] = useState(null);
+	const [btnAdicionarPerguntaBottom, setbtnAdicionarPerguntaBottom] = useState(null);
 	const [btnSalvarQuiz, setBtnSalvarQuiz] = useState(null);
 
-
+	// variavel para marcar se a ultima alteração na lista foi adição de card (1) ou remoção de card (-1)
+	const [listaCardsChange, setListaCardChange] = useState(0);
+ 
   const [fetchResource, setResource] = useState(null);
   const [fetchReqBody, setReqBody] = useState(JSON.stringify(null));
 
@@ -63,15 +67,6 @@ const CriacaoQuiz = () => {
     }
     
   }, [error]);
-
-
-	/** */
-	useEffect(() => {
-		if(listaPerguntas !== null){
-			//console.log(listaPerguntas);
-			
-		}
-	}, [listaPerguntas])
 
 	/** Evento do Botão de "Salvar novo Quiz" */
 	useEffect(() => {
@@ -189,22 +184,32 @@ const CriacaoQuiz = () => {
 	/** Evento do Botão de "Adicionar Pergunta" */
 	useEffect(() => {
 		if(listaPerguntas !== null){
-			if(listaPerguntas.length < 10){
+			if(quantCardsDOM < 10){
 				const clickHandler = () => {
 					setListaPerguntas((listaAntiga) => [...listaAntiga, <CardCriacaoPergunta numero={quantPerguntas + 1}/>])
-					setQuantPerguntas(quantPerguntas + 1)
+					setQuantCardsDOM(quantCardsDOM + 1);
+					setQuantPerguntas(quantPerguntas + 1); // referencia pro array
+					setListaCardChange(1);
 				}
 	
-				btnAdicionarPergunta.addEventListener('click', clickHandler);
-				return () => btnAdicionarPergunta.removeEventListener("click", clickHandler);
+				btnAdicionarPerguntaBottom.addEventListener('click', clickHandler);
+				btnAdicionarPerguntaTop.addEventListener('click', clickHandler);
+				return () => {
+					btnAdicionarPerguntaBottom.removeEventListener("click", clickHandler);
+					btnAdicionarPerguntaTop.removeEventListener("click", clickHandler);
+				}
 			} else {
 				const clickHandler = () => {
 					setToastTipo("INFO")
-					setToastTexto("Você atingiu o limite de 10 perguntas")
+					setToastTexto("Você atingiu o limite de 10 perguntas");
 				}
 	
-				btnAdicionarPergunta.addEventListener('click', clickHandler);
-				return () => btnAdicionarPergunta.removeEventListener("click", clickHandler);
+				btnAdicionarPerguntaBottom.addEventListener('click', clickHandler);
+				btnAdicionarPerguntaTop.addEventListener('click', clickHandler);
+				return () => {
+					btnAdicionarPerguntaBottom.removeEventListener("click", clickHandler);
+					btnAdicionarPerguntaTop.removeEventListener("click", clickHandler);
+				}
 				
 			}
 
@@ -213,7 +218,7 @@ const CriacaoQuiz = () => {
 		}
 
 		
-	}, [listaPerguntas]);
+	}, [listaPerguntas, quantCardsDOM]);
 
 	/** Evento dos Botões de excluir pergunta */
 	useEffect(() => {
@@ -232,7 +237,9 @@ const CriacaoQuiz = () => {
 				 * 		Por hora vamos manter assim, mas sabendo que há o Array "ListaPerguntas" com todos os cards já
 				 * 	criados, inclusive os que foram apagados. 
 				 */
-				divLista.removeChild(cardPergunta);
+				divListaDOM.removeChild(cardPergunta);
+				setQuantCardsDOM(quantCardsDOM - 1);
+				setListaCardChange(-1);
 			}
 
 			for(let i = 0; i < arrayBotoesExcluir.length; i++){
@@ -246,14 +253,27 @@ const CriacaoQuiz = () => {
 		}
 		}
 		
-	}, [listaPerguntas])
+	}, [listaPerguntas, quantCardsDOM])
 
+	/** Scrolla a lista para baixo quando um novo card é removido / criado */
+	useEffect(() => {
+		if(listaCardsChange !== 0){
+
+			// Se foi criado um novo card
+			if(listaCardsChange === 1){
+				divListaDOM.scrollTo(0, divListaDOM.scrollHeight)
+				setListaCardChange(0)
+			} 
+			
+		}
+	}, [listaCardsChange])
 
 	/* USE EFFECT INICIAL */
   useEffect(() => {
-		setBtnAdicionarPergunta(document.querySelector("#btnAdicionarPergunta"));
+		setbtnAdicionarPerguntaTop(document.querySelector("#btnAdicionarPerguntaTop"));
+		setbtnAdicionarPerguntaBottom(document.querySelector("#btnAdicionarPerguntaBottom"));
 		setBtnSalvarQuiz(document.querySelector("#btnSalvarQuiz"));
-		setDivLista(document.querySelector('.listaCardCriacaoPergunta'));
+		setdivListaDOM(document.querySelector('.listaCardCriacaoPergunta'));
 		setListaPerguntas([]);
 		setQuantPerguntas(0);
 		
@@ -291,8 +311,8 @@ const CriacaoQuiz = () => {
 					</Container>
 
 					{/* LINHA ORIENTAÇÃO */}
-					<Container width="80vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="space-between" gap="4rem">
-							<h4>Perguntas</h4>
+					<Container width="80vw" height="10vh" flexDirection="row" alignItems="center" justifyContent="space-between" gap="2rem">
+							<Button id="btnAdicionarPerguntaTop" cor="branco" texto="Adicionar pergunta" />
 							<h6 className='criacaoPerguntaDica'>Clique na letra da alternativa para definí-la como correta</h6>
 					</Container>
 
@@ -305,7 +325,7 @@ const CriacaoQuiz = () => {
 
 					{/* BOTOES RELACIONADOS A CRIACAO DE CARDS - SALVAR BARALHO */}
 					<Container width="80vw" height="15vh" flexDirection="row" alignItems="center" justifyContent="space-between">
-							<Button id="btnAdicionarPergunta" cor="branco" texto="Adicionar pergunta" />
+							<Button id="btnAdicionarPerguntaBottom" cor="branco" texto="Adicionar pergunta" />
 							<Button id="btnSalvarQuiz" cor="verde" texto="Salvar novo quiz" />
 					</Container>
 

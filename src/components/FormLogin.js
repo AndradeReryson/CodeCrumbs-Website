@@ -36,6 +36,7 @@ const FormLogin = ({setIsLoadingVisivel, toastSetters}) => {
         let json_usuario = JSON.parse(data);
 
         secureLocalStorage.setItem('dados', data);
+        secureLocalStorage.setItem('papel', json_usuario.privilegio.privilegio);
         secureLocalStorage.setItem('id', json_usuario.id);
         secureLocalStorage.setItem('apelido', json_usuario.apelido)
         secureLocalStorage.setItem('username', json_usuario.credenciais.email);

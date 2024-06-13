@@ -2,16 +2,17 @@ import React from 'react'
 import './general/Theme.css'
 import './ButtonFiltro.css'
 
-const ButtonFiltro = ({className, texto}) => {
+const ButtonFiltro = ({id, className, texto}) => {
   return (
-    <div className={"button-filtro " + className}>
+    <div id={id} className={"button-filtro " + className}>
 			<h6>{texto}</h6>
     </div>
   )
 }
 
 ButtonFiltro.defaultProps = {
-	className:      ""
+  id:           "",
+	className:    ""
 }
 
 export default ButtonFiltro

@@ -14,6 +14,7 @@
     overflow-y: auto;
 }
 
+
 /************** ALTO CONTRASTE *********************/
 /***************************************************/
 
@@ -40,6 +41,7 @@
 
     .criacaoPerguntaDica,
     #root.altoContraste .criacaoPerguntaDica{
+        width: 40%;
         text-align: right;
     }
 

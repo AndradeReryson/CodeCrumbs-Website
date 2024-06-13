@@ -24,6 +24,23 @@ const ListaQuizzes = () => {
 
   const idUsuario = secureLocalStorage.getItem('id');
 
+  /**
+   * STATES de "localização": 
+   *    - langSelecionada:    Linguagem selecionada atual;
+   *    - secaoQuizzes:       Seção atual (Meus quizzes / todos os quizzes);
+   *    - paginaAtual:        pagina atual
+   */
+  const [langSelecionada, setLangSelecionada] = useState(null);
+  const [secaoQuizzes, setSecaoQuizzes] = useState(null); 
+  const [paginaAtual, setPaginaAtual] = useState(null);
+  
+  // botões de filtro
+  const [btnFiltroCSS, setBtnFiltroCSS] = useState(null);
+  const [btnFiltroSQL, setBtnFiltroSQl] = useState(null);
+  const [btnFiltroMeusQuizzes, setBtnFiltroMeusQuizzes] = useState(null);
+  const [btnFiltroTodosQuizzes, setBtnFiltroTodosQuizzes] = useState(null);
+
+  // variaveis usadas no fetch
   const [fetchResource, setResource] = useState(null);
   const [fetchReqBody, setReqBody] = useState(JSON.stringify(null));
 
@@ -49,8 +66,7 @@ const ListaQuizzes = () => {
             numero={(obj.id) < 10 ? "#000"+(obj.id) : "#00"+(obj.id)}
             titulo={obj.titulo}
             concluido={obj.nota === null ? false : true}
-            nota={obj.nota === null ? "--" : obj.nota}
-
+            nota={obj.nota === null ? "--" : obj.nota+"%"}
           />
           
         )
@@ -72,9 +88,90 @@ const ListaQuizzes = () => {
     
   }, [error]);
 
-  // para o fetch acontecer precisamos mudar o resource, portanto:
+
+  /** Evento do botão de filtro "CSS" */
   useEffect(() => {
-    setResource("quizzes/ref/"+idUsuario+"/pagina/1");
+    if(langSelecionada != null){
+      const clickHandler = () => {
+
+        if(langSelecionada !== "CSS"){
+          setLangSelecionada("CSS");
+          setResource("quizzes/"+secaoQuizzes+"/ref/"+idUsuario+"/lang/CSS/pagina/"+paginaAtual);
+        } 
+      }
+
+      btnFiltroCSS.addEventListener('click', clickHandler);
+      return () => btnFiltroCSS.removeEventListener('click', clickHandler);
+    }
+      
+  }, [langSelecionada, secaoQuizzes, paginaAtual])
+
+  /** Evento do botão de filtro "SQL" */
+  useEffect(() => {
+    if(langSelecionada != null){
+      const clickHandler = () => {
+
+        if(langSelecionada !== "SQL"){
+          setLangSelecionada("SQL");
+          setResource("quizzes/"+secaoQuizzes+"/ref/"+idUsuario+"/lang/SQL/pagina/"+paginaAtual);
+        } 
+      }
+
+      btnFiltroSQL.addEventListener('click', clickHandler);
+      return () => btnFiltroSQL.removeEventListener('click', clickHandler);
+    }
+      
+  }, [langSelecionada, secaoQuizzes, paginaAtual])
+
+  /** Evento do botão "Todos os Quizzes" */
+  useEffect(() => {
+    if(secaoQuizzes !== null){
+      const clickHandler = () => {
+
+        if(secaoQuizzes !== "todos-quizzes"){
+          setSecaoQuizzes("todos-quizzes");
+          setResource("quizzes/todos-quizzes/ref/"+idUsuario+"/lang/"+langSelecionada+"/pagina/"+paginaAtual);
+        } 
+      }
+
+      btnFiltroTodosQuizzes.addEventListener('click', clickHandler);
+      return () => btnFiltroTodosQuizzes.removeEventListener('click', clickHandler);
+    }
+  }, [langSelecionada, secaoQuizzes, paginaAtual])
+
+  /** Evento do botão "meus Quizzes" */
+  useEffect(() => {
+    if(secaoQuizzes !== null){
+      const clickHandler = () => {
+
+        if(secaoQuizzes !== "meus-quizzes"){
+          console.log(langSelecionada)
+          setSecaoQuizzes("meus-quizzes");
+          setResource("quizzes/meus-quizzes/ref/"+idUsuario+"/lang/"+langSelecionada+"/pagina/"+paginaAtual);
+        } else {
+          alert('ja esta')
+        }
+      }
+
+      btnFiltroMeusQuizzes.addEventListener('click', clickHandler);
+      return () => btnFiltroMeusQuizzes.removeEventListener('click', clickHandler);
+    }
+  }, [langSelecionada, secaoQuizzes, paginaAtual])
+
+  /* para o fetch acontecer precisamos mudar o resource, portanto: */
+  useEffect(() => {
+    setBtnFiltroCSS(document.querySelector('#btnFiltroCSS'))
+    setBtnFiltroSQl(document.querySelector('#btnFiltroSQL'))
+    setBtnFiltroTodosQuizzes(document.querySelector('#btnFiltroTodosQuizzes'))
+    setBtnFiltroMeusQuizzes(document.querySelector('#btnFiltroMeusQuizzes'))
+    
+    // setando os states inicias de linguagem, seção e pagina
+    setLangSelecionada("CSS");
+    setSecaoQuizzes('todos-quizzes');
+    setPaginaAtual(1);
+    
+    // usando valores estáticos pois os valores acima não foram renderizados ainda;
+    setResource("quizzes/todos-quizzes/ref/"+idUsuario+"/lang/CSS/pagina/1");
   }, [])
 
   return (
@@ -97,8 +194,8 @@ const ListaQuizzes = () => {
           <Container className="divListaQuizzesFiltroBusca" width="80vw" height="10vh" flexDirection="row" alignItems="center" > 
             <Container width="40vw" height="10vh" flexDirection="row" alignItems="center">
               <div className='listaFiltro'>
-                <ButtonFiltro className="active" texto="CSS" />
-                <ButtonFiltro texto="SQL" />
+                <ButtonFiltro id="btnFiltroCSS" className={langSelecionada === "CSS" ? "active" : ""} texto="CSS" />
+                <ButtonFiltro id="btnFiltroSQL" className={langSelecionada === "SQL" ? "active" : ""} texto="SQL" />
               </div>
             </Container>
 
@@ -113,8 +210,8 @@ const ListaQuizzes = () => {
           <Container className="divListaQuizzesMeusQuizzes" width="80vw" height="10vh" flexDirection="row" alignItems="center"> 
             <Container width="40vw" height="10vh" flexDirection="row" alignItems="center">
               <div className='listaFiltro'>
-                <ButtonFiltro className="active" texto="Todos os Quizzes" />
-                <ButtonFiltro texto="Meus Quizzes" />
+                <ButtonFiltro id="btnFiltroTodosQuizzes" className={secaoQuizzes === "todos-quizzes" ? "active" : ""} texto="Todos os Quizzes" />
+                <ButtonFiltro id="btnFiltroMeusQuizzes"  className={secaoQuizzes === "meus-quizzes" ? "active" : ""} texto="Meus Quizzes" />
               </div>
             </Container>
 
